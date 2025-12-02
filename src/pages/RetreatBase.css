@@ -1,0 +1,48 @@
+/* Shared layout styles for all retreat pages */
+:root{
+  --retreat-max-width: 1200px;
+  --retreat-side-padding-desktop: 160px;
+  --retreat-side-padding-tablet: 100px;
+  --retreat-side-padding-mobile: 40px;
+}
+
+/* Container to standardize content width across pages */
+.retreat-inner {
+  max-width: var(--retreat-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Optional helper to add consistent side padding to sections */
+.retreat-section {
+  padding-left: var(--retreat-side-padding-desktop);
+  padding-right: var(--retreat-side-padding-desktop);
+  box-sizing: border-box;
+}
+
+@media (max-width: 1200px) {
+  .retreat-section {
+    padding-left: var(--retreat-side-padding-tablet);
+    padding-right: var(--retreat-side-padding-tablet);
+  }
+}
+
+@media (max-width: 768px) {
+  .retreat-section {
+    padding-left: var(--retreat-side-padding-mobile);
+    padding-right: var(--retreat-side-padding-mobile);
+  }
+}
+
+/* Premium touches: consistent serif for headings in retreat sections */
+.retreat-inner h2, .retreat-inner h1 {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  color: #1d4d2d;
+}
+
+.retreat-inner p {
+  color: #3b5560;
+}

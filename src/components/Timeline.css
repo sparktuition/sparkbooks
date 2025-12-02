@@ -1,0 +1,177 @@
+:root{
+  --bg-1: #071026;
+  --bg-2: #051226;
+  --accent: #16f6a8;
+  --muted: rgba(255,255,255,0.75);
+}
+
+.timeline-section{
+  background: linear-gradient(135deg,#071026 0%, #041028 60%, #071226 100%);
+  color: #fff;
+  padding: 64px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.timeline-inner{
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.timeline-title{
+  font-size: 34px;
+  margin: 0 0 28px 0;
+  font-weight: 900;
+  color: #eaf7f2;
+}
+
+.timeline-wrap{
+  position: relative;
+  padding: 44px 0 10px;
+}
+
+.timeline-center-line{
+  display: none; /* removed: only numbered circles wanted */
+}
+
+.timeline-items{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+  z-index: 2;
+}
+
+.timeline-item{
+  width: 22%;
+  position: relative;
+  text-align: center;
+}
+
+.timeline-item .timeline-content{
+  max-width: 240px;
+  position: relative;
+  z-index: 2;
+}
+
+.timeline-item.top .timeline-content{
+  margin-bottom: 76px;
+}
+
+.timeline-item.bottom .timeline-content{
+  margin-top: 76px;
+}
+
+.timeline-item-title{
+  font-size: 14px;
+  margin: 0 0 8px 0;
+  font-weight: 700;
+}
+
+.timeline-item-desc{
+  margin: 0;
+  font-size: 13px;
+  color: rgba(255,255,255,0.78);
+  line-height: 1.6;
+}
+
+.timeline-marker{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 1px;
+  height: 1px;
+  z-index: 5;
+}
+
+/* connectors removed — only show circular markers with numbers */
+.timeline-item.top .timeline-marker::before,
+.timeline-item.bottom .timeline-marker::after{
+  display: none;
+}
+
+
+.marker-circle{
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(6,18,20,0.95), rgba(2,6,8,0.9));
+  border: 3px solid rgba(255,255,255,0.06);
+  display: block;
+  box-shadow: 0 8px 22px rgba(2,6,10,0.6);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timeline-item:not(.muted) .marker-circle{
+  border-color: var(--accent);
+}
+
+.timeline-item.muted .marker-circle{
+  border-color: rgba(255,255,255,0.06);
+  background: linear-gradient(180deg, rgba(3,8,12,0.95), rgba(2,6,10,0.95));
+}
+
+
+.marker-number{
+  position: relative;
+  left: 0;
+  transform: none;
+  top: 0;
+  font-weight: 800;
+  color: var(--accent);
+  font-size: 14px;
+  line-height: 1;
+  z-index: 6;
+}
+
+.timeline-item.muted .marker-number{
+  color: rgba(255,255,255,0.18);
+}
+
+.timeline-item.muted .marker-circle{
+  width: 54px;
+  height: 54px;
+  border-color: rgba(255,255,255,0.06);
+}
+
+/* Ensure muted item spacing is increased so larger marker doesn't overlap text */
+.timeline-item.muted.bottom .timeline-content{
+  margin-top: 96px;
+}
+.timeline-item.muted.top .timeline-content{
+  margin-bottom: 96px;
+}
+
+/* Ensure marker visuals sit above content */
+.marker-circle, .marker-circle::after, .marker-number{
+  z-index: 6;
+  position: relative;
+}
+
+/* Slightly reduce font size on very small screens to prevent overlap */
+@media (max-width: 520px){
+  .timeline-item .timeline-content{ z-index: 1 }
+  .timeline-item.top .timeline-content, .timeline-item.bottom .timeline-content{ margin: 0; }
+  .timeline-marker{ left: 28px; transform: translate(-50%, -50%); }
+  .marker-number{ top: calc(50% + 22px); font-size: 11px }
+}
+
+@media (max-width: 880px){
+  .timeline-items{ flex-wrap: wrap; gap: 28px; }
+  .timeline-item{ width: 48%; }
+  .timeline-center-line{ left: 4%; right: 4%; top: 54%; }
+}
+
+@media (max-width: 520px){
+  .timeline-item{ width: 100%; text-align: left; padding-left: 64px; }
+  .timeline-item.top .timeline-content, .timeline-item.bottom .timeline-content{ margin: 0; }
+  .timeline-marker{ left: 28px; transform: translate(-50%, -50%); }
+  .timeline-center-line{ display: none; }
+}
+

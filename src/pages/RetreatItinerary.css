@@ -1,0 +1,273 @@
+/* Retreat Itinerary Section */
+.retreat-itinerary {
+  width: 100%;
+  padding: 100px 40px;
+  background: linear-gradient(135deg, rgba(232, 245, 240, 0.8) 0%, rgba(208, 235, 225, 0.6) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.retreat-itinerary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -20%;
+  width: 50%;
+  height: 100%;
+  background: radial-gradient(circle at 100% 50%, rgba(15, 107, 74, 0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.retreat-itinerary-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.itinerary-title {
+  font-family: 'Georgia', serif;
+  font-size: 56px;
+  text-align: left;
+  color: #0a5e47;
+  margin: 0 0 70px 0;
+  font-weight: 500;
+  letter-spacing: -0.8px;
+}
+
+.timeline-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+/* Left Column */
+.timeline-left {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  padding-right: 40px;
+}
+
+.timeline-left-item {
+  text-align: center;
+}
+
+.timeline-left-label {
+  font-family: 'Georgia', serif;
+  font-size: 28px;
+  color: #0a5e47;
+  margin: 0 0 16px 0;
+  font-weight: 500;
+  letter-spacing: -0.3px;
+}
+
+.timeline-left-text {
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  font-size: 16px;
+  color: #4a4a4a;
+  line-height: 1.7;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* Right Column - Timeline */
+.timeline-right {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  padding-left: 40px;
+}
+
+.timeline-connector-line {
+  position: absolute;
+  left: 0;
+  top: 40px;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, #0a5e47, rgba(10, 94, 71, 0.1));
+}
+
+.timeline-node {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  z-index: 2;
+}
+
+.timeline-node:first-child {
+  justify-content: flex-start;
+}
+
+.timeline-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #c9e8de;
+  color: #0a5e47;
+  font-family: 'Georgia', serif;
+  font-size: 28px;
+  font-weight: 600;
+  flex-shrink: 0;
+  box-shadow: 0 4px 16px rgba(10, 94, 71, 0.12);
+  border: 3px solid #fff;
+}
+
+.timeline-dot {
+  display: none;
+}
+
+.timeline-node-label {
+  font-family: 'Georgia', serif;
+  font-size: 24px;
+  color: #0a5e47;
+  margin: 0;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.timeline-node-text {
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  font-size: 16px;
+  color: #666;
+  line-height: 1.65;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .timeline-wrapper {
+    gap: 40px;
+  }
+
+  .timeline-left {
+    gap: 60px;
+    padding-right: 30px;
+  }
+
+  .itinerary-title {
+    font-size: 44px;
+  }
+
+  .timeline-left-label {
+    font-size: 24px;
+  }
+
+  .timeline-left-text {
+    font-size: 15px;
+  }
+
+  .timeline-node-label {
+    font-size: 22px;
+  }
+
+  .timeline-node-text {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .retreat-itinerary {
+    padding: 60px 24px;
+  }
+
+  .timeline-wrapper {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .timeline-left {
+    gap: 50px;
+    padding-right: 0;
+    padding-bottom: 40px;
+    border-bottom: 2px solid rgba(10, 94, 71, 0.2);
+  }
+
+  .timeline-right {
+    padding-left: 0;
+    gap: 50px;
+  }
+
+  .timeline-connector-line {
+    display: none;
+  }
+
+  .itinerary-title {
+    font-size: 36px;
+    margin-bottom: 50px;
+  }
+
+  .timeline-left-label {
+    font-size: 22px;
+  }
+
+  .timeline-left-text {
+    font-size: 14px;
+  }
+
+  .timeline-number {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+  }
+
+  .timeline-node-label {
+    font-size: 20px;
+  }
+
+  .timeline-node-text {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .retreat-itinerary {
+    padding: 48px 16px;
+  }
+
+  .itinerary-title {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+
+  .timeline-left {
+    gap: 40px;
+  }
+
+  .timeline-right {
+    gap: 40px;
+  }
+
+  .timeline-left-label {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+
+  .timeline-left-text {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .timeline-number {
+    width: 46px;
+    height: 46px;
+    font-size: 22px;
+  }
+
+  .timeline-node-label {
+    font-size: 18px;
+    margin-bottom: 6px;
+  }
+
+  .timeline-node-text {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+}

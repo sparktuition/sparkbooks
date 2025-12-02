@@ -1,0 +1,114 @@
+:root{
+  --bg-1: #061026;
+  --bg-2: #041026;
+  --accent: #16f6a8;
+  --card-border: rgba(22,246,168,0.12);
+}
+
+.collection-section{
+  background: linear-gradient(180deg, #071026 0%, #041226 100%);
+  color: #fff;
+  padding: 56px 20px;
+}
+
+.collection-inner{
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.collection-title{
+  font-size: 22px;
+  margin: 0 0 6px 0;
+  font-weight: 800;
+}
+
+.collection-intro{
+  color: rgba(255,255,255,0.8);
+  max-width: 900px;
+  margin: 0 0 22px 0;
+  line-height: 1.6;
+}
+
+.collection-grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.collection-card{
+  display: flex;
+  gap: 16px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.04));
+  border-radius: 10px;
+  padding: 14px;
+  border: 1px solid rgba(255,255,255,0.04);
+  position: relative;
+  overflow: hidden;
+}
+
+.card-media{
+  width: 140px;
+  height: 140px;
+  border-radius: 8px;
+  background-size: cover;
+  background-position: center;
+  flex-shrink: 0;
+  border: 3px solid rgba(22,246,168,0.06);
+}
+
+.card-body{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-title{
+  margin: 0 0 6px 0;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.card-desc{
+  margin: 0 0 10px 0;
+  color: rgba(255,255,255,0.8);
+  font-size: 13px;
+}
+
+.card-details{
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 260ms ease, opacity 200ms ease;
+  opacity: 0;
+  color: rgba(255,255,255,0.85);
+  font-size: 13px;
+}
+
+.card-details.visible{
+  max-height: 240px;
+  opacity: 1;
+  margin-top: 10px;
+}
+
+.card-actions{
+  margin-top: auto;
+}
+
+.btn-read{
+  background: transparent;
+  border: 1.5px solid var(--accent);
+  color: var(--accent);
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.collection-card.open{
+  box-shadow: 0 12px 40px rgba(2,6,10,0.6);
+  border-color: rgba(22,246,168,0.14);
+}
+
+@media (max-width: 880px){
+  .collection-grid{ grid-template-columns: 1fr; }
+  .card-media{ width: 120px; height: 120px }
+}

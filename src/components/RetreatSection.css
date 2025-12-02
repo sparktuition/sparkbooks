@@ -1,0 +1,83 @@
+.retreat-section {
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  color: #e9eef8;
+}
+
+.retreat-promo {
+  background: linear-gradient(135deg, #0a1a3a 0%, #071029 50%, #1a0a2e 100%);
+  padding: 48px 20px;
+}
+
+.retreat-promo-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.retreat-content h2 {
+  font-size: 36px;
+  color: #ffffff;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.retreat-description {
+  color: #b9c7db;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.retreat-btn {
+  background: linear-gradient(90deg, #07f2cd 0%, #05d4b8 100%);
+  color: #071029;
+  border: none;
+  padding: 14px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 24px rgba(7, 242, 205, 0.3);
+}
+
+.retreat-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(7, 242, 205, 0.5);
+}
+
+.retreat-visual-preview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.retreat-preview-img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 18px 60px rgba(2, 6, 23, 0.65);
+  border: 6px solid rgba(7, 242, 205, 0.15);
+}
+
+@media (max-width: 768px) {
+  .retreat-promo-inner {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .retreat-content h2 {
+    font-size: 24px;
+  }
+
+  .retreat-description {
+    font-size: 14px;
+  }
+
+  .retreat-promo {
+    padding: 32px 20px;
+  }
+}

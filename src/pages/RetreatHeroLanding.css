@@ -1,4 +1,4 @@
-/* Restored original hero styles */
+/* Ultra-premium hero styles */
 .retreat-hero-landing {
   width: 100%;
   height: 100vh;
@@ -17,7 +17,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-    background: rgba(0,0,0,0.45);
+  background: linear-gradient(135deg, rgba(10,14,26,0.75) 0%, rgba(13,21,37,0.65) 50%, rgba(10,14,26,0.8) 100%);
   z-index: 1;
 }
 
@@ -25,7 +25,7 @@
   position: relative;
   z-index: 2;
   padding: 60px 40px;
-  max-width: 700px;
+  max-width: 800px;
   margin-left: 80px;
   /* background removed for premium look */
   border-radius: 0;
@@ -34,13 +34,13 @@
 
 .retreat-hero-title {
   font-family: 'Georgia', serif;
-  font-size: 64px;
+  font-size: 72px;
   color: #fff !important;
   margin: 0 0 24px 0;
-  line-height: 1.2;
-  font-weight: 700;
-  letter-spacing: -1px;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  line-height: 1.1;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
 }
 
 .retreat-hero-subtitle {
@@ -48,64 +48,64 @@
   font-size: 28px;
   font-weight: 600;
   margin-bottom: 18px;
-  text-shadow: 1px 1px 6px rgba(0,0,0,0.3);
+  text-shadow: 0 2px 10px rgba(0,0,0,0.6);
 }
 
 .retreat-hero-description {
   font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-  font-size: 18px;
+  font-size: 20px;
   color: #fff !important;
-  margin: 0 0 36px 0;
-  line-height: 1.6;
+  margin: 0 0 40px 0;
+  line-height: 1.7;
   font-weight: 400;
   letter-spacing: 0.3px;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
 }
 
 .retreat-hero-landing .retreat-hero-buttons {
   display: flex;
-  gap: 16px;
+  gap: 20px;
   align-items: center;
 }
 
 .retreat-hero-landing .retreat-btn-primary {
-  background: #2a9d6f;
-  color: #fff;
+  background: linear-gradient(135deg, #16f6a8 0%, #10f0b0 100%);
+  color: #00221a;
   border: none;
-  padding: 14px 32px;
-  font-size: 16px;
-  font-weight: 600;
-  border-radius: 8px;
+  padding: 18px 40px;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 999px;
   cursor: pointer;
   transition: all 0.3s ease;
   font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto;
-  box-shadow: 0 4px 12px rgba(42, 157, 111, 0.3);
+  box-shadow: 0 10px 30px rgba(22,246,168,0.3);
 }
 
 .retreat-hero-landing .retreat-btn-primary:hover {
-  background: #247d5f;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(42, 157, 111, 0.4);
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(22,246,168,0.4);
 }
 
 .retreat-hero-landing .retreat-btn-secondary {
-  background: transparent;
+  background: rgba(255,255,255,0.08);
   color: #fff;
   border: 2px solid rgba(255,255,255,0.7);
-  padding: 12px 30px;
-  font-size: 16px;
+  padding: 16px 38px;
+  font-size: 18px;
   font-weight: 600;
-  border-radius: 8px;
+  border-radius: 999px;
   cursor: pointer;
   transition: all 0.3s ease;
   font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto;
+  backdrop-filter: blur(10px);
 }
 
 .retreat-hero-landing .retreat-btn-secondary:hover {
-  background: rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.15);
   border-color: #fff;
   color: #fff;
-  transform: translateY(-2px);
+  transform: translateY(-3px);
 }
 
 /* Modern Register / Book Now button */
@@ -114,20 +114,21 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
-  padding: 14px 34px;
-  background: linear-gradient(90deg, #087a4a 0%, #0f6b3a 100%);
-  color: #fff;
+  padding: 18px 42px;
+  background: linear-gradient(135deg, #16f6a8 0%, #10f0b0 100%);
+  color: #00221a;
   border-radius: 999px;
   text-decoration: none;
-  font-weight: 700;
-  box-shadow: 0 10px 30px rgba(15, 107, 58, 0.25);
-  transition: transform 0.18s ease, box-shadow 0.18s ease;
-  border: 2px solid rgba(15,107,58,0.12);
+  font-weight: 800;
+  font-size: 18px;
+  box-shadow: 0 12px 35px rgba(22,246,168,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
 }
 
 .retreat-hero-landing .retreat-btn-register:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 16px 36px rgba(15, 107, 58, 0.3);
+  transform: translateY(-4px);
+  box-shadow: 0 18px 45px rgba(22,246,168,0.4);
 }
 
 @media (max-width: 768px) {

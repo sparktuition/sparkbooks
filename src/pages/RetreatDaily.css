@@ -4,12 +4,24 @@
   Using a very subtle, almost white-to-light-green gradient to match the screenshot.
 */
 .retreat-daily {
-    /* Subtle gradient matching the screenshot background */
-    background: linear-gradient(to bottom right, #d4f1d4 0%, #e8f5e8 50%, #f0fff0 100%);
-    padding: 80px 20px;
+    background: linear-gradient(135deg, #d4f1d4 0%, #e8f5e8 30%, #f0fff0 70%, #e8f5e8 100%);
+    padding: 120px 32px;
     font-family: 'Georgia', 'Times New Roman', serif;
-    color: #333;
+    color: #1a3a2e;
     min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.retreat-daily::before{
+    content: '';
+    position: absolute;
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(circle, rgba(46,125,50,0.08), transparent 70%);
+    top: -200px;
+    right: -200px;
+    pointer-events: none;
 }
 
 .retreat-daily-inner {
@@ -18,24 +30,22 @@
 }
 
 .retreat-daily-title {
-    font-size: 2.8em;
-    color: #1d4d2d;
-    margin-bottom: 80px;
-    font-weight: 400;
-    letter-spacing: 1px;
-    text-align: left;
+    font-size: 54px;
+    color: #0f6b4a;
+    margin-bottom: 100px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    text-align: center;
     font-family: 'Georgia', serif;
 }
 
-/*
-  Daily Items Layout
-*/
 .daily-item {
     display: flex;
     align-items: center;
-    gap: 60px;
-    margin-bottom: 120px;
+    gap: 80px;
+    margin-bottom: 140px;
     min-height: 400px;
+    position: relative;
 }
 
 /* Alternate layout - even items have image on left */
@@ -58,28 +68,29 @@
 }
 
 .feature-arrow {
-    font-size: 2.5em;
-    color: #1d4d2d;
-    font-weight: 300;
-    letter-spacing: 5px;
+    font-size: 3em;
+    color: #0f6b4a;
+    font-weight: 400;
+    letter-spacing: 8px;
 }
 
 .feature-title {
-    font-size: 1.8em;
-    color: #1d4d2d;
-    font-weight: 400;
+    font-size: 2.2em;
+    color: #0a5e47;
+    font-weight: 600;
     margin: 0;
-    line-height: 1.3;
+    line-height: 1.2;
     font-family: 'Georgia', serif;
-    letter-spacing: 0.5px;
+    letter-spacing: -0.5px;
 }
 
 .feature-description {
-    font-size: 1.1em;
-    color: #555;
-    line-height: 1.7;
+    font-size: 1.2em;
+    color: #2a5245;
+    line-height: 1.8;
     margin: 0;
     font-family: 'Georgia', serif;
+    font-weight: 400;
 }
 
 .daily-image {
@@ -91,26 +102,33 @@
 
 .image-placeholder {
     width: 100%;
-    max-width: 500px;
-    height: 350px;
+    max-width: 550px;
+    height: 400px;
     background: linear-gradient(135deg, #c8e6c8 0%, #a5d6a5 100%);
-    border-radius: 20px;
+    border-radius: 24px;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #fff;
     font-size: 1.2em;
     font-weight: 500;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
     overflow: hidden;
     position: relative;
+    border: 3px solid rgba(15,107,74,0.2);
+    transition: all 0.3s ease;
+}
+
+.image-placeholder:hover{
+    transform: scale(1.02);
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.2);
 }
 
 .image-placeholder::before {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(45deg, rgba(255,255,255,0.1) 0%, rgba(0,0,0,0.05) 100%);
+    background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.08) 100%);
 }
 
 /* Responsive adjustments */

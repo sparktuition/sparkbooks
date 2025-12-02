@@ -23,6 +23,7 @@ function HomePage() {
     <div>
       <div data-aos="fade-down" data-aos-duration="900"><Hero /></div>
       <div data-aos="fade-right" data-aos-duration="700" data-aos-delay="50"><Stats /></div>
+      <div data-aos="fade-up" data-aos-duration="700" data-aos-delay="320"><RetreatSection /></div>
       <div data-aos="fade-left" data-aos-duration="700" data-aos-delay="80"><About /></div>
       <div data-aos="fade-up" data-aos-duration="700" data-aos-delay="100"><Timeline /></div>
       <div data-aos="zoom-in" data-aos-duration="800" data-aos-delay="120"><FeaturedBooks /></div>
@@ -35,7 +36,7 @@ function HomePage() {
       <div data-aos="fade-left" data-aos-duration="700" data-aos-delay="260"><UpcomingEvents /></div>
       <div data-aos="fade-up" data-aos-duration="700" data-aos-delay="280"><PressCoverage /></div>
       <div data-aos="zoom-in" data-aos-duration="800" data-aos-delay="300"><BehindTheScenes /></div>
-      <div data-aos="fade-up" data-aos-duration="700" data-aos-delay="320"><RetreatSection /></div>
+
       <div data-aos="fade-up" data-aos-duration="700" data-aos-delay="340"><ContactSection /></div>
     </div>
   )

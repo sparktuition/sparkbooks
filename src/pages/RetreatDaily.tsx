@@ -87,7 +87,7 @@ const RetreatDaily: React.FC = () => {
             </div>
           </div>
           <div className="daily-image">
-           <img src="/SparkWritersRetreat/jpg (21).jpg" alt="Nature Field" className="daily-img" />
+           <img src="/SparkWritersRetreat/jpg (12).jpg" alt="Nature Field" className="daily-img" />
          </div>
         </div>
       </div>

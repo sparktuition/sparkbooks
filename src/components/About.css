@@ -5,18 +5,34 @@
 }
 
 .about{
-  padding: 48px 24px;
-  background: linear-gradient(180deg, rgba(7,10,30,0.92) 0%, rgba(6,4,7,0.98) 100%);
+  padding: 100px 32px;
+  background: linear-gradient(135deg, #0a0e1a 0%, #0d1525 50%, #0a0e1a 100%);
   color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.about::before{
+  content: '';
+  position: absolute;
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(circle, rgba(22,246,168,0.05), transparent 70%);
+  top: 50%;
+  left: -200px;
+  transform: translateY(-50%);
+  pointer-events: none;
 }
 
 .about-inner{
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 360px 1fr;
-  gap: 36px;
+  grid-template-columns: 400px 1fr;
+  gap: 60px;
   align-items: center;
+  position: relative;
+  z-index: 1;
 }
 
 .about-media{
@@ -25,36 +41,63 @@
 }
 
 .about-image{
-  width: 320px;
-  height: 320px;
+  width: 100%;
+  max-width: 380px;
+  height: auto;
+  aspect-ratio: 1;
   object-fit: cover;
-  border-radius: 14px;
-  box-shadow: 0 10px 30px rgba(2,6,20,0.6);
-  border: 6px solid rgba(255,255,255,0.02);
+  border-radius: 24px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+  border: 3px solid rgba(22,246,168,0.1);
+  transition: all 0.3s ease;
+}
+
+.about-image:hover{
+  transform: scale(1.02);
+  box-shadow: 0 25px 70px rgba(0,0,0,0.5);
+  border-color: rgba(22,246,168,0.2);
 }
 
 .about-title{
-  font-size: 22px;
-  margin: 0 0 14px 0;
-  font-weight: 800;
+  font-size: 42px;
+  margin: 0 0 24px 0;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  background: linear-gradient(135deg, #fff 0%, #16f6a8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .about-text{
-  color: rgba(255,255,255,0.82);
-  font-size: 14px;
-  line-height: 1.75;
-  margin-bottom: 14px;
+  color: rgba(255,255,255,0.75);
+  font-size: 17px;
+  line-height: 1.9;
+  margin-bottom: 20px;
 }
 
-@media (max-width: 880px){
+@media (max-width: 1024px){
   .about-inner{
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 40px;
+  }
+  .about{
+    padding: 80px 24px;
+  }
+}
+
+@media (max-width: 640px){
+  .about{
+    padding: 60px 20px;
+  }
+  .about-title{
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  .about-text{
+    font-size: 16px;
   }
   .about-image{
-    width: 100%;
-    max-width: 420px;
-    height: auto;
-    margin: 0 auto;
+    max-width: 100%;
   }
 }

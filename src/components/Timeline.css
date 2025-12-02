@@ -45,49 +45,43 @@
 
 .timeline-wrap{
   position: relative;
-  padding: 44px 0 10px;
+  padding: 0;
 }
 
 .timeline-center-line{
-  display: none; /* removed: only numbered circles wanted */
+  display: none;
 }
 
 .timeline-items{
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 12px;
+  flex-direction: column;
+  gap: 0;
   position: relative;
   z-index: 2;
 }
 
 .timeline-item{
-  width: 22%;
+  width: 100%;
   position: relative;
-  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 80px 1fr;
+  gap: 32px;
+  align-items: center;
+  margin-bottom: 60px;
 }
 
-.timeline-item .timeline-content{
-  max-width: 240px;
-  position: relative;
-  z-index: 2;
-}
-
-.timeline-item.top .timeline-content{
-  margin-bottom: 76px;
-}
-
-.timeline-item.bottom .timeline-content{
-  margin-top: 76px;
+.timeline-item:last-child{
+  margin-bottom: 0;
 }
 
 .timeline-item .timeline-content{
   background: rgba(255,255,255,0.04);
-  padding: 24px;
-  border-radius: 16px;
+  padding: 32px;
+  border-radius: 20px;
   border: 1px solid rgba(255,255,255,0.08);
   backdrop-filter: blur(10px);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
 }
 
 .timeline-item:not(.muted) .timeline-content:hover{
@@ -96,8 +90,21 @@
   border-color: rgba(22,246,168,0.3);
 }
 
+/* Alternating layout: left-right */
+.timeline-item.top .timeline-content{
+  grid-column: 1;
+  grid-row: 1;
+  text-align: right;
+}
+
+.timeline-item.bottom .timeline-content{
+  grid-column: 3;
+  grid-row: 1;
+  text-align: left;
+}
+
 .timeline-item-title{
-  font-size: 18px;
+  font-size: 22px;
   margin: 0 0 12px 0;
   font-weight: 700;
   color: #fff;
@@ -105,31 +112,24 @@
 
 .timeline-item-desc{
   margin: 0;
-  font-size: 15px;
+  font-size: 16px;
   color: rgba(255,255,255,0.7);
   line-height: 1.7;
 }
 
 .timeline-marker{
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 1px;
-  height: 1px;
+  grid-column: 2;
+  grid-row: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   z-index: 5;
 }
 
-/* connectors removed — only show circular markers with numbers */
-.timeline-item.top .timeline-marker::before,
-.timeline-item.bottom .timeline-marker::after{
-  display: none;
-}
-
-
 .marker-circle{
-  width: 64px;
-  height: 64px;
+  width: 72px;
+  height: 72px;
   border-radius: 999px;
   background: rgba(255,255,255,0.04);
   border: 3px solid rgba(22,246,168,0.3);
@@ -154,18 +154,14 @@
 .timeline-item.muted .marker-circle{
   border-color: rgba(255,255,255,0.1);
   background: rgba(255,255,255,0.02);
+  width: 80px;
+  height: 80px;
 }
 
-
 .marker-number{
-  position: relative;
-  left: 0;
-  transform: none;
-  top: 0;
   font-weight: 900;
-  font-size: 20px;
+  font-size: 24px;
   line-height: 1;
-  z-index: 6;
   background: linear-gradient(135deg, #16f6a8 0%, #00d4ff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -179,38 +175,43 @@
   background-clip: text;
 }
 
-.timeline-item.muted .marker-circle{
-  width: 72px;
-  height: 72px;
-  border-color: rgba(255,255,255,0.08);
+/* Vertical line connecting markers on desktop */
+.timeline-items::before{
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 40px;
+  bottom: 40px;
+  width: 2px;
+  background: linear-gradient(180deg, 
+    transparent 0%, 
+    rgba(22,246,168,0.2) 10%, 
+    rgba(22,246,168,0.2) 90%, 
+    transparent 100%);
+  transform: translateX(-50%);
+  z-index: 1;
 }
 
-/* Ensure muted item spacing is increased so larger marker doesn't overlap text */
-.timeline-item.muted.bottom .timeline-content{
-  margin-top: 96px;
-}
-.timeline-item.muted.top .timeline-content{
-  margin-bottom: 96px;
-}
-
-/* Ensure marker visuals sit above content */
-.marker-circle, .marker-circle::after, .marker-number{
-  z-index: 6;
-  position: relative;
-}
-
-/* Slightly reduce font size on very small screens to prevent overlap */
-@media (max-width: 520px){
-  .timeline-item .timeline-content{ z-index: 1 }
-  .timeline-item.top .timeline-content, .timeline-item.bottom .timeline-content{ margin: 0; }
-  .timeline-marker{ left: 28px; transform: translate(-50%, -50%); }
-  .marker-number{ top: calc(50% + 22px); font-size: 11px }
-}
-
-@media (max-width: 880px){
-  .timeline-items{ flex-wrap: wrap; gap: 32px; }
-  .timeline-item{ width: 48%; }
-  .timeline-center-line{ left: 4%; right: 4%; top: 54%; }
+@media (max-width: 900px){
+  .timeline-item{
+    grid-template-columns: 1fr 64px 1fr;
+    gap: 24px;
+    margin-bottom: 48px;
+  }
+  .marker-circle{
+    width: 60px;
+    height: 60px;
+  }
+  .timeline-item.muted .marker-circle{
+    width: 68px;
+    height: 68px;
+  }
+  .marker-number{
+    font-size: 20px;
+  }
+  .timeline-item .timeline-content{
+    padding: 24px;
+  }
 }
 
 @media (max-width: 768px){
@@ -223,21 +224,103 @@
   }
 }
 
-@media (max-width: 520px){
-  .timeline-item{ width: 100%; text-align: left; padding-left: 80px; }
-  .timeline-item.top .timeline-content, .timeline-item.bottom .timeline-content{ margin: 0; }
-  .timeline-marker{ left: 32px; transform: translate(-50%, -50%); }
-  .timeline-center-line{ display: none; }
+@media (max-width: 640px){
+  .timeline-items::before{
+    left: 32px;
+    transform: none;
+  }
+  
+  .timeline-item{
+    grid-template-columns: 64px 1fr;
+    gap: 20px;
+    margin-bottom: 40px;
+    align-items: start;
+  }
+  
+  .timeline-marker{
+    grid-column: 1;
+    grid-row: 1;
+  }
+  
+  .timeline-item.top .timeline-content,
+  .timeline-item.bottom .timeline-content{
+    grid-column: 2;
+    grid-row: 1;
+    text-align: left;
+  }
+  
   .marker-circle{
+    width: 56px;
+    height: 56px;
+  }
+  
+  .timeline-item.muted .marker-circle{
+    width: 64px;
+    height: 64px;
+  }
+  
+  .marker-number{
+    font-size: 18px;
+  }
+  
+  .timeline-item .timeline-content{
+    padding: 20px;
+  }
+  
+  .timeline-item-title{
+    font-size: 18px;
+  }
+  
+  .timeline-item-desc{
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px){
+  .timeline-section{
+    padding: 60px 16px;
+  }
+  
+  .timeline-title{
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+  
+  .timeline-item{
+    grid-template-columns: 52px 1fr;
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+  
+  .marker-circle{
+    width: 48px;
+    height: 48px;
+  }
+  
+  .timeline-item.muted .marker-circle{
     width: 52px;
     height: 52px;
   }
-  .timeline-item.muted .marker-circle{
-    width: 60px;
-    height: 60px;
-  }
+  
   .marker-number{
     font-size: 16px;
+  }
+  
+  .timeline-item .timeline-content{
+    padding: 16px;
+  }
+  
+  .timeline-item-title{
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+  
+  .timeline-item-desc{
+    font-size: 14px;
+  }
+  
+  .timeline-items::before{
+    left: 26px;
   }
 }
 

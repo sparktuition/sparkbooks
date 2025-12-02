@@ -34,7 +34,7 @@ export default function Timeline() {
 
           <div className="timeline-items">
             {items.map((it, idx) => (
-              <div className={`timeline-item ${idx % 2 === 0 ? 'top' : 'bottom'} ${idx === items.length - 1 ? 'muted' : ''}`} key={it.num}>
+              <div className={`timeline-item ${idx % 2 === 0 ? 'top' : 'bottom'}`} key={it.num}>
                 <div className="timeline-content">
                   <h3 className="timeline-item-title">{it.title}</h3>
                   <p className="timeline-item-desc">{it.desc}</p>

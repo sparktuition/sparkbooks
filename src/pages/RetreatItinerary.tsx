@@ -7,6 +7,22 @@ const RetreatItinerary: React.FC = () => {
       <div className="retreat-itinerary-inner retreat-inner">
         <h2 className="itinerary-title">Your Seven-Day Transformative Experience</h2>
 
+        <div className="retreat-dates-highlight">
+          <div className="dates-badge">
+            <div className="date-start">
+              <span className="date-label">Arrival</span>
+              <span className="date-value">1 March 2026</span>
+              <span className="date-day">Sunday</span>
+            </div>
+            <div className="dates-separator">to</div>
+            <div className="date-end">
+              <span className="date-label">Departure</span>
+              <span className="date-value">8 March 2026</span>
+              <span className="date-day">Sunday</span>
+            </div>
+          </div>
+        </div>
+
         <div className="timeline-wrapper">
           {/* Left Column - Content */}
           <div className="timeline-left">

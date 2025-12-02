@@ -2,8 +2,8 @@
 .retreat-extraordinary {
   width: 100%;
   padding: 80px 40px;
-  background: radial-gradient(800px 400px at 90% 10%, rgba(24,83,49,0.18) 0%, rgba(16,86,46,0.12) 20%), linear-gradient(180deg, #0f6b4a 0%, #0b5a3e 100%);
-  color: #fff;
+  background: linear-gradient(135deg, #f5faf8 0%, #eef7f3 100%);
+  color: #1a1a1a;
 }
 
 .retreat-extraordinary-inner {
@@ -13,80 +13,139 @@
 
 .retreat-extra-title {
   font-family: 'Georgia', serif;
-  font-size: 44px;
-  margin: 0 0 28px 0;
-  color: #fff;
-  text-align: left;
+  font-size: 48px;
+  margin: 0 0 60px 0;
+  color: #0a5e47;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: -0.5px;
 }
 
 .extra-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 28px 40px;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 32px;
 }
 
 .extra-item {
-  padding: 18px 6px 24px 6px;
+  background: #ffffff;
+  padding: 36px 32px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(10, 94, 71, 0.08);
+  border: 1px solid rgba(10, 94, 71, 0.1);
+  transition: all 0.3s ease;
+}
+
+.extra-item:hover {
+  box-shadow: 0 12px 40px rgba(10, 94, 71, 0.15);
+  transform: translateY(-4px);
 }
 
 .extra-top {
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin-bottom: 10px;
+  gap: 16px;
+  margin-bottom: 20px;
 }
 
 .extra-icon {
-  width: 28px;
-  height: 28px;
+  width: 56px;
+  height: 56px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff;
+  background: linear-gradient(135deg, #0f6b4a 0%, #0a5e47 100%);
+  border-radius: 50%;
+  flex-shrink: 0;
+  color: #ffffff;
+}
+
+.extra-icon svg {
+  stroke: currentColor;
+  width: 22px;
+  height: 22px;
 }
 
 .extra-divider {
   flex: 1;
   height: 2px;
   border: none;
-  background: linear-gradient(90deg, rgba(255,255,255,0.8), rgba(255,255,255,0.3));
+  background: linear-gradient(90deg, rgba(10, 94, 71, 0.3), rgba(10, 94, 71, 0.1));
 }
 
 .extra-heading {
   font-family: 'Georgia', serif;
   font-size: 22px;
-  margin: 6px 0 8px 0;
-  color: #fff;
+  margin: 0 0 12px 0;
+  color: #0a5e47;
+  font-weight: 600;
 }
 
 .extra-text {
   margin: 0;
-  color: rgba(255,255,255,0.95);
+  color: #555555;
   font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-  font-size: 16px;
-  line-height: 1.6;
+  font-size: 15px;
+  line-height: 1.7;
   font-weight: 400;
 }
 
 .extra-conclusion {
-  margin-top: 28px;
-  padding-left: 18px;
-  border-left: 4px solid rgba(255,255,255,0.5);
-  color: rgba(255,255,255,0.9);
-  font-weight: 600;
+  margin-top: 60px;
+  padding: 32px;
+  background: #ffffff;
+  border-radius: 16px;
+  border-left: 4px solid #0a5e47;
+  color: #333333;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.8;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(10, 94, 71, 0.08);
 }
 
 @media (max-width: 1000px) {
   .extra-grid {
     grid-template-columns: 1fr 1fr;
-    gap: 22px;
+    gap: 28px;
   }
 
-  .retreat-extra-title { font-size: 38px; }
+  .retreat-extra-title { 
+    font-size: 40px;
+    margin-bottom: 50px;
+  }
+
+  .extra-item {
+    padding: 28px 24px;
+  }
 }
 
 @media (max-width: 720px) {
-  .retreat-extraordinary { padding: 48px 20px; }
-  .extra-grid { grid-template-columns: 1fr; gap: 18px; }
-  .retreat-extra-title { font-size: 28px; }
+  .retreat-extraordinary { 
+    padding: 60px 24px; 
+  }
+
+  .extra-grid { 
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .retreat-extra-title { 
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
+
+  .extra-heading {
+    font-size: 20px;
+  }
+
+  .extra-text {
+    font-size: 14px;
+  }
+
+  .extra-conclusion {
+    margin-top: 40px;
+    padding: 24px;
+    font-size: 15px;
+  }
 }

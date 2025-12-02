@@ -11,7 +11,7 @@ const RetreatExtraordinary: React.FC = () => {
           <div className="extra-item">
             <div className="extra-top">
               <div className="extra-icon" aria-hidden>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3l9 4.5-9 4.5-9-4.5L12 3z" stroke="#0b5a3e" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3l9 4.5-9 4.5-9-4.5L12 3z" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/></svg>
               </div>
               <hr className="extra-divider" />
             </div>
@@ -22,7 +22,7 @@ const RetreatExtraordinary: React.FC = () => {
           <div className="extra-item">
             <div className="extra-top">
               <div className="extra-icon" aria-hidden>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l2 4 4 .5-3 2 1 4-4-2-4 2 1-4-3-2 4-.5L12 2z" stroke="#0b5a3e" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l2 4 4 .5-3 2 1 4-4-2-4 2 1-4-3-2 4-.5L12 2z" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/></svg>
               </div>
               <hr className="extra-divider" />
             </div>
@@ -33,7 +33,7 @@ const RetreatExtraordinary: React.FC = () => {
           <div className="extra-item">
             <div className="extra-top">
               <div className="extra-icon" aria-hidden>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 6h12M6 12h12M6 18h12" stroke="#0b5a3e" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 6h12M6 12h12M6 18h12" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/></svg>
               </div>
               <hr className="extra-divider" />
             </div>
@@ -44,7 +44,7 @@ const RetreatExtraordinary: React.FC = () => {
           <div className="extra-item">
             <div className="extra-top">
               <div className="extra-icon" aria-hidden>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2v20M2 12h20" stroke="#0b5a3e" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2v20M2 12h20" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/></svg>
               </div>
               <hr className="extra-divider" />
             </div>
@@ -55,7 +55,7 @@ const RetreatExtraordinary: React.FC = () => {
           <div className="extra-item">
             <div className="extra-top">
               <div className="extra-icon" aria-hidden>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 22s4-4 6-6 4-6 4-10c0-4-3-6-7-6s-7 2-7 6c0 4 2 8 4 10s6 6 6 6" stroke="#0b5a3e" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 22s4-4 6-6 4-6 4-10c0-4-3-6-7-6s-7 2-7 6c0 4 2 8 4 10s6 6 6 6" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/></svg>
               </div>
               <hr className="extra-divider" />
             </div>
@@ -66,7 +66,7 @@ const RetreatExtraordinary: React.FC = () => {
           <div className="extra-item">
             <div className="extra-top">
               <div className="extra-icon" aria-hidden>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 21h18M4 7h16M7 3h10" stroke="#0b5a3e" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 21h18M4 7h16M7 3h10" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/></svg>
               </div>
               <hr className="extra-divider" />
             </div>

@@ -55,9 +55,7 @@ const CollectionsPage: React.FC = () => {
             </div>
           </div>
 
-          <div className="collections-visual">
-            <img className="bookshelf-img" src="https://picsum.photos/seed/bookshelf/1000/1200" alt="bookshelf placeholder" />
-          </div>
+          {/* image removed as requested */}
         </div>
       </section>
     </div>

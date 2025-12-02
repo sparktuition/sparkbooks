@@ -30,9 +30,66 @@
   font-size: 56px;
   text-align: left;
   color: #0a5e47;
-  margin: 0 0 70px 0;
+  margin: 0 0 48px 0;
   font-weight: 500;
   letter-spacing: -0.8px;
+}
+
+.retreat-dates-highlight {
+  margin-bottom: 60px;
+  display: flex;
+  justify-content: center;
+}
+
+.dates-badge {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  background: linear-gradient(135deg, rgba(15, 107, 74, 0.08) 0%, rgba(11, 90, 62, 0.06) 100%);
+  border: 2px solid rgba(10, 94, 71, 0.2);
+  border-radius: 16px;
+  padding: 32px 48px;
+  backdrop-filter: blur(8px);
+}
+
+.date-start,
+.date-end {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  min-width: 160px;
+}
+
+.date-label {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #0a5e47;
+  opacity: 0.7;
+}
+
+.date-value {
+  font-family: 'Georgia', serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: #0a5e47;
+  line-height: 1;
+}
+
+.date-day {
+  font-size: 14px;
+  color: #0a5e47;
+  opacity: 0.8;
+  font-weight: 500;
+}
+
+.dates-separator {
+  font-size: 18px;
+  color: #0a5e47;
+  opacity: 0.5;
+  font-weight: 300;
 }
 
 .timeline-wrapper {
@@ -156,6 +213,20 @@
     font-size: 44px;
   }
 
+  .dates-badge {
+    gap: 30px;
+    padding: 28px 40px;
+  }
+
+  .date-value {
+    font-size: 28px;
+  }
+
+  .date-start,
+  .date-end {
+    min-width: 140px;
+  }
+
   .timeline-left-label {
     font-size: 24px;
   }
@@ -176,6 +247,22 @@
 @media (max-width: 768px) {
   .retreat-itinerary {
     padding: 60px 24px;
+  }
+
+  .dates-badge {
+    flex-direction: column;
+    gap: 20px;
+    padding: 24px 32px;
+  }
+
+  .date-start,
+  .date-end {
+    min-width: 100%;
+    text-align: center;
+  }
+
+  .dates-separator {
+    transform: rotate(90deg);
   }
 
   .timeline-wrapper {
@@ -235,6 +322,27 @@
   .itinerary-title {
     font-size: 28px;
     margin-bottom: 40px;
+  }
+
+  .retreat-dates-highlight {
+    margin-bottom: 40px;
+  }
+
+  .dates-badge {
+    padding: 20px 24px;
+    gap: 16px;
+  }
+
+  .date-value {
+    font-size: 24px;
+  }
+
+  .date-label {
+    font-size: 11px;
+  }
+
+  .date-day {
+    font-size: 12px;
   }
 
   .timeline-left {

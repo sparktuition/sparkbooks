@@ -6,6 +6,8 @@ const RetreatHeroTwoColumn: React.FC = () => {
     <section className="retreat-hero retreat-section">
       <div className="retreat-hero-grid retreat-inner">
           <div className="retreat-copy">
+          
+
           <h1 className="retreat-title">Step Into a World Where Creativity Awakens</h1>
 
           <p className="retreat-paragraph">
@@ -19,7 +21,7 @@ const RetreatHeroTwoColumn: React.FC = () => {
 
         <div className="retreat-image">
           <img
-            src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1400&q=80&auto=format&fit=crop"
+             src="/SparkWritersRetreat/jpg (20).jpg"
             alt="Mountain landscape"
           />
         </div>

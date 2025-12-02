@@ -1,83 +1,105 @@
-/* Features section */
 .retreat-features {
   width: 100%;
   padding: 80px 40px;
-  background: radial-gradient(800px 400px at 90% 10%, rgba(24,83,49,0.18) 0%, rgba(16,86,46,0.12) 20%), linear-gradient(180deg, #0f6b4a 0%, #0b5a3e 100%);
-  color: #fff;
+  background: linear-gradient(135deg, #f5faf8 0%, #eef7f3 100%);
+  color: #1a1a1a;
+  box-sizing: border-box;
 }
 
 .retreat-features-inner {
   max-width: 1200px;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .retreat-features-title {
   font-family: 'Georgia', serif;
-  font-size: 44px;
-  margin: 0 0 28px 0;
-  color: #fff;
-  text-align: left;
+  font-size: 48px;
+  margin: 0 0 60px 0;
+  color: #0a5e47;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: -0.5px;
 }
 
 .features-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 22px;
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .feature-card {
-  background: rgba(234, 251, 244, 0.9);
-  color: #042a1f;
-  padding: 28px 26px;
-  border-radius: 12px;
+  background: #ffffff;
+  color: #1a1a1a;
+  padding: 40px 36px;
+  border-radius: 14px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  box-shadow: 0 12px 30px rgba(2,30,20,0.08);
+  gap: 18px;
+  box-shadow: 0 6px 20px rgba(10, 94, 71, 0.05);
+  border: 1px solid rgba(10, 94, 71, 0.06);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+  box-sizing: border-box;
 }
 
-.feature-icon {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: #0f6b4a;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 6px;
+.feature-card:hover {
+  box-shadow: 0 12px 36px rgba(10, 94, 71, 0.12);
+  transform: translateY(-4px);
 }
-
-.feature-icon svg { display: block; }
 
 .feature-title {
   font-family: 'Georgia', serif;
-  font-size: 22px;
-  margin: 0;
-  color: #063a2b;
+  font-size: 24px;
+  margin: 0 0 8px 0;
+  color: #0a5e47;
+  font-weight: 600;
+  line-height: 1.3;
 }
 
 .feature-text {
   margin: 0;
   font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-  color: #0d3326;
-  line-height: 1.6;
+  color: #555555;
+  line-height: 1.7;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 0.3px;
 }
 
 .retreat-features-note {
-  margin-top: 28px;
-  color: rgba(255,255,255,0.95);
-  font-weight: 600;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 16px;
+  color: #333333;
+  font-weight: 500;
   font-size: 16px;
+  line-height: 1.8;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(10, 94, 71, 0.08);
+  border: 1px solid rgba(10, 94, 71, 0.1);
+}
+
+.retreat-features-note strong {
+  color: #0a5e47;
+  font-weight: 700;
 }
 
 @media (max-width: 900px) {
   .features-grid {
     grid-template-columns: 1fr 1fr;
-    gap: 18px;
+    gap: 28px;
   }
 
   .retreat-features-title {
-    font-size: 38px;
+    font-size: 40px;
+    margin-bottom: 50px;
+  }
+
+  .feature-card {
+    padding: 36px 32px;
   }
 }
 
@@ -87,11 +109,26 @@
   }
 
   .retreat-features {
-    padding: 48px 20px;
+    padding: 60px 24px;
   }
 
   .retreat-features-title {
-    font-size: 28px;
-    text-align: left;
+    font-size: 32px;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .feature-title {
+    font-size: 20px;
+  }
+
+  .feature-text {
+    font-size: 14px;
+  }
+
+  .retreat-features-note {
+    padding: 24px;
+    font-size: 15px;
+    margin-top: 40px;
   }
 }

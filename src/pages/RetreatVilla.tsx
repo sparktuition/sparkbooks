@@ -1,24 +1,28 @@
-import React from 'react'
-import './RetreatVilla.css'
+
+import React from 'react';
+import './RetreatVilla.css';
+
+const villaImageFiles = [
+  "jpeg (8).jpeg",
+  "jpg (1).jpg", "jpg (2).jpg", "jpg (3).jpg", "jpg (4).jpg", "jpg (5).jpg", "jpg (6).jpg",
+  "jpg (7).jpg", "jpg (8).jpg", "jpg (9).jpg", "jpg (10).jpg", "jpg (11).jpg", "jpg (12).jpg",
+  "jpg (13).jpg", "jpg (14).jpg", "jpg (15).jpg", "jpg (16).jpg", "jpg (17).jpg", "jpg (18).jpg",
+  "jpg (19).jpg", "jpg (21).jpg", "jpg (22).jpg", "jpg (23).jpg", "jpg (24).jpg", "jpg (25).jpg",
+  "jpg (26).jpg", "jpg (27).jpg", "jpg (28).jpg", "jpg (29).jpg"
+];
+
+const features = [
+  'Modern luxury villa surrounded by pristine Himalayan greenery and natural beauty',
+  'Quiet, peaceful, and completely private surroundings designed for deep creative work',
+  'Clean, premium rooms with thoughtful amenities and exceptional attention to detail',
+  'Panoramic mountain views from terraces, balconies, and intimate writing nooks',
+  'Beautiful outdoor spaces for contemplation, inspiration, and creative breakthroughs',
+  'Hygienic, freshly prepared meals that nourish both body and creative spirit',
+];
 
 const RetreatVilla: React.FC = () => {
-  const villaImages = [
-    { id: 1, alt: 'Modern villa exterior with mountain view' },
-    { id: 2, alt: 'Luxury bedroom with mountain vista' },
-    { id: 3, alt: 'Outdoor terrace with seating area' },
-    { id: 4, alt: 'Living room with fireplace' },
-    { id: 5, alt: 'Balcony overlooking mountains' },
-    { id: 6, alt: 'Dining area with mountain views' },
-  ]
 
-  const features = [
-    'Modern luxury villa surrounded by pristine Himalayan greenery and natural beauty',
-    'Quiet, peaceful, and completely private surroundings designed for deep creative work',
-    'Clean, premium rooms with thoughtful amenities and exceptional attention to detail',
-    'Panoramic mountain views from terraces, balconies, and intimate writing nooks',
-    'Beautiful outdoor spaces for contemplation, inspiration, and creative breakthroughs',
-    'Hygienic, freshly prepared meals that nourish both body and creative spirit',
-  ]
+
 
   return (
     <section className="retreat-villa retreat-section">
@@ -27,9 +31,13 @@ const RetreatVilla: React.FC = () => {
 
         {/* Gallery Section */}
         <div className="villa-gallery">
-          {villaImages.map((image) => (
-            <div key={image.id} className="gallery-item">
-              <div className="gallery-placeholder"></div>
+          {villaImageFiles.map((filename, idx) => (
+            <div key={idx} className="gallery-item">
+              <img
+                src={`/SparkWritersRetreat/${filename}`}
+                alt={`Villa view ${idx + 1}`}
+                className="villa-img"
+              />
             </div>
           ))}
         </div>
@@ -58,7 +66,7 @@ const RetreatVilla: React.FC = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default RetreatVilla
+export default RetreatVilla;

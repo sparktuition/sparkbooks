@@ -17,7 +17,7 @@ const RetreatDaily: React.FC = () => {
             </div>
           </div>
           <div className="daily-image">
-            <div className="image-placeholder nature-field"></div>
+            <img src="/SparkWritersRetreat/jpg (23).jpg" alt="Nature Field" className="daily-img" />
           </div>
         </div>
 
@@ -31,8 +31,8 @@ const RetreatDaily: React.FC = () => {
             </div>
           </div>
           <div className="daily-image">
-            <div className="image-placeholder mentorship"></div>
-          </div>
+            <img src="/SparkWritersRetreat/jpeg (5).jpeg" alt="Nature Field" className="daily-img" />
+         </div>
         </div>
 
         {/* Item 3 */}
@@ -45,8 +45,8 @@ const RetreatDaily: React.FC = () => {
             </div>
           </div>
           <div className="daily-image">
-            <div className="image-placeholder story-dev"></div>
-          </div>
+         <img src="/SparkWritersRetreat/jpeg (7).jpeg" alt="Nature Field" className="daily-img" />
+         </div>
         </div>
 
         {/* Item 4 */}
@@ -59,8 +59,8 @@ const RetreatDaily: React.FC = () => {
             </div>
           </div>
           <div className="daily-image">
-            <div className="image-placeholder creative-insights"></div>
-          </div>
+           <img src="/SparkWritersRetreat/jpeg (8).jpeg" alt="Nature Field" className="daily-img" />
+        </div>
         </div>
 
         {/* Item 5 */}
@@ -73,8 +73,8 @@ const RetreatDaily: React.FC = () => {
             </div>
           </div>
           <div className="daily-image">
-            <div className="image-placeholder writing-sanctuary"></div>
-          </div>
+            <img src="/SparkWritersRetreat/jpg (21).jpg" alt="Nature Field" className="daily-img" />
+         </div>
         </div>
 
         {/* Item 6 */}
@@ -87,8 +87,8 @@ const RetreatDaily: React.FC = () => {
             </div>
           </div>
           <div className="daily-image">
-            <div className="image-placeholder inner-storyteller"></div>
-          </div>
+           <img src="/SparkWritersRetreat/jpg (21).jpg" alt="Nature Field" className="daily-img" />
+         </div>
         </div>
       </div>
     </section>

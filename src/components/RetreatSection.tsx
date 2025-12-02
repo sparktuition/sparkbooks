@@ -6,7 +6,7 @@ const RetreatSection: React.FC = () => {
   const navigate = useNavigate()
 
   return (
-    <div className="retreat-section">
+    <div className="retreat-bleed">
       <section className="retreat-promo">
         <div className="retreat-promo-inner">
           <div className="retreat-content">
@@ -24,7 +24,7 @@ const RetreatSection: React.FC = () => {
           <div className="retreat-visual-preview">
             <img 
               className="retreat-preview-img" 
-              src="https://picsum.photos/seed/writers-retreat/600/400" 
+              src="/SparkWritersRetreat/book.jpg"
               alt="writers retreat preview" 
             />
           </div>

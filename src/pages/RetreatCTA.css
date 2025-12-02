@@ -54,6 +54,35 @@
   border-color: #0f6b3a;
 }
 
+/* Modal form styles for retreat CTA */
+.retreat-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(2,6,23,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1200;
+  padding: 24px;
+}
+.retreat-modal {
+  width: 100%;
+  max-width: 720px;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 20px 60px rgba(2,6,23,0.45);
+}
+.retreat-modal h3 { margin: 0 0 10px 0; color: #1e3a1a }
+.retreat-form { display: grid; gap: 12px }
+.retreat-form label { display:flex; flex-direction:column; font-size:13px; color:#23310d }
+.retreat-form input, .retreat-form textarea, .retreat-form select { margin-top:6px; padding:10px 12px; border-radius:8px; border:1px solid #d6eac8; font-size:14px }
+.retreat-form-actions { display:flex; gap:12px; justify-content:flex-end; margin-top:6px }
+.retreat-form .btn-outline { background: transparent; border: 1px solid #1e3a1a; color: #1e3a1a; padding:8px 14px; border-radius:8px }
+.retreat-form .btn-primary { background: #1e3a1a; color: #eaffd6; padding:8px 14px; border-radius:8px; border:none }
+.cta-success { margin-top: 10px; color: #1d6d29; font-weight:600 }
+.cta-error { margin-top: 10px; color: #912a2a; font-weight:600 }
+
 /* Responsive adjustments */
 @media (max-width: 1200px) {
   .retreat-cta {

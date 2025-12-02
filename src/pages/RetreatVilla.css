@@ -1,3 +1,165 @@
+.villa-modal-overlay {
+    animation: villaModalFadeIn 0.3s ease;
+}
+
+@keyframes villaModalFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.villa-modal {
+    background: linear-gradient(135deg, #f8f8fa 0%, #eaeaf3 100%);
+    border-radius: 20px;
+    box-shadow: 0 12px 48px rgba(0,0,0,0.22);
+    padding: 32px 32px 20px 32px;
+    position: relative;
+    max-width: 90vw;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+    border: 1px solid #e0e0e0;
+}
+.villa-modal-close {
+    background: linear-gradient(135deg, #222 0%, #444 100%);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    font-size: 1.7em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+    transition: background 0.2s, box-shadow 0.2s;
+    border: 1px solid #fff;
+}
+.villa-modal-close:hover {
+    background: linear-gradient(135deg, #444 0%, #222 100%);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.22);
+}
+.villa-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    touch-action: none;
+}
+.villa-modal {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.18);
+    padding: 24px 24px 16px 24px;
+    position: relative;
+    max-width: 90vw;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+}
+.villa-modal-img {
+    max-width: 80vw;
+    max-height: 60vh;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+    display: block;
+}
+@media (max-width: 600px) {
+    .villa-modal {
+        max-width: 98vw;
+        max-height: 98vh;
+        padding: 8vw 2vw 4vw 2vw;
+    }
+    .villa-modal-img {
+        max-width: 96vw;
+        max-height: 60vh;
+        width: 100%;
+        height: auto;
+    }
+    .villa-modal-close {
+        top: 8px;
+        right: 8px;
+        width: 28px;
+        height: 28px;
+        font-size: 1.3em;
+    }
+}
+/* Modal styles for full-size villa images */
+.villa-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.villa-modal {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.18);
+    padding: 24px 24px 16px 24px;
+    position: relative;
+    max-width: 90vw;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.villa-modal-img {
+    max-width: 80vw;
+    max-height: 70vh;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+}
+
+.villa-modal-close {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    background: #222;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    font-size: 1.6em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+    transition: background 0.2s;
+}
+.villa-modal-close:hover {
+    background: #444;
+}
+/* Consistent villa image sizing */
+.villa-img {
+    width: 220px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    display: block;
+    margin: 0 auto;
+}
 /*
   Base Styles and Container Setup
   ---

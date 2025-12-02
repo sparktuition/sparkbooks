@@ -11,7 +11,7 @@ const RetreatMentors: React.FC = () => {
           <article className="mentor-card">
             <div className="mentor-image">
               <img
-                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&q=80&auto=format&fit=crop"
+                src="/SparkWritersRetreat/jpeg%20(1).jpeg"
                 alt="Dr. Manjiri Prabhu"
               />
             </div>
@@ -30,7 +30,7 @@ const RetreatMentors: React.FC = () => {
           <article className="mentor-card">
             <div className="mentor-image">
               <img
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80&auto=format&fit=crop"
+               src="/SparkWritersRetreat/jpeg%20(2).jpeg"
                 alt="Eshwar Sundaresan"
               />
             </div>

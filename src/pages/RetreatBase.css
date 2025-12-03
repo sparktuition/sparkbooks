@@ -14,7 +14,7 @@ html, body {
 
 .retreat-page-container {
   background: #fafafa;
-  min-height: 100vh;
+  /* Remove min-height: 100vh to prevent nested/double scroll issues. Let content flow naturally. */
   overflow-x: hidden;
 }
 

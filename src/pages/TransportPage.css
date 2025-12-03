@@ -19,7 +19,6 @@
 
 /* Decorative elements in hero */
 .transport-hero::before {
-  content: '';
   position: absolute;
   top: -100px;
   right: -100px;
@@ -31,7 +30,6 @@
 }
 
 .transport-hero::after {
-  content: '';
   position: absolute;
   bottom: -150px;
   left: -100px;
@@ -99,7 +97,6 @@
 }
 
 .btn-return::before {
-  content: '←';
   margin-right: 0.5rem;
   font-size: 1.2rem;
   transition: transform 0.3s ease;
@@ -136,7 +133,6 @@
 }
 
 .transport-card::before {
-  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -162,7 +158,6 @@
 }
 
 .transport-card p strong::after {
-  content: '';
   position: absolute;
   bottom: -1px;
   left: 0;
@@ -197,7 +192,6 @@
 }
 
 .pickup-slot::before {
-  content: '🚗';
   position: absolute;
   top: 1.5rem;
   right: 1.5rem;
@@ -277,7 +271,6 @@
 }
 
 .transport-cta::before {
-  content: '';
   position: absolute;
   top: -100px;
   left: -100px;
@@ -341,7 +334,6 @@
 }
 
 .cta-btn::before {
-  content: '';
   position: absolute;
   top: 0;
   left: -100%;

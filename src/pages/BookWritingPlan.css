@@ -10,7 +10,6 @@
 
 /* Decorative background elements */
 .book-writing-plan-section::before {
-  content: '';
   position: absolute;
   top: -150px;
   left: -100px;
@@ -22,7 +21,6 @@
 }
 
 .book-writing-plan-section::after {
-  content: '';
   position: absolute;
   bottom: -150px;
   right: -100px;
@@ -60,7 +58,6 @@
 }
 
 .book-writing-plan-title::before {
-  content: '';
   display: block;
   width: 100px;
   height: 4px;
@@ -101,7 +98,6 @@
 }
 
 .book-writing-plan-list li::before {
-  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -144,7 +140,6 @@
 }
 
 .book-writing-plan-list li.float-icon::after {
-  content: '📝';
   position: absolute;
   top: 1.8rem;
   left: 1.5rem;

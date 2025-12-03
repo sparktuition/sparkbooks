@@ -10,7 +10,6 @@
 
 /* Decorative background elements */
 .retreat-villa::before {
-  content: '';
   position: absolute;
   top: -150px;
   right: -100px;
@@ -22,7 +21,6 @@
 }
 
 .retreat-villa::after {
-  content: '';
   position: absolute;
   bottom: -150px;
   left: -100px;
@@ -55,7 +53,6 @@
 }
 
 .villa-title::after {
-  content: '';
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -110,7 +107,6 @@
 
 /* Overlay on hover */
 .gallery-item::before {
-  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -129,7 +125,6 @@
 
 /* Number indicator (optional) */
 .gallery-item::after {
-  content: '';
   position: absolute;
   top: 1rem;
   right: 1rem;
@@ -156,34 +151,6 @@
 }
 
 /* Add numbers to each image */
-.gallery-item:nth-child(1)::after { content: '1'; }
-.gallery-item:nth-child(2)::after { content: '2'; }
-.gallery-item:nth-child(3)::after { content: '3'; }
-.gallery-item:nth-child(4)::after { content: '4'; }
-.gallery-item:nth-child(5)::after { content: '5'; }
-.gallery-item:nth-child(6)::after { content: '6'; }
-.gallery-item:nth-child(7)::after { content: '7'; }
-.gallery-item:nth-child(8)::after { content: '8'; }
-.gallery-item:nth-child(9)::after { content: '9'; }
-.gallery-item:nth-child(10)::after { content: '10'; }
-.gallery-item:nth-child(11)::after { content: '11'; }
-.gallery-item:nth-child(12)::after { content: '12'; }
-.gallery-item:nth-child(13)::after { content: '13'; }
-.gallery-item:nth-child(14)::after { content: '14'; }
-.gallery-item:nth-child(15)::after { content: '15'; }
-.gallery-item:nth-child(16)::after { content: '16'; }
-.gallery-item:nth-child(17)::after { content: '17'; }
-.gallery-item:nth-child(18)::after { content: '18'; }
-.gallery-item:nth-child(19)::after { content: '19'; }
-.gallery-item:nth-child(20)::after { content: '20'; }
-.gallery-item:nth-child(21)::after { content: '21'; }
-.gallery-item:nth-child(22)::after { content: '22'; }
-.gallery-item:nth-child(23)::after { content: '23'; }
-.gallery-item:nth-child(24)::after { content: '24'; }
-.gallery-item:nth-child(25)::after { content: '25'; }
-.gallery-item:nth-child(26)::after { content: '26'; }
-.gallery-item:nth-child(27)::after { content: '27'; }
-.gallery-item:nth-child(28)::after { content: '28'; }
 
 /* ===== FEATURES SECTION ===== */
 .villa-features {
@@ -226,7 +193,6 @@
 
 /* Checkmark icon */
 .feature-item::before {
-  content: '✓';
   position: absolute;
   left: 1.5rem;
   top: 50%;
@@ -257,7 +223,6 @@
 }
 
 .authenticity-box::before {
-  content: '';
   position: absolute;
   top: 0;
   left: 0;

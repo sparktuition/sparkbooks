@@ -10,7 +10,6 @@
 
 /* Decorative background elements */
 .retreat-why::before {
-  content: '';
   position: absolute;
   top: -150px;
   left: -100px;
@@ -22,7 +21,6 @@
 }
 
 .retreat-why::after {
-  content: '';
   position: absolute;
   bottom: -150px;
   right: -100px;
@@ -55,7 +53,6 @@
 }
 
 .why-title::after {
-  content: '';
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -84,7 +81,6 @@
 
 /* Decorative quote marks */
 .why-subtitle::before {
-  content: '"';
   position: absolute;
   top: 0.5rem;
   left: 1rem;
@@ -95,7 +91,6 @@
 }
 
 .why-subtitle::after {
-  content: '"';
   position: absolute;
   bottom: 0.5rem;
   right: 1rem;
@@ -130,7 +125,6 @@
 }
 
 .feature-card::before {
-  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -152,7 +146,6 @@
 
 /* Hover background effect */
 .feature-card::after {
-  content: '';
   position: absolute;
   top: 0;
   left: -100%;
@@ -189,7 +182,6 @@
 
 /* Subtle glow effect on icon hover */
 .feature-icon::before {
-  content: '';
   position: absolute;
   top: -2px;
   left: -2px;
@@ -219,7 +211,6 @@
 }
 
 .feature-title::after {
-  content: '';
   position: absolute;
   bottom: 0;
   left: 50%;

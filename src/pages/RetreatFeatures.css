@@ -10,7 +10,6 @@
 
 /* Decorative background elements */
 .retreat-features::before {
-  content: '';
   position: absolute;
   top: -150px;
   left: -100px;
@@ -22,7 +21,6 @@
 }
 
 .retreat-features::after {
-  content: '';
   position: absolute;
   bottom: -150px;
   right: -100px;
@@ -55,7 +53,6 @@
 }
 
 .retreat-features-title::after {
-  content: '';
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -92,7 +89,6 @@
 }
 
 .feature-card::before {
-  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -115,7 +111,6 @@
 
 /* Decorative corner accent */
 .feature-card::after {
-  content: '';
   position: absolute;
   top: 0;
   right: 0;
@@ -143,19 +138,6 @@
   padding-left: 3rem;
 }
 
-/* Custom icons for each feature */
-.feature-card:nth-child(1) .feature-title::before {
-  content: '🏠';
-}
-.feature-card:nth-child(2) .feature-title::before {
-  content: '🌲';
-}
-.feature-card:nth-child(3) .feature-title::before {
-  content: '🍽️';
-}
-.feature-card:nth-child(4) .feature-title::before {
-  content: '✍️';
-}
 
 .feature-title.float-icon::before {
   position: absolute;
@@ -174,7 +156,6 @@
 
 /* Title underline */
 .feature-title::after {
-  content: '';
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -229,7 +210,6 @@
 }
 
 .retreat-features-note strong::after {
-  content: '';
   position: absolute;
   bottom: -1px;
   left: 0;
@@ -241,7 +221,6 @@
 
 /* Decorative bird icon */
 .retreat-features-note::before {
-  content: '🕊️';
   position: absolute;
   top: 1.5rem;
   left: 1.5rem;
@@ -261,7 +240,6 @@
 
 /* Decorative line */
 .retreat-features-note::after {
-  content: '';
   position: absolute;
   bottom: 0;
   left: 50%;

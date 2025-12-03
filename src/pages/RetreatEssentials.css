@@ -15,7 +15,6 @@
 
 /* Decorative background elements */
 .retreat-essentials-section::before {
-  content: '';
   position: absolute;
   top: -150px;
   left: -100px;
@@ -27,7 +26,6 @@
 }
 
 .retreat-essentials-section::after {
-  content: '';
   position: absolute;
   bottom: -150px;
   right: -100px;
@@ -60,7 +58,6 @@
 }
 
 .retreat-essentials-title::after {
-  content: '';
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -123,33 +120,7 @@
   align-items: center;
 }
 
-/* Custom icons for Essentials list */
-.essentials-list li:nth-child(1).float-icon::before {
-  content: '🧥';
-}
-.essentials-list li:nth-child(2).float-icon::before {
-  content: '👟';
-}
-.essentials-list li:nth-child(3).float-icon::before {
-  content: '📓';
-}
 
-/* Custom icons for Do's list */
-.dos-list li:nth-child(1).float-icon::before {
-  content: '✅';
-}
-.dos-list li:nth-child(2).float-icon::before {
-  content: '🤝';
-}
-.dos-list li:nth-child(3).float-icon::before {
-  content: '💪';
-}
-.dos-list li:nth-child(4).float-icon::before {
-  content: '💊';
-}
-.dos-list li:nth-child(5).float-icon::before {
-  content: '📶';
-}
 
 /* Icon positioning */
 .essentials-list li.float-icon::before,
@@ -179,7 +150,6 @@
 /* Hover accent border */
 .essentials-list li::after,
 .dos-list li::after {
-  content: '';
   position: absolute;
   top: 0;
   left: 0;

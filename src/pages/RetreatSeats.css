@@ -10,7 +10,6 @@
 
 /* Decorative background elements */
 .retreat-seats-section::before {
-  content: '';
   position: absolute;
   top: -150px;
   left: -100px;
@@ -22,7 +21,6 @@
 }
 
 .retreat-seats-section::after {
-  content: '';
   position: absolute;
   bottom: -150px;
   right: -100px;
@@ -55,7 +53,6 @@
 }
 
 .retreat-seats-title::after {
-  content: '';
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -79,7 +76,6 @@
 
 /* Decorative corner accent */
 .retreat-seats-content::before {
-  content: '';
   position: absolute;
   top: 0;
   right: 0;
@@ -110,7 +106,6 @@
 }
 
 .seats-highlight::after {
-  content: '';
   position: absolute;
   bottom: -2px;
   left: 0;
@@ -165,7 +160,6 @@
 }
 
 .seats-fee-label::after {
-  content: '';
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -198,7 +192,6 @@
 }
 
 .seats-fee.strike::before {
-  content: '';
   position: absolute;
   top: 50%;
   left: -5%;
@@ -219,7 +212,6 @@
 
 /* Ribbon effect for special offer */
 .seats-offer-block:nth-child(2)::before {
-  content: '✨';
   position: absolute;
   top: 1rem;
   left: 1rem;
@@ -228,7 +220,6 @@
 }
 
 .seats-offer-block:nth-child(2)::after {
-  content: '✨';
   position: absolute;
   bottom: 1rem;
   right: 1rem;
@@ -258,7 +249,6 @@
 }
 
 .retreat-seats-note strong::after {
-  content: '';
   position: absolute;
   bottom: -1px;
   left: 0;
@@ -270,7 +260,6 @@
 
 /* Alarm clock icon for urgency */
 .retreat-seats-note::before {
-  content: '⏰';
   position: absolute;
   top: 50%;
   left: 1.5rem;

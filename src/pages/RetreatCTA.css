@@ -10,7 +10,6 @@
 
 /* Decorative background shapes */
 .retreat-cta::before {
-  content: '';
   position: absolute;
   top: -150px;
   right: -100px;
@@ -22,7 +21,6 @@
 }
 
 .retreat-cta::after {
-  content: '';
   position: absolute;
   bottom: -150px;
   left: -100px;
@@ -55,7 +53,6 @@
 }
 
 .cta-title::before {
-  content: '"';
   position: absolute;
   top: -40px;
   left: 0;
@@ -66,7 +63,6 @@
 }
 
 .cta-title::after {
-  content: '"';
   position: absolute;
   bottom: -60px;
   right: 0;
@@ -84,7 +80,6 @@
 }
 
 .cta-highlight::after {
-  content: '';
   position: absolute;
   bottom: 0;
   left: 0;
@@ -124,7 +119,6 @@
 }
 
 .btn::before {
-  content: '';
   position: absolute;
   top: 0;
   left: -100%;
@@ -268,7 +262,6 @@
 }
 
 .retreat-modal h3::after {
-  content: '';
   position: absolute;
   bottom: 0;
   left: 50%;

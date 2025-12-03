@@ -10,7 +10,6 @@
 
 /* Decorative background elements */
 .retreat-daily::before {
-  content: '';
   position: absolute;
   top: -150px;
   left: -100px;
@@ -22,7 +21,6 @@
 }
 
 .retreat-daily::after {
-  content: '';
   position: absolute;
   bottom: -150px;
   right: -100px;
@@ -54,7 +52,6 @@
 }
 
 .retreat-daily-title::after {
-  content: '';
   position: absolute;
   bottom: -1rem;
   left: 50%;
@@ -120,7 +117,6 @@
 }
 
 .feature-title::after {
-  content: '';
   position: absolute;
   bottom: 0;
   left: 0;
@@ -162,7 +158,6 @@
 }
 
 .daily-image::before {
-  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -200,12 +195,12 @@
   pointer-events: none;
 }
 
-.daily-item-1::before { content: '01'; top: -2rem; left: -2rem; }
-.daily-item-2::before { content: '02'; top: -2rem; right: -2rem; }
-.daily-item-3::before { content: '03'; top: -2rem; left: -2rem; }
-.daily-item-4::before { content: '04'; top: -2rem; right: -2rem; }
-.daily-item-5::before { content: '05'; top: -2rem; left: -2rem; }
-.daily-item-6::before { content: '06'; top: -2rem; right: -2rem; }
+.daily-item-1::before { top: -2rem; left: -2rem; }
+.daily-item-2::before { top: -2rem; right: -2rem; }
+.daily-item-3::before { top: -2rem; left: -2rem; }
+.daily-item-4::before { top: -2rem; right: -2rem; }
+.daily-item-5::before { top: -2rem; left: -2rem; }
+.daily-item-6::before { top: -2rem; right: -2rem; }
 
 /* ===== ANIMATION SUPPORT ===== */
 .daily-item {

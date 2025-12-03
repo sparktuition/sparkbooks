@@ -15,7 +15,6 @@
 
 /* Decorative background elements */
 .retreat-stay-section::before {
-  content: '';
   position: absolute;
   top: -150px;
   left: -100px;
@@ -27,7 +26,6 @@
 }
 
 .retreat-stay-section::after {
-  content: '';
   position: absolute;
   bottom: -150px;
   right: -100px;
@@ -60,7 +58,6 @@
 }
 
 .retreat-stay-title::after {
-  content: '';
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -90,7 +87,6 @@
 
 /* Decorative corner accent */
 .retreat-stay-content::before {
-  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -113,7 +109,6 @@
 
 /* Custom icons for each paragraph */
 .retreat-stay-content:first-of-type p::before {
-  content: '🏔️';
   position: absolute;
   left: 0;
   top: 0.2rem;
@@ -123,7 +118,6 @@
 }
 
 .retreat-stay-content:last-of-type p::before {
-  content: '💰';
   position: absolute;
   left: 0;
   top: 0.2rem;
@@ -145,7 +139,6 @@
 
 /* Hover accent border */
 .retreat-stay-content::after {
-  content: '';
   position: absolute;
   top: 0;
   right: 0;

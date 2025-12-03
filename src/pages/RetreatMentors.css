@@ -10,7 +10,6 @@
 
 /* Decorative background elements */
 .retreat-mentors::before {
-  content: '';
   position: absolute;
   top: -150px;
   left: -100px;
@@ -22,7 +21,6 @@
 }
 
 .retreat-mentors::after {
-  content: '';
   position: absolute;
   bottom: -150px;
   right: -100px;
@@ -55,7 +53,6 @@
 }
 
 .mentors-title::after {
-  content: '';
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -91,7 +88,6 @@
 }
 
 .mentor-card::before {
-  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -142,7 +138,6 @@
 
 /* Decorative frame for image */
 .mentor-image::before {
-  content: '';
   position: absolute;
   top: -8px;
   left: -8px;
@@ -156,6 +151,9 @@
     linear-gradient(#fff 0 0) content-box, 
     linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
+  mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
   mask-composite: exclude;
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -179,7 +177,6 @@
 }
 
 .mentor-name::after {
-  content: '';
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -236,7 +233,6 @@
 }
 
 .mentor-skills li::before {
-  content: '✓';
   position: absolute;
   left: 0.8rem;
   top: 50%;
@@ -272,7 +268,6 @@
 
 .mentors-conclusion::before,
 .mentors-conclusion::after {
-  content: '✨';
   position: absolute;
   font-size: 1.5rem;
   opacity: 0.4;

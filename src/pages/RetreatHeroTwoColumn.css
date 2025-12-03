@@ -10,7 +10,6 @@
 
 /* Decorative background elements */
 .retreat-hero::before {
-  content: '';
   position: absolute;
   top: -150px;
   right: -100px;
@@ -22,7 +21,6 @@
 }
 
 .retreat-hero::after {
-  content: '';
   position: absolute;
   bottom: -150px;
   left: -100px;
@@ -63,7 +61,6 @@
 }
 
 .retreat-title::after {
-  content: '';
   position: absolute;
   bottom: 0;
   left: 0;
@@ -95,7 +92,6 @@
 }
 
 .retreat-paragraph strong::after {
-  content: '';
   position: absolute;
   bottom: -1px;
   left: 0;
@@ -116,7 +112,6 @@
 }
 
 .retreat-image::before {
-  content: '';
   position: absolute;
   top: 0;
   left: 0;

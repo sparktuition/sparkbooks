@@ -10,7 +10,6 @@
 
 /* Decorative background shapes */
 .retreat-audience::before {
-  content: '';
   position: absolute;
   top: -150px;
   left: -100px;
@@ -22,7 +21,6 @@
 }
 
 .retreat-audience::after {
-  content: '';
   position: absolute;
   bottom: -150px;
   right: -100px;
@@ -54,21 +52,12 @@
 }
 
 .audience-title::before {
-  content: '';
   display: block;
   width: 80px;
   height: 4px;
   background: linear-gradient(to right, #6c5ce7, #a29bfe);
-  margin: 0 auto 1.5rem;
-  border-radius: 2px;
-}
-
-/* ===== GRID LAYOUT ===== */
-.audience-grid.stagger-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  margin-bottom: 3.5rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 /* ===== CARD STYLING ===== */
@@ -87,7 +76,6 @@
 }
 
 .audience-card::before {
-  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -108,8 +96,8 @@
 }
 
 /* Card hover accent */
+/* Card hover accent */
 .audience-card::after {
-  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -141,7 +129,6 @@
 
 /* Custom icons for each card */
 .audience-card:nth-child(1) .audience-card-title::before {
-  content: '🌱';
   position: absolute;
   left: 0;
   font-size: 1.4rem;
@@ -149,7 +136,6 @@
 }
 
 .audience-card:nth-child(2) .audience-card-title::before {
-  content: '📖';
   position: absolute;
   left: 0;
   font-size: 1.4rem;
@@ -157,7 +143,6 @@
 }
 
 .audience-card:nth-child(3) .audience-card-title::before {
-  content: '✨';
   position: absolute;
   left: 0;
   font-size: 1.4rem;
@@ -165,7 +150,6 @@
 }
 
 .audience-card:nth-child(4) .audience-card-title::before {
-  content: '💼';
   position: absolute;
   left: 0;
   font-size: 1.4rem;
@@ -173,7 +157,6 @@
 }
 
 .audience-card:nth-child(5) .audience-card-title::before {
-  content: '🌠';
   position: absolute;
   left: 0;
   font-size: 1.4rem;
@@ -216,7 +199,6 @@
 }
 
 .audience-note::before {
-  content: '💫';
   position: absolute;
   top: 1.5rem;
   left: 1.5rem;
@@ -225,7 +207,6 @@
 }
 
 .audience-note::after {
-  content: '';
   position: absolute;
   bottom: 0;
   left: 50%;

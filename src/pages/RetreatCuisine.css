@@ -15,7 +15,6 @@
 
 /* Decorative background elements */
 .retreat-cuisine-section::before {
-  content: '';
   position: absolute;
   top: -150px;
   right: -100px;
@@ -27,7 +26,6 @@
 }
 
 .retreat-cuisine-section::after {
-  content: '';
   position: absolute;
   bottom: -150px;
   left: -100px;
@@ -60,7 +58,6 @@
 }
 
 .retreat-cuisine-title::after {
-  content: '';
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -84,7 +81,6 @@
 
 /* Decorative corner accent */
 .retreat-cuisine-content::before {
-  content: '';
   position: absolute;
   top: 0;
   right: 0;
@@ -106,7 +102,6 @@
 }
 
 .retreat-cuisine-content p::before {
-  content: '🍽️';
   position: absolute;
   left: 0;
   top: 0.2rem;
@@ -147,22 +142,6 @@
   padding-left: 3.5rem;
 }
 
-/* Icons for each list item */
-.cuisine-list li:nth-child(1).float-icon::before {
-  content: '🍳';
-}
-.cuisine-list li:nth-child(2).float-icon::before {
-  content: '🥗';
-}
-.cuisine-list li:nth-child(3).float-icon::before {
-  content: '🍎';
-}
-.cuisine-list li:nth-child(4).float-icon::before {
-  content: '🥘';
-}
-.cuisine-list li:nth-child(5).float-icon::before {
-  content: '🌱';
-}
 
 .cuisine-list li.float-icon::before {
   position: absolute;
@@ -190,7 +169,6 @@
 
 /* Hover accent line */
 .cuisine-list li::after {
-  content: '';
   position: absolute;
   bottom: 0;
   left: 50%;

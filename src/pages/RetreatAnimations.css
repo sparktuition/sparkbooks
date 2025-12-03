@@ -31,7 +31,6 @@
   overflow: hidden;
 }
 .parallax-bg::before {
-  content: '';
   position: absolute;
   inset: -10% -10%;
   background: radial-gradient(600px 300px at 10% 0%, rgba(0,0,0,0.04), transparent 60%),

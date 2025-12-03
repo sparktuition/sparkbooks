@@ -1,10 +1,9 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import './RetreatHeroLanding.css'
 
 const RetreatHeroLanding: React.FC = () => {
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }, []);
+  // Remove forced scrolling — let the page flow naturally so the hero section doesn't
+  // cause jumpy or separate scrolling behaviors on small devices.
   return (
     <section className="retreat-hero-main">
       <div className="retreat-hero-content">

@@ -10,7 +10,6 @@
 
 /* Decorative background elements */
 .retreat-itinerary::before {
-  content: '';
   position: absolute;
   top: -150px;
   right: -100px;
@@ -22,7 +21,6 @@
 }
 
 .retreat-itinerary::after {
-  content: '';
   position: absolute;
   bottom: -150px;
   left: -100px;
@@ -55,7 +53,6 @@
 }
 
 .itinerary-title::after {
-  content: '';
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -87,7 +84,6 @@
 }
 
 .dates-badge::before {
-  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -173,7 +169,6 @@
 }
 
 .timeline-left-item::before {
-  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -200,7 +195,6 @@
 }
 
 .timeline-left-label::before {
-  content: '📅';
   position: absolute;
   left: 0;
   top: 50%;

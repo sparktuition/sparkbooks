@@ -15,7 +15,6 @@
 
 /* Decorative background elements */
 .transport-arrangements-page::before {
-  content: '';
   position: absolute;
   top: -150px;
   left: -100px;
@@ -27,7 +26,6 @@
 }
 
 .transport-arrangements-page::after {
-  content: '';
   position: absolute;
   bottom: -150px;
   right: -100px;
@@ -60,7 +58,6 @@
 }
 
 .transport-title::after {
-  content: '';
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -95,7 +92,6 @@
 }
 
 .transport-desc strong::after {
-  content: '';
   position: absolute;
   bottom: -1px;
   left: 0;
@@ -107,7 +103,6 @@
 
 /* Decorative icon in description */
 .transport-desc::before {
-  content: '🚗';
   position: absolute;
   top: 1.5rem;
   left: 1.5rem;
@@ -147,7 +142,6 @@
 
 /* Time icon for slots */
 .slot-card::before {
-  content: '⏰';
   position: absolute;
   left: 1.5rem;
   top: 50%;
@@ -170,7 +164,6 @@
 
 /* Hover accent border */
 .slot-card::after {
-  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -215,7 +208,6 @@
 }
 
 .slot-label::after {
-  content: '';
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -255,7 +247,6 @@
 }
 
 .transport-note strong::after {
-  content: '';
   position: absolute;
   bottom: -1px;
   left: 0;
@@ -267,7 +258,6 @@
 
 /* Decorative note icon */
 .transport-note::before {
-  content: '📝';
   position: absolute;
   top: 1.5rem;
   left: 1.5rem;

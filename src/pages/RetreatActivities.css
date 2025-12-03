@@ -10,7 +10,6 @@
 
 /* Subtle decorative elements */
 .retreat-activities-section::before {
-  content: '';
   position: absolute;
   top: -100px;
   right: -50px;
@@ -22,7 +21,6 @@
 }
 
 .retreat-activities-section::after {
-  content: '';
   position: absolute;
   bottom: -100px;
   left: -50px;
@@ -54,7 +52,6 @@
 }
 
 .retreat-activities-title::before {
-  content: '';
   display: block;
   width: 60px;
   height: 4px;
@@ -88,7 +85,6 @@
 }
 
 .retreat-activities-content p::before {
-  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -119,7 +115,6 @@
 }
 
 .activities-highlight::after {
-  content: '';
   position: absolute;
   bottom: 0;
   left: 0;
@@ -142,7 +137,6 @@
 
 /* Icon decorations for paragraphs */
 .retreat-activities-content p:first-child::after {
-  content: '✨';
   position: absolute;
   top: 1.5rem;
   right: 1.5rem;
@@ -151,7 +145,6 @@
 }
 
 .retreat-activities-content p:last-child::after {
-  content: '🏔️';
   position: absolute;
   top: 1.5rem;
   right: 1.5rem;

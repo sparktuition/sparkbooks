@@ -10,7 +10,6 @@
 
 /* Decorative background elements */
 .retreat-extraordinary::before {
-  content: '';
   position: absolute;
   top: -150px;
   right: -100px;
@@ -22,7 +21,6 @@
 }
 
 .retreat-extraordinary::after {
-  content: '';
   position: absolute;
   bottom: -150px;
   left: -100px;
@@ -55,7 +53,6 @@
 }
 
 .retreat-extra-title::after {
-  content: '';
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -90,7 +87,6 @@
 }
 
 .extra-item::before {
-  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -202,7 +198,6 @@
 }
 
 .extra-conclusion::before {
-  content: '❝';
   position: absolute;
   top: 1.5rem;
   left: 1.5rem;
@@ -213,7 +208,6 @@
 }
 
 .extra-conclusion::after {
-  content: '❞';
   position: absolute;
   bottom: 1.5rem;
   right: 1.5rem;

@@ -3,7 +3,7 @@ import React from 'react';
 import './RetreatVilla.css';
 
 const villaImageFiles = [
-  "jpeg (8).jpeg",
+ 
   "jpg (1).jpg", "jpg (2).jpg", "jpg (3).jpg", "jpg (4).jpg", "jpg (5).jpg", "jpg (6).jpg",
   "jpg (7).jpg", "jpg (8).jpg", "jpg (9).jpg", "jpg (10).jpg", "jpg (11).jpg", "jpg (12).jpg",
   "jpg (13).jpg", "jpg (14).jpg", "jpg (15).jpg", "jpg (16).jpg", "jpg (17).jpg", "jpg (18).jpg",
@@ -33,11 +33,13 @@ const RetreatVilla: React.FC = () => {
         <div className="villa-gallery">
           {villaImageFiles.map((filename, idx) => (
             <div key={idx} className="gallery-item">
-              <img
-                src={`/SparkWritersRetreat/${filename}`}
-                alt={`Villa view ${idx + 1}`}
-                className="villa-img"
-              />
+              <div className="villa-img-container">
+                <img
+                  src={`/SparkWritersRetreat/${filename}`}
+                  alt={`Villa view ${idx + 1}`}
+                  className="villa-img"
+                />
+              </div>
             </div>
           ))}
         </div>

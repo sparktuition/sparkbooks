@@ -1,6 +1,12 @@
+
+import { useEffect } from 'react';
 import './Hero.css'
 
+
 export default function Hero() {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
   return (
     <section className="hero">
       <div className="hero-inner">

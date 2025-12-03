@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './RetreatHeroLanding.css'
 
 const RetreatHeroLanding: React.FC = () => {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
   return (
     <section className="retreat-hero-landing retreat-section">
       <div className="retreat-hero-overlay"></div>

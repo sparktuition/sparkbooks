@@ -1,0 +1,580 @@
+/* RetreatSeats.css - Light & Beautiful Theme */
+
+/* ===== BASE STYLES ===== */
+.retreat-seats-section {
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #dcfce7 0%, #dbeafe 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative background elements */
+.retreat-seats-section::before {
+  content: '';
+  position: absolute;
+  top: -150px;
+  left: -100px;
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.1) 0%, rgba(22, 163, 74, 0.1) 100%);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.retreat-seats-section::after {
+  content: '';
+  position: absolute;
+  bottom: -150px;
+  right: -100px;
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, rgba(30, 64, 175, 0.1) 100%);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* ===== INNER CONTAINER ===== */
+.retreat-seats-inner {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+/* ===== TITLE STYLING ===== */
+.retreat-seats-title {
+  font-family: 'Cormorant Garamond', 'Georgia', serif;
+  font-size: 3.2rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 3rem;
+  line-height: 1.3;
+  position: relative;
+  padding-bottom: 1.5rem;
+}
+
+.retreat-seats-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(to right, #22c55e, #2563eb);
+  border-radius: 2px;
+}
+
+/* ===== CONTENT CONTAINER ===== */
+.retreat-seats-content {
+  background: white;
+  border-radius: 24px;
+  padding: 3rem;
+  box-shadow: 0 20px 40px rgba(34, 197, 94, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative corner accent */
+.retreat-seats-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(135deg, transparent 50%, rgba(34, 197, 94, 0.05) 50%);
+  border-top-right-radius: 24px;
+}
+
+/* ===== DESCRIPTION ===== */
+.retreat-seats-desc {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 1.3rem;
+  line-height: 1.7;
+  color: #4b5563;
+  margin-bottom: 2.5rem;
+  padding: 0 1rem;
+}
+
+.seats-highlight {
+  position: relative;
+  font-weight: 700;
+  color: #22c55e;
+  padding: 0 4px;
+  background: linear-gradient(120deg, rgba(34, 197, 94, 0.1) 0%, transparent 100%);
+  border-radius: 3px;
+  display: inline-block;
+}
+
+.seats-highlight::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #22c55e, transparent);
+  border-radius: 1px;
+}
+
+/* ===== PRICE OFFER SECTION ===== */
+.retreat-seats-offer {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.seats-offer-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, rgba(248, 250, 252, 0.5) 0%, rgba(241, 245, 249, 0.5) 100%);
+  border-radius: 20px;
+  min-width: 200px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.seats-offer-block:nth-child(2) {
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.05) 0%, rgba(22, 163, 74, 0.05) 100%);
+  border: 1px solid rgba(34, 197, 94, 0.1);
+}
+
+.seats-offer-block:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(34, 197, 94, 0.1);
+}
+
+.seats-fee-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.8rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.seats-fee-label::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 2px;
+  background: #d1d5db;
+  border-radius: 1px;
+}
+
+.seats-fee-label.special {
+  color: #22c55e;
+}
+
+.seats-fee-label.special::after {
+  background: #22c55e;
+}
+
+.seats-fee {
+  font-family: 'Cormorant Garamond', 'Georgia', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  line-height: 1;
+}
+
+.seats-fee.strike {
+  position: relative;
+  color: #9ca3af;
+}
+
+.seats-fee.strike::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -5%;
+  right: -5%;
+  height: 3px;
+  background: #ef4444;
+  transform: rotate(-15deg);
+  border-radius: 1.5px;
+}
+
+.seats-fee.special {
+  color: #22c55e;
+  position: relative;
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.1) 0%, rgba(22, 163, 74, 0.05) 100%);
+}
+
+/* Ribbon effect for special offer */
+.seats-offer-block:nth-child(2)::before {
+  content: '✨';
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-size: 1.2rem;
+  opacity: 0.5;
+}
+
+.seats-offer-block:nth-child(2)::after {
+  content: '✨';
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  font-size: 1.2rem;
+  opacity: 0.5;
+}
+
+/* ===== NOTE TEXT ===== */
+.retreat-seats-note {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #4b5563;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, rgba(248, 250, 252, 0.7) 0%, rgba(241, 245, 249, 0.7) 100%);
+  border-radius: 16px;
+  border: 1px solid rgba(34, 197, 94, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.retreat-seats-note strong {
+  color: #2563eb;
+  font-weight: 600;
+  position: relative;
+  padding: 0 2px;
+}
+
+.retreat-seats-note strong::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, #2563eb, transparent);
+  opacity: 0.3;
+}
+
+/* Alarm clock icon for urgency */
+.retreat-seats-note::before {
+  content: '⏰';
+  position: absolute;
+  top: 50%;
+  left: 1.5rem;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+  opacity: 0.3;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.3;
+    transform: translateY(-50%) scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(-50%) scale(1.1);
+  }
+}
+
+/* ===== ANIMATION SUPPORT ===== */
+.retreat-seats-content {
+  opacity: 0;
+  transform: scale(0.95);
+  animation: zoomIn 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes zoomIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Large Tablets */
+@media (max-width: 992px) {
+  .retreat-seats-section {
+    padding: 80px 20px;
+  }
+  
+  .retreat-seats-title {
+    font-size: 2.7rem;
+    margin-bottom: 2.5rem;
+  }
+  
+  .retreat-seats-content {
+    padding: 2.5rem;
+  }
+  
+  .retreat-seats-desc {
+    font-size: 1.2rem;
+  }
+  
+  .seats-fee {
+    font-size: 2.2rem;
+  }
+  
+  .seats-offer-block {
+    padding: 1.8rem;
+    min-width: 180px;
+  }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  .retreat-seats-section {
+    padding: 70px 20px;
+  }
+  
+  .retreat-seats-title {
+    font-size: 2.3rem;
+  }
+  
+  .retreat-seats-content {
+    padding: 2rem;
+  }
+  
+  .retreat-seats-desc {
+    font-size: 1.1rem;
+  }
+  
+  .retreat-seats-offer {
+    gap: 2rem;
+  }
+  
+  .seats-offer-block {
+    padding: 1.5rem;
+    min-width: 160px;
+  }
+  
+  .seats-fee {
+    font-size: 2rem;
+  }
+  
+  .retreat-seats-note {
+    font-size: 1rem;
+    padding: 1.2rem 1.2rem 1.2rem 3.5rem;
+  }
+  
+  /* Adjust decorative circles */
+  .retreat-seats-section::before,
+  .retreat-seats-section::after {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .retreat-seats-section {
+    padding: 60px 15px;
+  }
+  
+  .retreat-seats-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .retreat-seats-content {
+    padding: 1.5rem;
+    border-radius: 20px;
+  }
+  
+  .retreat-seats-desc {
+    font-size: 1rem;
+    line-height: 1.6;
+    padding: 0;
+  }
+  
+  .retreat-seats-offer {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  
+  .seats-offer-block {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .seats-fee {
+    font-size: 1.8rem;
+  }
+  
+  .seats-fee.special {
+    padding: 0.4rem 0.8rem;
+  }
+  
+  .retreat-seats-note {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    padding: 1rem 1rem 1rem 3rem;
+  }
+  
+  .retreat-seats-note::before {
+    left: 1rem;
+    font-size: 1.2rem;
+  }
+  
+  /* Hide decorative circles on very small screens */
+  .retreat-seats-section::before,
+  .retreat-seats-section::after {
+    display: none;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 375px) {
+  .retreat-seats-title {
+    font-size: 1.8rem;
+  }
+  
+  .retreat-seats-content {
+    padding: 1.2rem;
+  }
+  
+  .seats-offer-block {
+    padding: 1.2rem;
+  }
+  
+  .seats-fee {
+    font-size: 1.6rem;
+  }
+  
+  .retreat-seats-note {
+    font-size: 0.9rem;
+    padding: 0.8rem 0.8rem 0.8rem 2.8rem;
+  }
+  
+  .retreat-seats-note::before {
+    left: 0.8rem;
+    font-size: 1.1rem;
+  }
+}
+
+/* ===== PRINT STYLES ===== */
+@media print {
+  .retreat-seats-section {
+    background: white !important;
+    padding: 50px 0 !important;
+  }
+  
+  .retreat-seats-content {
+    box-shadow: none !important;
+    border: 1px solid #e0e0e0 !important;
+  }
+  
+  .retreat-seats-title {
+    color: #000 !important;
+  }
+  
+  .retreat-seats-title::after {
+    background: #000 !important;
+  }
+  
+  .seats-highlight {
+    color: #000 !important;
+    background: none !important;
+  }
+  
+  .seats-fee.special {
+    background: #f5f5f5 !important;
+    color: #000 !important;
+  }
+  
+  /* Hide decorative elements for print */
+  .retreat-seats-section::before,
+  .retreat-seats-section::after,
+  .retreat-seats-content::before,
+  .seats-highlight::after,
+  .seats-fee-label::after,
+  .seats-fee.strike::before,
+  .seats-offer-block:nth-child(2)::before,
+  .seats-offer-block:nth-child(2)::after,
+  .retreat-seats-note::before,
+  .retreat-seats-note strong::after {
+    display: none !important;
+  }
+}
+
+/* ===== DARK MODE SUPPORT ===== */
+@media (prefers-color-scheme: dark) {
+  .retreat-seats-section {
+    background: linear-gradient(135deg, #052e16 0%, #172554 100%);
+  }
+  
+  .retreat-seats-title {
+    color: #ffffff;
+  }
+  
+  .retreat-seats-content {
+    background: #1f2937;
+    border: 1px solid #374151;
+  }
+  
+  .retreat-seats-desc {
+    color: #d1d5db;
+  }
+  
+  .seats-highlight {
+    color: #4ade80;
+    background: linear-gradient(120deg, rgba(34, 197, 94, 0.2) 0%, transparent 100%);
+  }
+  
+  .seats-offer-block {
+    background: linear-gradient(135deg, rgba(31, 41, 55, 0.5) 0%, rgba(55, 65, 81, 0.5) 100%);
+  }
+  
+  .seats-offer-block:nth-child(2) {
+    background: linear-gradient(135deg, rgba(34, 197, 94, 0.1) 0%, rgba(22, 163, 74, 0.05) 100%);
+    border: 1px solid rgba(34, 197, 94, 0.2);
+  }
+  
+  .seats-fee {
+    color: #f3f4f6;
+  }
+  
+  .seats-fee-label.special {
+    color: #4ade80;
+  }
+  
+  .seats-fee.special {
+    color: #4ade80;
+    background: linear-gradient(135deg, rgba(34, 197, 94, 0.15) 0%, rgba(22, 163, 74, 0.1) 100%);
+  }
+  
+  .retreat-seats-note {
+    background: linear-gradient(135deg, rgba(31, 41, 55, 0.7) 0%, rgba(55, 65, 81, 0.7) 100%);
+    color: #d1d5db;
+    border: 1px solid rgba(34, 197, 94, 0.2);
+  }
+  
+  .retreat-seats-note strong {
+    color: #60a5fa;
+  }
+  
+  /* Adjust decorative circles for dark mode */
+  .retreat-seats-section::before {
+    background: linear-gradient(135deg, rgba(34, 197, 94, 0.05) 0%, rgba(22, 163, 74, 0.05) 100%);
+  }
+  
+  .retreat-seats-section::after {
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.05) 0%, rgba(30, 64, 175, 0.05) 100%);
+  }
+}

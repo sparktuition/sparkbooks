@@ -1,42 +1,74 @@
-/* Retreat Itinerary Section */
-.retreat-itinerary {
-  width: 100%;
-  padding: 100px 40px;
-  background: linear-gradient(135deg, rgba(232, 245, 240, 0.8) 0%, rgba(208, 235, 225, 0.6) 100%);
+/* RetreatItinerary.css - Light & Beautiful Theme */
+
+/* ===== BASE STYLES ===== */
+.retreat-itinerary.retreat-section {
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #fefce8 0%, #fffbeb 100%);
   position: relative;
   overflow: hidden;
 }
 
+/* Decorative background elements */
 .retreat-itinerary::before {
   content: '';
   position: absolute;
-  top: 0;
-  right: -20%;
-  width: 50%;
-  height: 100%;
-  background: radial-gradient(circle at 100% 50%, rgba(15, 107, 74, 0.06) 0%, transparent 70%);
-  pointer-events: none;
-}
-
-.retreat-itinerary-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  position: relative;
+  top: -150px;
+  right: -100px;
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(135deg, rgba(251, 191, 36, 0.08) 0%, rgba(245, 158, 11, 0.08) 100%);
+  border-radius: 50%;
   z-index: 1;
 }
 
-.itinerary-title {
-  font-family: 'Georgia', serif;
-  font-size: 56px;
-  text-align: left;
-  color: #0a5e47;
-  margin: 0 0 48px 0;
-  font-weight: 500;
-  letter-spacing: -0.8px;
+.retreat-itinerary::after {
+  content: '';
+  position: absolute;
+  bottom: -150px;
+  left: -100px;
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(135deg, rgba(217, 119, 6, 0.08) 0%, rgba(180, 83, 9, 0.08) 100%);
+  border-radius: 50%;
+  z-index: 1;
 }
 
+/* ===== INNER CONTAINER ===== */
+.retreat-itinerary-inner.retreat-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* ===== TITLE STYLING ===== */
+.itinerary-title {
+  font-family: 'Cormorant Garamond', 'Georgia', serif;
+  font-size: 3.2rem;
+  font-weight: 600;
+  color: #2d3436;
+  text-align: center;
+  margin-bottom: 3rem;
+  line-height: 1.3;
+  position: relative;
+  padding-bottom: 1.5rem;
+}
+
+.itinerary-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(to right, #f59e0b, #d97706);
+  border-radius: 2px;
+}
+
+/* ===== DATES HIGHLIGHT ===== */
 .retreat-dates-highlight {
-  margin-bottom: 60px;
+  margin-bottom: 4rem;
   display: flex;
   justify-content: center;
 }
@@ -44,338 +76,581 @@
 .dates-badge {
   display: flex;
   align-items: center;
-  gap: 40px;
-  background: linear-gradient(135deg, rgba(15, 107, 74, 0.08) 0%, rgba(11, 90, 62, 0.06) 100%);
-  border: 2px solid rgba(10, 94, 71, 0.2);
+  gap: 2rem;
+  background: white;
+  padding: 2rem 3rem;
   border-radius: 16px;
-  padding: 32px 48px;
-  backdrop-filter: blur(8px);
+  box-shadow: 0 15px 35px rgba(245, 158, 11, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  position: relative;
+  overflow: hidden;
 }
 
+.dates-badge::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(to right, #f59e0b, #d97706);
+  border-radius: 2px 2px 0 0;
+}
+
+/* Date start and end styling */
 .date-start,
 .date-end {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
-  min-width: 160px;
+  text-align: center;
+  min-width: 150px;
 }
 
 .date-label {
-  font-size: 12px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
   font-weight: 600;
+  color: #6b7280;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  color: #0a5e47;
-  opacity: 0.7;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
 }
 
 .date-value {
-  font-family: 'Georgia', serif;
-  font-size: 32px;
-  font-weight: 700;
-  color: #0a5e47;
-  line-height: 1;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.25rem;
 }
 
 .date-day {
-  font-size: 14px;
-  color: #0a5e47;
-  opacity: 0.8;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  color: #f59e0b;
   font-weight: 500;
 }
 
 .dates-separator {
-  font-size: 18px;
-  color: #0a5e47;
-  opacity: 0.5;
-  font-weight: 300;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #9ca3af;
+  padding: 0 1rem;
 }
 
+/* ===== TIMELINE LAYOUT ===== */
 .timeline-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: flex-start;
+  gap: 4rem;
+  align-items: start;
+  position: relative;
 }
 
-/* Left Column */
+/* Left Column - Content */
 .timeline-left {
   display: flex;
   flex-direction: column;
-  gap: 80px;
-  padding-right: 40px;
+  gap: 3rem;
+  padding-top: 2rem;
 }
 
 .timeline-left-item {
-  text-align: center;
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(245, 158, 11, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-left-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(245, 158, 11, 0.15);
+}
+
+.timeline-left-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to bottom, #f59e0b, #d97706);
+  border-radius: 2px 0 0 2px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.timeline-left-item:hover::before {
+  opacity: 1;
 }
 
 .timeline-left-label {
-  font-family: 'Georgia', serif;
-  font-size: 28px;
-  color: #0a5e47;
-  margin: 0 0 16px 0;
-  font-weight: 500;
-  letter-spacing: -0.3px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.8rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.timeline-left-label::before {
+  content: '📅';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  opacity: 0.6;
 }
 
 .timeline-left-text {
-  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-  font-size: 16px;
-  color: #4a4a4a;
-  line-height: 1.7;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #4b5563;
   margin: 0;
-  font-weight: 400;
 }
 
 /* Right Column - Timeline */
 .timeline-right {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 60px;
-  padding-left: 40px;
+  padding-top: 2rem;
 }
 
 .timeline-connector-line {
   position: absolute;
-  left: 0;
-  top: 40px;
+  left: 40px;
+  top: 0;
   bottom: 0;
   width: 2px;
-  background: linear-gradient(to bottom, #0a5e47, rgba(10, 94, 71, 0.1));
+  background: linear-gradient(to bottom, #f59e0b, transparent, #d97706);
+  border-radius: 1px;
 }
 
 .timeline-node {
   position: relative;
-  display: flex;
-  align-items: center;
-  gap: 24px;
-  z-index: 2;
+  margin-bottom: 4rem;
+  padding-left: 100px;
+  min-height: 120px;
 }
 
-.timeline-node:first-child {
-  justify-content: flex-start;
+.timeline-node:last-child {
+  margin-bottom: 0;
 }
 
 .timeline-number {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  background: #c9e8de;
-  color: #0a5e47;
-  font-family: 'Georgia', serif;
-  font-size: 28px;
-  font-weight: 600;
-  flex-shrink: 0;
-  box-shadow: 0 4px 16px rgba(10, 94, 71, 0.12);
-  border: 3px solid #fff;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+  box-shadow: 0 10px 25px rgba(245, 158, 11, 0.3);
+  z-index: 2;
+  transition: transform 0.3s ease;
+}
+
+.timeline-node:hover .timeline-number {
+  transform: scale(1.1);
 }
 
 .timeline-dot {
-  display: none;
+  position: absolute;
+  left: 39px;
+  top: 40px;
+  width: 12px;
+  height: 12px;
+  background: white;
+  border: 3px solid #f59e0b;
+  border-radius: 50%;
+  z-index: 3;
 }
 
 .timeline-node-label {
-  font-family: 'Georgia', serif;
-  font-size: 24px;
-  color: #0a5e47;
-  margin: 0;
-  font-weight: 500;
-  margin-bottom: 8px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
 }
 
 .timeline-node-text {
-  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-  font-size: 16px;
-  color: #666;
-  line-height: 1.65;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #4b5563;
   margin: 0;
-  font-weight: 400;
+  padding-right: 1rem;
 }
 
-/* Responsive */
-@media (max-width: 1024px) {
-  .timeline-wrapper {
-    gap: 40px;
-  }
+/* Special styling for middle node (Days 2-6) */
+.timeline-node:nth-child(2) .timeline-node-label {
+  color: #d97706;
+}
 
-  .timeline-left {
-    gap: 60px;
-    padding-right: 30px;
-  }
+/* ===== ANIMATION SUPPORT ===== */
+.stagger-list > * {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards;
+}
 
+.timeline-left-item:nth-child(1) { animation-delay: 0.1s; }
+.timeline-left-item:nth-child(2) { animation-delay: 0.2s; }
+
+.timeline-node:nth-child(1) { animation-delay: 0.3s; }
+.timeline-node:nth-child(2) { animation-delay: 0.4s; }
+.timeline-node:nth-child(3) { animation-delay: 0.5s; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Large Tablets */
+@media (max-width: 992px) {
+  .retreat-itinerary.retreat-section {
+    padding: 80px 20px;
+  }
+  
   .itinerary-title {
-    font-size: 44px;
+    font-size: 2.7rem;
+    margin-bottom: 2.5rem;
   }
-
+  
   .dates-badge {
-    gap: 30px;
-    padding: 28px 40px;
+    padding: 1.8rem 2.5rem;
+    gap: 1.5rem;
   }
-
+  
   .date-value {
-    font-size: 28px;
+    font-size: 1.3rem;
   }
-
-  .date-start,
-  .date-end {
-    min-width: 140px;
+  
+  .timeline-wrapper {
+    gap: 3rem;
   }
-
+  
+  .timeline-left {
+    gap: 2rem;
+  }
+  
+  .timeline-left-item {
+    padding: 1.8rem;
+  }
+  
   .timeline-left-label {
-    font-size: 24px;
+    font-size: 1.6rem;
   }
-
-  .timeline-left-text {
-    font-size: 15px;
+  
+  .timeline-node {
+    padding-left: 90px;
+    min-height: 110px;
+    margin-bottom: 3rem;
   }
-
-  .timeline-node-label {
-    font-size: 22px;
+  
+  .timeline-number {
+    width: 70px;
+    height: 70px;
+    font-size: 1.8rem;
   }
-
-  .timeline-node-text {
-    font-size: 15px;
+  
+  .timeline-dot {
+    left: 34px;
+    top: 35px;
   }
 }
 
+/* Tablets */
 @media (max-width: 768px) {
-  .retreat-itinerary {
-    padding: 60px 24px;
+  .retreat-itinerary.retreat-section {
+    padding: 70px 20px;
   }
-
+  
+  .itinerary-title {
+    font-size: 2.3rem;
+  }
+  
   .dates-badge {
     flex-direction: column;
-    gap: 20px;
-    padding: 24px 32px;
+    gap: 1rem;
+    padding: 1.5rem;
+    text-align: center;
   }
-
+  
   .date-start,
   .date-end {
     min-width: 100%;
-    text-align: center;
   }
-
+  
   .dates-separator {
-    transform: rotate(90deg);
+    padding: 0.5rem 0;
   }
-
+  
   .timeline-wrapper {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 3rem;
   }
-
-  .timeline-left {
-    gap: 50px;
-    padding-right: 0;
-    padding-bottom: 40px;
-    border-bottom: 2px solid rgba(10, 94, 71, 0.2);
-  }
-
+  
   .timeline-right {
-    padding-left: 0;
-    gap: 50px;
+    padding-top: 0;
   }
-
+  
+  .timeline-left {
+    padding-top: 0;
+  }
+  
   .timeline-connector-line {
-    display: none;
+    left: 40px;
+    top: 0;
+    bottom: 0;
   }
-
-  .itinerary-title {
-    font-size: 36px;
-    margin-bottom: 50px;
-  }
-
-  .timeline-left-label {
-    font-size: 22px;
-  }
-
-  .timeline-left-text {
-    font-size: 14px;
-  }
-
-  .timeline-number {
-    width: 50px;
-    height: 50px;
-    font-size: 24px;
-  }
-
-  .timeline-node-label {
-    font-size: 20px;
-  }
-
-  .timeline-node-text {
-    font-size: 14px;
+  
+  /* Adjust decorative circles */
+  .retreat-itinerary::before,
+  .retreat-itinerary::after {
+    width: 300px;
+    height: 300px;
   }
 }
 
-@media (max-width: 480px) {
-  .retreat-itinerary {
-    padding: 48px 16px;
+/* Mobile */
+@media (max-width: 576px) {
+  .retreat-itinerary.retreat-section {
+    padding: 60px 15px;
   }
-
+  
   .itinerary-title {
-    font-size: 28px;
-    margin-bottom: 40px;
+    font-size: 2rem;
+    margin-bottom: 2rem;
   }
-
-  .retreat-dates-highlight {
-    margin-bottom: 40px;
-  }
-
+  
   .dates-badge {
-    padding: 20px 24px;
-    gap: 16px;
+    padding: 1.2rem;
+    margin-bottom: 3rem;
   }
-
+  
   .date-value {
-    font-size: 24px;
+    font-size: 1.2rem;
   }
-
-  .date-label {
-    font-size: 11px;
-  }
-
+  
   .date-day {
-    font-size: 12px;
+    font-size: 0.9rem;
   }
-
+  
   .timeline-left {
-    gap: 40px;
+    gap: 1.5rem;
   }
-
-  .timeline-right {
-    gap: 40px;
+  
+  .timeline-left-item {
+    padding: 1.5rem;
   }
-
+  
   .timeline-left-label {
-    font-size: 20px;
-    margin-bottom: 12px;
+    font-size: 1.4rem;
   }
-
+  
   .timeline-left-text {
-    font-size: 13px;
+    font-size: 1rem;
     line-height: 1.6;
   }
-
+  
+  .timeline-node {
+    padding-left: 80px;
+    min-height: 100px;
+    margin-bottom: 2.5rem;
+  }
+  
   .timeline-number {
-    width: 46px;
-    height: 46px;
-    font-size: 22px;
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
   }
-
+  
+  .timeline-dot {
+    left: 29px;
+    top: 30px;
+    width: 10px;
+    height: 10px;
+  }
+  
   .timeline-node-label {
-    font-size: 18px;
-    margin-bottom: 6px;
+    font-size: 1.4rem;
   }
-
+  
   .timeline-node-text {
-    font-size: 13px;
+    font-size: 1rem;
     line-height: 1.6;
+  }
+  
+  /* Hide decorative circles on very small screens */
+  .retreat-itinerary::before,
+  .retreat-itinerary::after {
+    display: none;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 375px) {
+  .itinerary-title {
+    font-size: 1.8rem;
+  }
+  
+  .timeline-left-item {
+    padding: 1.2rem;
+  }
+  
+  .timeline-left-label {
+    font-size: 1.3rem;
+  }
+  
+  .timeline-left-text {
+    font-size: 0.95rem;
+  }
+  
+  .timeline-node {
+    padding-left: 70px;
+  }
+  
+  .timeline-number {
+    width: 55px;
+    height: 55px;
+    font-size: 1.3rem;
+  }
+  
+  .timeline-dot {
+    left: 24px;
+    top: 27px;
+  }
+  
+  .timeline-node-label {
+    font-size: 1.2rem;
+  }
+  
+  .timeline-node-text {
+    font-size: 0.95rem;
+  }
+}
+
+/* ===== PRINT STYLES ===== */
+@media print {
+  .retreat-itinerary.retreat-section {
+    background: white !important;
+    padding: 50px 0 !important;
+  }
+  
+  .dates-badge,
+  .timeline-left-item {
+    box-shadow: none !important;
+    border: 1px solid #e0e0e0 !important;
+  }
+  
+  .itinerary-title {
+    color: #000 !important;
+  }
+  
+  .itinerary-title::after {
+    background: #000 !important;
+  }
+  
+  .date-value {
+    color: #000 !important;
+  }
+  
+  .date-day {
+    color: #666 !important;
+  }
+  
+  /* Hide decorative elements for print */
+  .retreat-itinerary::before,
+  .retreat-itinerary::after,
+  .dates-badge::before,
+  .timeline-left-item::before,
+  .timeline-left-label::before,
+  .timeline-connector-line,
+  .timeline-dot {
+    display: none !important;
+  }
+  
+  .timeline-number {
+    background: #000 !important;
+    color: white !important;
+    box-shadow: none !important;
+  }
+}
+
+/* ===== DARK MODE SUPPORT ===== */
+@media (prefers-color-scheme: dark) {
+  .retreat-itinerary.retreat-section {
+    background: linear-gradient(135deg, #1a1a2e 0%, #292524 100%);
+  }
+  
+  .itinerary-title {
+    color: #ffffff;
+  }
+  
+  .dates-badge {
+    background: #1f2937;
+    border: 1px solid #374151;
+  }
+  
+  .date-value {
+    color: #f3f4f6;
+  }
+  
+  .date-day {
+    color: #f59e0b;
+  }
+  
+  .timeline-left-item {
+    background: #1f2937;
+    border: 1px solid #374151;
+  }
+  
+  .timeline-left-label {
+    color: #f3f4f6;
+  }
+  
+  .timeline-left-text {
+    color: #d1d5db;
+  }
+  
+  .timeline-node-label {
+    color: #f3f4f6;
+  }
+  
+  .timeline-node-text {
+    color: #d1d5db;
+  }
+  
+  .timeline-connector-line {
+    background: linear-gradient(to bottom, #f59e0b, transparent, #d97706);
+  }
+  
+  /* Adjust decorative circles for dark mode */
+  .retreat-itinerary::before {
+    background: linear-gradient(135deg, rgba(251, 191, 36, 0.05) 0%, rgba(245, 158, 11, 0.05) 100%);
+  }
+  
+  .retreat-itinerary::after {
+    background: linear-gradient(135deg, rgba(217, 119, 6, 0.05) 0%, rgba(180, 83, 9, 0.05) 100%);
   }
 }

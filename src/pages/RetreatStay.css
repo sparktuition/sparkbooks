@@ -1,0 +1,375 @@
+/* RetreatStay.css - Light & Beautiful Theme */
+
+/* ===== BASE STYLES ===== */
+.retreat-stay-section {
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #fef3c7 0%, #fefce8 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Sand theme variation */
+.retreat-stay-section.theme-sand {
+  background: linear-gradient(135deg, #fef3c7 0%, #fefce8 100%);
+}
+
+/* Decorative background elements */
+.retreat-stay-section::before {
+  content: '';
+  position: absolute;
+  top: -150px;
+  left: -100px;
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.08) 0%, rgba(217, 119, 6, 0.08) 100%);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.retreat-stay-section::after {
+  content: '';
+  position: absolute;
+  bottom: -150px;
+  right: -100px;
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(135deg, rgba(180, 83, 9, 0.08) 0%, rgba(146, 64, 14, 0.08) 100%);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* ===== INNER CONTAINER ===== */
+.retreat-stay-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* ===== TITLE STYLING ===== */
+.retreat-stay-title {
+  font-family: 'Cormorant Garamond', 'Georgia', serif;
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: #2d3436;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  line-height: 1.3;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.retreat-stay-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(to right, #d97706, #92400e);
+  border-radius: 2px;
+}
+
+/* Second title spacing adjustment */
+.retreat-stay-title + .retreat-stay-content {
+  margin-top: 0;
+}
+
+/* ===== CONTENT CONTAINER ===== */
+.retreat-stay-content {
+  background: white;
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-shadow: 0 15px 35px rgba(217, 119, 6, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 2.5rem;
+}
+
+/* Decorative corner accent */
+.retreat-stay-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, rgba(217, 119, 6, 0.05) 0%, transparent 50%);
+  border-top-left-radius: 20px;
+}
+
+/* ===== PARAGRAPH STYLING ===== */
+.retreat-stay-content p {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #4a5568;
+  margin: 0;
+  position: relative;
+  padding-left: 2.5rem;
+}
+
+/* Custom icons for each paragraph */
+.retreat-stay-content:first-of-type p::before {
+  content: '🏔️';
+  position: absolute;
+  left: 0;
+  top: 0.2rem;
+  font-size: 1.3rem;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.retreat-stay-content:last-of-type p::before {
+  content: '💰';
+  position: absolute;
+  left: 0;
+  top: 0.2rem;
+  font-size: 1.3rem;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+/* Hover effects */
+.retreat-stay-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(217, 119, 6, 0.15);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.retreat-stay-content:hover p::before {
+  opacity: 0.8;
+}
+
+/* Hover accent border */
+.retreat-stay-content::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to bottom, #d97706, #92400e);
+  border-radius: 0 2px 2px 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.retreat-stay-content:hover::after {
+  opacity: 1;
+}
+
+/* ===== ANIMATION SUPPORT ===== */
+.stagger-list {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.retreat-stay-content:nth-of-type(1) {
+  animation-delay: 0.2s;
+}
+
+.retreat-stay-content:nth-of-type(2) {
+  animation-delay: 0.4s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Large Tablets */
+@media (max-width: 992px) {
+  .retreat-stay-section {
+    padding: 80px 20px;
+  }
+  
+  .retreat-stay-title {
+    font-size: 2.4rem;
+    margin-bottom: 2rem;
+  }
+  
+  .retreat-stay-content {
+    padding: 2rem;
+  }
+  
+  .retreat-stay-content p {
+    font-size: 1.1rem;
+    padding-left: 2rem;
+  }
+  
+  .retreat-stay-content p::before {
+    font-size: 1.2rem;
+  }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  .retreat-stay-section {
+    padding: 70px 20px;
+  }
+  
+  .retreat-stay-title {
+    font-size: 2.1rem;
+    margin-bottom: 1.8rem;
+  }
+  
+  .retreat-stay-content {
+    padding: 1.8rem;
+    margin-bottom: 2rem;
+  }
+  
+  .retreat-stay-content p {
+    font-size: 1.05rem;
+    padding-left: 1.8rem;
+    line-height: 1.7;
+  }
+  
+  .retreat-stay-content p::before {
+    font-size: 1.1rem;
+  }
+  
+  /* Adjust decorative circles */
+  .retreat-stay-section::before,
+  .retreat-stay-section::after {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .retreat-stay-section {
+    padding: 60px 15px;
+  }
+  
+  .retreat-stay-title {
+    font-size: 1.9rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .retreat-stay-content {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 16px;
+  }
+  
+  .retreat-stay-content p {
+    font-size: 1rem;
+    padding-left: 1.5rem;
+    line-height: 1.6;
+  }
+  
+  .retreat-stay-content p::before {
+    font-size: 1rem;
+  }
+  
+  .retreat-stay-content::before {
+    width: 50px;
+    height: 50px;
+  }
+  
+  /* Hide decorative circles on very small screens */
+  .retreat-stay-section::before,
+  .retreat-stay-section::after {
+    display: none;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 375px) {
+  .retreat-stay-title {
+    font-size: 1.7rem;
+  }
+  
+  .retreat-stay-content {
+    padding: 1.2rem;
+  }
+  
+  .retreat-stay-content p {
+    font-size: 0.95rem;
+    padding-left: 1.2rem;
+  }
+  
+  .retreat-stay-content p::before {
+    font-size: 0.95rem;
+  }
+  
+  .retreat-stay-content::before {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* ===== PRINT STYLES ===== */
+@media print {
+  .retreat-stay-section {
+    background: white !important;
+    padding: 50px 0 !important;
+  }
+  
+  .retreat-stay-content {
+    box-shadow: none !important;
+    border: 1px solid #e0e0e0 !important;
+    page-break-inside: avoid;
+  }
+  
+  .retreat-stay-title {
+    color: #000 !important;
+  }
+  
+  .retreat-stay-title::after {
+    background: #000 !important;
+  }
+  
+  /* Hide decorative elements for print */
+  .retreat-stay-section::before,
+  .retreat-stay-section::after,
+  .retreat-stay-content::before,
+  .retreat-stay-content::after,
+  .retreat-stay-content p::before {
+    display: none !important;
+  }
+}
+
+/* ===== DARK MODE SUPPORT ===== */
+@media (prefers-color-scheme: dark) {
+  .retreat-stay-section {
+    background: linear-gradient(135deg, #1c1917 0%, #292524 100%);
+  }
+  
+  .retreat-stay-section.theme-sand {
+    background: linear-gradient(135deg, #292524 0%, #1c1917 100%);
+  }
+  
+  .retreat-stay-title {
+    color: #ffffff;
+  }
+  
+  .retreat-stay-content {
+    background: #2d3748;
+    color: #e2e8f0;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    border: 1px solid #4a5568;
+  }
+  
+  .retreat-stay-content p {
+    color: #e2e8f0;
+  }
+  
+  /* Adjust decorative circles for dark mode */
+  .retreat-stay-section::before {
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.05) 0%, rgba(217, 119, 6, 0.05) 100%);
+  }
+  
+  .retreat-stay-section::after {
+    background: linear-gradient(135deg, rgba(180, 83, 9, 0.05) 0%, rgba(146, 64, 14, 0.05) 100%);
+  }
+}

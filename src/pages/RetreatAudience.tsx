@@ -7,29 +7,29 @@ const RetreatAudience: React.FC = () => {
       <div className="retreat-audience-inner retreat-inner">
         <h2 className="audience-title">Who Can Join This Journey</h2>
 
-        <div className="audience-grid">
+        <div className="audience-grid stagger-list">
           <article className="audience-card">
-            <h3 className="audience-card-title">Beginners</h3>
+            <h3 className="audience-card-title float-icon">Beginners</h3>
             <p className="audience-card-text">Ready to start your writing journey with confidence and expert guidance from the very beginning</p>
           </article>
 
           <article className="audience-card">
-            <h3 className="audience-card-title">Emerging Writers</h3>
+            <h3 className="audience-card-title float-icon">Emerging Writers</h3>
             <p className="audience-card-text">Working on manuscripts and seeking fresh perspectives, structure, and momentum</p>
           </article>
 
           <article className="audience-card">
-            <h3 className="audience-card-title">Creative Seekers</h3>
+            <h3 className="audience-card-title float-icon">Creative Seekers</h3>
             <p className="audience-card-text">Anyone feeling stuck in the creative process and yearning for breakthrough inspiration</p>
           </article>
 
           <article className="audience-card">
-            <h3 className="audience-card-title">Professionals</h3>
+            <h3 className="audience-card-title float-icon">Professionals</h3>
             <p className="audience-card-text">Busy individuals needing a tranquil escape to finally complete that book project</p>
           </article>
 
           <article className="audience-card">
-            <h3 className="audience-card-title">Dreamers</h3>
+            <h3 className="audience-card-title float-icon">Dreamers</h3>
             <p className="audience-card-text">Anyone dreaming of building or completing their book in a supportive, luxurious environment</p>
           </article>
         </div>

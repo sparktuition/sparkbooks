@@ -1,0 +1,601 @@
+/* TransportArrangements.css - Light & Beautiful Theme */
+
+/* ===== BASE STYLES ===== */
+.transport-arrangements-page {
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #0a2540 0%, #08304b 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Cyan theme variation */
+.transport-arrangements-page.theme-cyan {
+  background: linear-gradient(135deg, #0a2540 0%, #08304b 100%);
+}
+
+/* Decorative background elements */
+.transport-arrangements-page::before {
+  content: '';
+  position: absolute;
+  top: -150px;
+  left: -100px;
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.08) 0%, rgba(8, 145, 178, 0.08) 100%);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.transport-arrangements-page::after {
+  content: '';
+  position: absolute;
+  bottom: -150px;
+  right: -100px;
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(135deg, rgba(14, 165, 233, 0.08) 0%, rgba(2, 132, 199, 0.08) 100%);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* ===== CONTENT CONTAINER ===== */
+.transport-arrangements-content {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+/* ===== TITLE STYLING ===== */
+.transport-title {
+  font-family: 'Cormorant Garamond', 'Georgia', serif;
+  font-size: 3.2rem;
+  font-weight: 600;
+  color: #2d3436;
+  margin-bottom: 2.5rem;
+  line-height: 1.3;
+  position: relative;
+  padding-bottom: 1.5rem;
+}
+
+.transport-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(to right, #06b6d4, #0891b2);
+  border-radius: 2px;
+}
+
+/* ===== DESCRIPTION STYLING ===== */
+.transport-desc {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: #4a5568;
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(6, 182, 212, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  position: relative;
+  overflow: hidden;
+}
+
+.transport-desc strong {
+  color: #06b6d4;
+  font-weight: 600;
+  position: relative;
+  padding: 0 2px;
+}
+
+.transport-desc strong::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, #06b6d4, transparent);
+  opacity: 0.3;
+}
+
+/* Decorative icon in description */
+.transport-desc::before {
+  content: '🚗';
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  font-size: 1.5rem;
+  opacity: 0.3;
+}
+
+/* ===== TRANSPORT SLOTS ===== */
+.transport-slots {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+/* ===== SLOT CARD ===== */
+.slot-card {
+  background: white;
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-shadow: 0 15px 35px rgba(6, 182, 212, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  min-width: 200px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.slot-card.float-icon {
+  padding-left: 3.5rem;
+}
+
+/* Time icon for slots */
+.slot-card::before {
+  content: '⏰';
+  position: absolute;
+  left: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.8rem;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+
+/* Hover effects */
+.slot-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px rgba(6, 182, 212, 0.2);
+}
+
+.slot-card:hover::before {
+  opacity: 0.8;
+  transform: translateY(-50%) scale(1.1);
+}
+
+/* Hover accent border */
+.slot-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to bottom, #06b6d4, #0891b2);
+  border-radius: 2px 0 0 2px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.slot-card:hover::after {
+  opacity: 1;
+}
+
+/* ===== SLOT TIME ===== */
+.slot-time {
+  font-family: 'Cormorant Garamond', 'Georgia', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #06b6d4;
+  display: block;
+  margin-bottom: 0.5rem;
+  line-height: 1;
+  transition: color 0.3s ease;
+}
+
+.slot-card:hover .slot-time {
+  color: #0891b2;
+}
+
+/* ===== SLOT LABEL ===== */
+.slot-label {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.slot-label::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 2px;
+  background: linear-gradient(to right, #06b6d4, #0891b2);
+  border-radius: 1px;
+  opacity: 0.5;
+  transition: width 0.3s ease;
+}
+
+.slot-card:hover .slot-label::after {
+  width: 40px;
+}
+
+/* ===== TRANSPORT NOTE ===== */
+.transport-note {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #4a5568;
+  padding: 2rem;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(236, 254, 255, 0.9) 100%);
+  border-radius: 20px;
+  border: 1px solid rgba(6, 182, 212, 0.1);
+  box-shadow: 0 10px 30px rgba(6, 182, 212, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+.transport-note strong {
+  color: #0891b2;
+  font-weight: 600;
+  position: relative;
+  padding: 0 2px;
+}
+
+.transport-note strong::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, #0891b2, transparent);
+  opacity: 0.3;
+}
+
+/* Decorative note icon */
+.transport-note::before {
+  content: '📝';
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  font-size: 1.5rem;
+  opacity: 0.3;
+}
+
+/* ===== ANIMATION SUPPORT ===== */
+.stagger-list > * {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.slot-card:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.slot-card:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.transport-note {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards;
+  animation-delay: 0.6s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Large Tablets */
+@media (max-width: 992px) {
+  .transport-arrangements-page {
+    padding: 80px 20px;
+  }
+  
+  .transport-title {
+    font-size: 2.7rem;
+    margin-bottom: 2rem;
+  }
+  
+  .transport-desc {
+    font-size: 1.1rem;
+    padding: 1.8rem;
+  }
+  
+  .transport-slots {
+    gap: 2rem;
+  }
+  
+  .slot-card {
+    padding: 2rem;
+    min-width: 180px;
+  }
+  
+  .slot-time {
+    font-size: 2.2rem;
+  }
+  
+  .transport-note {
+    font-size: 1.05rem;
+    padding: 1.8rem;
+  }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  .transport-arrangements-page {
+    padding: 70px 20px;
+  }
+  
+  .transport-title {
+    font-size: 2.3rem;
+  }
+  
+  .transport-desc {
+    font-size: 1.05rem;
+    padding: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+  
+  .transport-slots {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  
+  .slot-card {
+    width: 100%;
+    max-width: 300px;
+    padding: 1.8rem;
+  }
+  
+  .slot-card.float-icon {
+    padding-left: 3rem;
+  }
+  
+  .slot-card::before {
+    left: 1.2rem;
+    font-size: 1.5rem;
+  }
+  
+  .slot-time {
+    font-size: 2rem;
+  }
+  
+  .transport-note {
+    font-size: 1rem;
+    padding: 1.5rem;
+  }
+  
+  /* Adjust decorative circles */
+  .transport-arrangements-page::before,
+  .transport-arrangements-page::after {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .transport-arrangements-page {
+    padding: 60px 15px;
+  }
+  
+  .transport-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .transport-desc {
+    font-size: 1rem;
+    padding: 1.2rem;
+    line-height: 1.6;
+    text-align: left;
+  }
+  
+  .transport-desc::before {
+    top: 1.2rem;
+    left: 1.2rem;
+    font-size: 1.2rem;
+  }
+  
+  .slot-card {
+    padding: 1.5rem;
+  }
+  
+  .slot-card.float-icon {
+    padding-left: 2.8rem;
+  }
+  
+  .slot-card::before {
+    left: 1rem;
+    font-size: 1.3rem;
+  }
+  
+  .slot-time {
+    font-size: 1.8rem;
+  }
+  
+  .transport-note {
+    font-size: 0.95rem;
+    padding: 1.2rem;
+    line-height: 1.5;
+    text-align: left;
+  }
+  
+  .transport-note::before {
+    top: 1.2rem;
+    left: 1.2rem;
+    font-size: 1.2rem;
+  }
+  
+  /* Hide decorative circles on very small screens */
+  .transport-arrangements-page::before,
+  .transport-arrangements-page::after {
+    display: none;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 375px) {
+  .transport-title {
+    font-size: 1.8rem;
+  }
+  
+  .transport-desc {
+    font-size: 0.95rem;
+    padding: 1rem;
+  }
+  
+  .transport-desc::before {
+    top: 1rem;
+    left: 1rem;
+    font-size: 1rem;
+  }
+  
+  .slot-card {
+    padding: 1.2rem;
+  }
+  
+  .slot-card.float-icon {
+    padding-left: 2.5rem;
+  }
+  
+  .slot-card::before {
+    left: 0.8rem;
+    font-size: 1.2rem;
+  }
+  
+  .slot-time {
+    font-size: 1.6rem;
+  }
+  
+  .transport-note {
+    font-size: 0.9rem;
+    padding: 1rem;
+  }
+  
+  .transport-note::before {
+    top: 1rem;
+    left: 1rem;
+    font-size: 1rem;
+  }
+}
+
+/* ===== PRINT STYLES ===== */
+@media print {
+  .transport-arrangements-page {
+    background: white !important;
+    padding: 50px 0 !important;
+  }
+  
+  .transport-desc,
+  .slot-card,
+  .transport-note {
+    box-shadow: none !important;
+    border: 1px solid #e0e0e0 !important;
+  }
+  
+  .transport-title {
+    color: #000 !important;
+  }
+  
+  .transport-title::after {
+    background: #000 !important;
+  }
+  
+  .transport-desc strong,
+  .transport-note strong {
+    color: #000 !important;
+  }
+  
+  .slot-time {
+    color: #000 !important;
+  }
+  
+  /* Hide decorative elements for print */
+  .transport-arrangements-page::before,
+  .transport-arrangements-page::after,
+  .transport-desc::before,
+  .slot-card::before,
+  .slot-card::after,
+  .slot-label::after,
+  .transport-desc strong::after,
+  .transport-note strong::after,
+  .transport-note::before {
+    display: none !important;
+  }
+}
+
+/* ===== DARK MODE SUPPORT ===== */
+@media (prefers-color-scheme: dark) {
+  .transport-arrangements-page {
+    background: linear-gradient(135deg, #083344 0%, #164e63 100%);
+  }
+  
+  .transport-title {
+    color: #ffffff;
+  }
+  
+  .transport-desc {
+    background: #1f2937;
+    color: #d1d5db;
+    border: 1px solid #374151;
+  }
+  
+  .transport-desc strong {
+    color: #22d3ee;
+  }
+  
+  .slot-card {
+    background: #1f2937;
+    border: 1px solid #374151;
+  }
+  
+  .slot-time {
+    color: #22d3ee;
+  }
+  
+  .slot-card:hover .slot-time {
+    color: #06b6d4;
+  }
+  
+  .transport-note {
+    background: linear-gradient(135deg, rgba(31, 41, 55, 0.9) 0%, rgba(55, 65, 81, 0.9) 100%);
+    color: #d1d5db;
+    border: 1px solid #374151;
+  }
+  
+  .transport-note strong {
+    color: #06b6d4;
+  }
+  
+  /* Adjust decorative circles for dark mode */
+  .transport-arrangements-page::before {
+    background: linear-gradient(135deg, rgba(6, 182, 212, 0.05) 0%, rgba(8, 145, 178, 0.05) 100%);
+  }
+  
+  .transport-arrangements-page::after {
+    background: linear-gradient(135deg, rgba(14, 165, 233, 0.05) 0%, rgba(2, 132, 199, 0.05) 100%);
+  }
+}

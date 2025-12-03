@@ -25,7 +25,7 @@ const RetreatVilla: React.FC = () => {
 
 
   return (
-    <section className="retreat-villa retreat-section">
+    <section className="retreat-villa retreat-section parallax-bg">
       <div className="retreat-villa-inner retreat-inner">
         <h2 className="villa-title">The Villa: Your Creative Sanctuary</h2>
 

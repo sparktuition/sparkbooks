@@ -5,7 +5,8 @@
   --muted: rgba(255,255,255,0.75);
 }
 
-.hero{
+
+.hero-section{
   min-height: 600px;
   display: flex;
   align-items: center;
@@ -18,7 +19,7 @@
   overflow: hidden;
 }
 
-.hero::before{
+.hero-section::before{
   content: '';
   position: absolute;
   right: -150px;
@@ -37,17 +38,18 @@
   50% { transform: rotate(15deg) translateY(-20px); }
 }
 
-.hero-inner{
+
+.hero-section-inner{
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
 }
 
-.hero-copy{
+.hero-section-copy{
   max-width: 800px;
 }
 
-.hero-title{
+.hero-section-title{
   font-size: 64px;
   margin: 0 0 16px 0;
   font-weight: 900;
@@ -59,7 +61,7 @@
   line-height: 1.1;
 }
 
-.hero-sub{
+.hero-section-sub{
   font-size: 28px;
   margin: 0 0 24px 0;
   font-weight: 600;
@@ -67,7 +69,7 @@
   letter-spacing: -0.01em;
 }
 
-.hero-desc{
+.hero-section-desc{
   color: rgba(255,255,255,0.75);
   line-height: 1.8;
   max-width: 700px;
@@ -75,18 +77,18 @@
   font-size: 18px;
 }
 
-.hero-actions{
+.hero-section-actions{
   display: flex;
   align-items: center;
   gap: 20px;
 }
 
-.hero-buttons{
+.hero-section-buttons{
   display: flex;
   gap: 16px;
 }
 
-.btn{
+.hero-section-btn{
   font-weight: 700;
   padding: 16px 32px;
   border-radius: 999px;
@@ -96,31 +98,31 @@
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.btn-primary{
+.hero-section-btn-primary{
   background: linear-gradient(135deg, #14e7b6 0%, #10f0b0 100%);
   color: #00221a;
   box-shadow: 0 10px 30px rgba(16,240,176,0.25);
 }
 
-.btn-primary:hover{
+.hero-section-btn-primary:hover{
   transform: translateY(-2px);
   box-shadow: 0 15px 40px rgba(16,240,176,0.35);
 }
 
-.btn-outline{
+.hero-section-btn-outline{
   background: rgba(22,246,168,0.05);
   color: var(--accent);
   border: 2px solid rgba(22,246,168,0.3);
   backdrop-filter: blur(10px);
 }
 
-.btn-outline:hover{
+.hero-section-btn-outline:hover{
   background: rgba(22,246,168,0.1);
   border-color: rgba(22,246,168,0.5);
   transform: translateY(-2px);
 }
 
-.hero-pill{
+.hero-section-pill{
   width: 44px;
   height: 28px;
   background: linear-gradient(90deg,#13e7b3,#00f6c0);
@@ -130,39 +132,39 @@
 }
 
 @media (max-width: 768px){
-  .hero{
+  .hero-section{
     padding: 60px 24px;
     min-height: 500px;
   }
-  .hero-title{
+  .hero-section-title{
     font-size: 42px;
   }
-  .hero-sub{
+  .hero-section-sub{
     font-size: 22px;
   }
-  .hero-desc{
+  .hero-section-desc{
     font-size: 16px;
   }
-  .btn{
+  .hero-section-btn{
     padding: 14px 28px;
     font-size: 15px;
   }
 }
 
 @media (max-width: 640px){
-  .hero{
+  .hero-section{
     padding: 48px 20px;
   }
-  .hero-title{
+  .hero-section-title{
     font-size: 36px;
   }
-  .hero-sub{
+  .hero-section-sub{
     font-size: 18px;
   }
-  .hero-actions{
+  .hero-section-actions{
     flex-direction: column;
     align-items: flex-start;
     gap: 12px;
   }
-  .hero-pill{ display: none }
+  .hero-section-pill{ display: none }
 }

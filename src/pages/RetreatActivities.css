@@ -1,0 +1,333 @@
+/* RetreatActivities.css - Light & Beautiful Theme */
+
+/* ===== BASE STYLES ===== */
+.retreat-activities-section {
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #f0f4f8 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle decorative elements */
+.retreat-activities-section::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  right: -50px;
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(135deg, rgba(255, 107, 107, 0.08) 0%, rgba(255, 230, 109, 0.08) 100%);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.retreat-activities-section::after {
+  content: '';
+  position: absolute;
+  bottom: -100px;
+  left: -50px;
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(135deg, rgba(107, 185, 240, 0.08) 0%, rgba(134, 255, 188, 0.08) 100%);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* ===== CONTENT CONTAINER ===== */
+.retreat-activities-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* ===== TITLE STYLING ===== */
+.retreat-activities-title {
+  font-family: 'Cormorant Garamond', 'Georgia', serif;
+  font-size: 3.2rem;
+  font-weight: 600;
+  color: #2d3436;
+  text-align: center;
+  margin-bottom: 3.5rem;
+  line-height: 1.3;
+  position: relative;
+}
+
+.retreat-activities-title::before {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(to right, #ff7675, #fd79a8);
+  margin: 0 auto 1.5rem;
+  border-radius: 2px;
+}
+
+/* ===== CONTENT LAYOUT ===== */
+.retreat-activities-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.retreat-activities-content p {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #4a5568;
+  padding: 2.5rem;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.retreat-activities-content p::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(to right, #74b9ff, #55efc4);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.retreat-activities-content p:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(116, 185, 255, 0.12);
+}
+
+.retreat-activities-content p:hover::before {
+  opacity: 1;
+}
+
+/* ===== HIGHLIGHTED TEXT ===== */
+.activities-highlight {
+  position: relative;
+  font-weight: 600;
+  color: #0984e3;
+  padding: 0 4px;
+  transition: all 0.2s ease;
+  display: inline-block;
+}
+
+.activities-highlight::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #74b9ff, #55efc4);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.activities-highlight:hover {
+  color: #6c5ce7;
+}
+
+.activities-highlight:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Icon decorations for paragraphs */
+.retreat-activities-content p:first-child::after {
+  content: '✨';
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-size: 1.5rem;
+  opacity: 0.3;
+}
+
+.retreat-activities-content p:last-child::after {
+  content: '🏔️';
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-size: 1.5rem;
+  opacity: 0.3;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Large Tablets */
+@media (max-width: 992px) {
+  .retreat-activities-section {
+    padding: 80px 20px;
+  }
+  
+  .retreat-activities-title {
+    font-size: 2.7rem;
+    margin-bottom: 3rem;
+  }
+  
+  .retreat-activities-content p {
+    font-size: 1.1rem;
+    padding: 2rem;
+  }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  .retreat-activities-section {
+    padding: 70px 20px;
+  }
+  
+  .retreat-activities-title {
+    font-size: 2.3rem;
+  }
+  
+  .retreat-activities-content {
+    gap: 1.8rem;
+  }
+  
+  .retreat-activities-content p {
+    font-size: 1.05rem;
+    padding: 1.8rem;
+  }
+  
+  /* Adjust decorative circles */
+  .retreat-activities-section::before,
+  .retreat-activities-section::after {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .retreat-activities-section {
+    padding: 60px 15px;
+  }
+  
+  .retreat-activities-title {
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+  }
+  
+  .retreat-activities-content {
+    gap: 1.5rem;
+  }
+  
+  .retreat-activities-content p {
+    font-size: 1rem;
+    padding: 1.5rem;
+    text-align: left;
+  }
+  
+  /* Hide decorative circles on very small screens */
+  .retreat-activities-section::before,
+  .retreat-activities-section::after {
+    display: none;
+  }
+  
+  /* Adjust icons for mobile */
+  .retreat-activities-content p::after {
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.2rem;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 375px) {
+  .retreat-activities-title {
+    font-size: 1.8rem;
+  }
+  
+  .retreat-activities-content p {
+    padding: 1.2rem;
+  }
+}
+
+/* ===== AOS ANIMATION SUPPORT ===== */
+.retreat-activities-section[data-aos="fade-up"] {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.retreat-activities-section[data-aos="fade-up"].aos-animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== PRINT STYLES ===== */
+@media print {
+  .retreat-activities-section {
+    background: white !important;
+    padding: 50px 0 !important;
+  }
+  
+  .retreat-activities-content p {
+    box-shadow: none !important;
+    border: 1px solid #e0e0e0 !important;
+    page-break-inside: avoid;
+  }
+  
+  .retreat-activities-title {
+    color: #000 !important;
+  }
+  
+  .retreat-activities-title::before {
+    background: #000 !important;
+  }
+  
+  /* Hide decorative elements for print */
+  .retreat-activities-section::before,
+  .retreat-activities-section::after,
+  .retreat-activities-content p::after {
+    display: none !important;
+  }
+}
+
+/* ===== DARK MODE SUPPORT ===== */
+@media (prefers-color-scheme: dark) {
+  .retreat-activities-section {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  }
+  
+  .retreat-activities-title {
+    color: #ffffff;
+  }
+  
+  .retreat-activities-content p {
+    background: #2d3748;
+    color: #e2e8f0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border: 1px solid #4a5568;
+  }
+  
+  .activities-highlight {
+    color: #63b3ed;
+  }
+  
+  .activities-highlight:hover {
+    color: #90cdf4;
+  }
+  
+  /* Adjust decorative circles for dark mode */
+  .retreat-activities-section::before {
+    background: linear-gradient(135deg, rgba(255, 107, 107, 0.05) 0%, rgba(255, 230, 109, 0.05) 100%);
+  }
+  
+  .retreat-activities-section::after {
+    background: linear-gradient(135deg, rgba(107, 185, 240, 0.05) 0%, rgba(134, 255, 188, 0.05) 100%);
+  }
+}
+
+/* ===== FONT IMPORT (Add to HTML head) ===== */
+/* 
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+*/

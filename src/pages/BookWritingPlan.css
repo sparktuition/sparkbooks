@@ -1,0 +1,408 @@
+/* BookWritingPlan.css - Light & Beautiful Theme */
+
+/* ===== BASE STYLES ===== */
+.book-writing-plan-section {
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #f8f5ff 0%, #f0f4ff 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative background elements */
+.book-writing-plan-section::before {
+  content: '';
+  position: absolute;
+  top: -150px;
+  left: -100px;
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(135deg, rgba(121, 134, 203, 0.08) 0%, rgba(147, 112, 219, 0.08) 100%);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.book-writing-plan-section::after {
+  content: '';
+  position: absolute;
+  bottom: -150px;
+  right: -100px;
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(135deg, rgba(186, 85, 211, 0.08) 0%, rgba(138, 43, 226, 0.08) 100%);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Indigo theme variation */
+.book-writing-plan-section.theme-indigo {
+  background: linear-gradient(135deg, #f8f5ff 0%, #eef2ff 100%);
+}
+
+/* ===== INNER CONTAINER ===== */
+.book-writing-plan-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* ===== TITLE STYLING ===== */
+.book-writing-plan-title {
+  font-family: 'Cormorant Garamond', 'Georgia', serif;
+  font-size: 3.2rem;
+  font-weight: 600;
+  color: #2d3436;
+  text-align: center;
+  margin-bottom: 4rem;
+  line-height: 1.3;
+  position: relative;
+  padding: 0 1rem;
+}
+
+.book-writing-plan-title::before {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(to right, #7b68ee, #9370db);
+  margin: 0 auto 1.5rem;
+  border-radius: 2px;
+}
+
+/* ===== LIST STYLING ===== */
+.book-writing-plan-list {
+  list-style: none;
+  counter-reset: topic-counter;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1.8rem;
+}
+
+/* ===== LIST ITEM STYLING ===== */
+.book-writing-plan-list li {
+  counter-increment: topic-counter;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #4a5568;
+  padding: 1.8rem;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(123, 104, 238, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+  min-height: 100px;
+}
+
+.book-writing-plan-list li::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(to right, #7b68ee, #9370db);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.book-writing-plan-list li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(123, 104, 238, 0.15);
+}
+
+.book-writing-plan-list li:hover::before {
+  opacity: 1;
+}
+
+/* Number styling */
+.topic-number {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #7b68ee;
+  margin-right: 0.75rem;
+  min-width: 2rem;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+.book-writing-plan-list li:hover .topic-number {
+  color: #9370db;
+}
+
+/* Decorative icon for each item */
+.book-writing-plan-list li.float-icon {
+  position: relative;
+  padding-left: 3.5rem;
+}
+
+.book-writing-plan-list li.float-icon::after {
+  content: '📝';
+  position: absolute;
+  top: 1.8rem;
+  left: 1.5rem;
+  font-size: 1.2rem;
+  opacity: 0.3;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.book-writing-plan-list li:hover.float-icon::after {
+  opacity: 0.6;
+  transform: scale(1.1);
+}
+
+/* ===== ANIMATION SUPPORT ===== */
+.stagger-list li {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+/* Staggered animation for list items */
+.stagger-list li:nth-child(1) { animation-delay: 0.05s; }
+.stagger-list li:nth-child(2) { animation-delay: 0.1s; }
+.stagger-list li:nth-child(3) { animation-delay: 0.15s; }
+.stagger-list li:nth-child(4) { animation-delay: 0.2s; }
+.stagger-list li:nth-child(5) { animation-delay: 0.25s; }
+.stagger-list li:nth-child(6) { animation-delay: 0.3s; }
+.stagger-list li:nth-child(7) { animation-delay: 0.35s; }
+.stagger-list li:nth-child(8) { animation-delay: 0.4s; }
+.stagger-list li:nth-child(9) { animation-delay: 0.45s; }
+.stagger-list li:nth-child(10) { animation-delay: 0.5s; }
+.stagger-list li:nth-child(11) { animation-delay: 0.55s; }
+.stagger-list li:nth-child(12) { animation-delay: 0.6s; }
+.stagger-list li:nth-child(13) { animation-delay: 0.65s; }
+.stagger-list li:nth-child(14) { animation-delay: 0.7s; }
+.stagger-list li:nth-child(15) { animation-delay: 0.75s; }
+.stagger-list li:nth-child(16) { animation-delay: 0.8s; }
+.stagger-list li:nth-child(17) { animation-delay: 0.85s; }
+.stagger-list li:nth-child(18) { animation-delay: 0.9s; }
+.stagger-list li:nth-child(19) { animation-delay: 0.95s; }
+.stagger-list li:nth-child(20) { animation-delay: 1s; }
+.stagger-list li:nth-child(21) { animation-delay: 1.05s; }
+.stagger-list li:nth-child(22) { animation-delay: 1.1s; }
+.stagger-list li:nth-child(23) { animation-delay: 1.15s; }
+.stagger-list li:nth-child(24) { animation-delay: 1.2s; }
+.stagger-list li:nth-child(25) { animation-delay: 1.25s; }
+.stagger-list li:nth-child(26) { animation-delay: 1.3s; }
+.stagger-list li:nth-child(27) { animation-delay: 1.35s; }
+.stagger-list li:nth-child(28) { animation-delay: 1.4s; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Large Tablets */
+@media (max-width: 1200px) {
+  .book-writing-plan-list {
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  }
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+  .book-writing-plan-section {
+    padding: 80px 20px;
+  }
+  
+  .book-writing-plan-title {
+    font-size: 2.7rem;
+    margin-bottom: 3.5rem;
+  }
+  
+  .book-writing-plan-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .book-writing-plan-list li {
+    padding: 1.5rem;
+    font-size: 1rem;
+  }
+  
+  .book-writing-plan-list li.float-icon {
+    padding-left: 3rem;
+  }
+  
+  .book-writing-plan-list li.float-icon::after {
+    top: 1.5rem;
+    left: 1.2rem;
+  }
+}
+
+/* Medium Tablets */
+@media (max-width: 768px) {
+  .book-writing-plan-section {
+    padding: 70px 20px;
+  }
+  
+  .book-writing-plan-title {
+    font-size: 2.3rem;
+    margin-bottom: 3rem;
+  }
+  
+  .book-writing-plan-list {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+    margin: 0 auto;
+    gap: 1.2rem;
+  }
+  
+  .book-writing-plan-list li {
+    padding: 1.4rem;
+    min-height: 90px;
+  }
+  
+  /* Adjust decorative circles */
+  .book-writing-plan-section::before,
+  .book-writing-plan-section::after {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .book-writing-plan-section {
+    padding: 60px 15px;
+  }
+  
+  .book-writing-plan-title {
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+    padding: 0;
+  }
+  
+  .book-writing-plan-list {
+    gap: 1rem;
+  }
+  
+  .book-writing-plan-list li {
+    padding: 1.2rem;
+    font-size: 0.95rem;
+    min-height: 80px;
+  }
+  
+  .book-writing-plan-list li.float-icon {
+    padding-left: 2.8rem;
+  }
+  
+  .book-writing-plan-list li.float-icon::after {
+    top: 1.2rem;
+    left: 1rem;
+    font-size: 1rem;
+  }
+  
+  .topic-number {
+    font-size: 1rem;
+    min-width: 1.8rem;
+  }
+  
+  /* Hide decorative circles on very small screens */
+  .book-writing-plan-section::before,
+  .book-writing-plan-section::after {
+    display: none;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 375px) {
+  .book-writing-plan-title {
+    font-size: 1.8rem;
+  }
+  
+  .book-writing-plan-list li {
+    padding: 1rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  
+  .book-writing-plan-list li.float-icon {
+    padding-left: 2.5rem;
+  }
+  
+  .book-writing-plan-list li.float-icon::after {
+    top: 1rem;
+    left: 0.8rem;
+  }
+}
+
+/* ===== PRINT STYLES ===== */
+@media print {
+  .book-writing-plan-section {
+    background: white !important;
+    padding: 50px 0 !important;
+  }
+  
+  .book-writing-plan-list li {
+    box-shadow: none !important;
+    border: 1px solid #e0e0e0 !important;
+    page-break-inside: avoid;
+  }
+  
+  .book-writing-plan-title {
+    color: #000 !important;
+  }
+  
+  .book-writing-plan-title::before {
+    background: #000 !important;
+  }
+  
+  /* Hide decorative elements for print */
+  .book-writing-plan-section::before,
+  .book-writing-plan-section::after,
+  .book-writing-plan-list li.float-icon::after {
+    display: none !important;
+  }
+}
+
+/* ===== DARK MODE SUPPORT ===== */
+@media (prefers-color-scheme: dark) {
+  .book-writing-plan-section {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  }
+  
+  .book-writing-plan-section.theme-indigo {
+    background: linear-gradient(135deg, #1a1a2e 0%, #1e1b4b 100%);
+  }
+  
+  .book-writing-plan-title {
+    color: #ffffff;
+  }
+  
+  .book-writing-plan-list li {
+    background: #2d3748;
+    color: #e2e8f0;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    border: 1px solid #4a5568;
+  }
+  
+  .topic-number {
+    color: #a78bfa;
+  }
+  
+  .book-writing-plan-list li:hover .topic-number {
+    color: #c4b5fd;
+  }
+  
+  /* Adjust decorative circles for dark mode */
+  .book-writing-plan-section::before {
+    background: linear-gradient(135deg, rgba(121, 134, 203, 0.05) 0%, rgba(147, 112, 219, 0.05) 100%);
+  }
+  
+  .book-writing-plan-section::after {
+    background: linear-gradient(135deg, rgba(186, 85, 211, 0.05) 0%, rgba(138, 43, 226, 0.05) 100%);
+  }
+}

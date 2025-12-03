@@ -1,118 +1,476 @@
-/* Audience section */
-.retreat-audience {
-  width: 100%;
-  padding: 80px 40px;
-  background: radial-gradient(900px 380px at 20% 15%, rgba(230,250,236,0.6) 0%, rgba(230,247,233,0.45) 10%), linear-gradient(135deg, #eaf7ea 0%, #e6f4dc 40%, #e9f7e7 100%);
-  color: #083627;
+/* RetreatAudience.css - Light & Beautiful Theme */
+
+/* ===== BASE STYLES ===== */
+.retreat-audience.retreat-section {
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #f9f7f7 0%, #f0f4f8 100%);
+  position: relative;
+  overflow: hidden;
 }
 
-.retreat-audience-inner {
+/* Decorative background shapes */
+.retreat-audience::before {
+  content: '';
+  position: absolute;
+  top: -150px;
+  left: -100px;
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(135deg, rgba(147, 165, 207, 0.08) 0%, rgba(228, 193, 249, 0.08) 100%);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.retreat-audience::after {
+  content: '';
+  position: absolute;
+  bottom: -150px;
+  right: -100px;
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(135deg, rgba(255, 200, 124, 0.08) 0%, rgba(255, 150, 150, 0.08) 100%);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* ===== INNER CONTAINER ===== */
+.retreat-audience-inner.retreat-inner {
   max-width: 1200px;
   margin: 0 auto;
+  position: relative;
+  z-index: 2;
 }
 
+/* ===== TITLE STYLING ===== */
 .audience-title {
-  font-family: 'Georgia', serif;
-  font-size: 44px;
-  margin: 0 0 48px 0;
-  color: #0d5b40;
-  text-align: left;
+  font-family: 'Cormorant Garamond', 'Georgia', serif;
+  font-size: 3.2rem;
+  font-weight: 600;
+  color: #2d3436;
+  text-align: center;
+  margin-bottom: 4rem;
+  line-height: 1.3;
+  position: relative;
 }
 
-.audience-grid {
+.audience-title::before {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(to right, #6c5ce7, #a29bfe);
+  margin: 0 auto 1.5rem;
+  border-radius: 2px;
+}
+
+/* ===== GRID LAYOUT ===== */
+.audience-grid.stagger-list {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 24px;
-  margin-bottom: 32px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3.5rem;
 }
 
+/* ===== CARD STYLING ===== */
 .audience-card {
-  background: rgba(255, 255, 255, 0.7);
-  border: 2px solid rgba(13, 91, 64, 0.15);
-  padding: 28px 24px;
-  border-radius: 16px;
-  box-shadow: 0 8px 20px rgba(13, 91, 64, 0.06);
+  background: white;
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 8px 30px rgba(108, 92, 231, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+  position: relative;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.audience-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(to right, #6c5ce7, #a29bfe);
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .audience-card:hover {
-  background: rgba(255, 255, 255, 0.85);
-  border-color: rgba(13, 91, 64, 0.3);
-  box-shadow: 0 12px 28px rgba(13, 91, 64, 0.1);
-  transform: translateY(-2px);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(108, 92, 231, 0.12);
 }
 
-.audience-card-title {
-  font-family: 'Georgia', serif;
-  font-size: 24px;
-  margin: 0;
-  color: #0b5a3e;
+.audience-card:hover::before {
+  opacity: 1;
 }
 
+/* Card hover accent */
+.audience-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(108, 92, 231, 0.03) 0%, transparent 50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.audience-card:hover::after {
+  opacity: 1;
+}
+
+/* ===== CARD TITLE ===== */
+.audience-card-title.float-icon {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2d3436;
+  margin-bottom: 1rem;
+  position: relative;
+  padding-left: 2.5rem;
+  min-height: 32px;
+  display: flex;
+  align-items: center;
+}
+
+/* Custom icons for each card */
+.audience-card:nth-child(1) .audience-card-title::before {
+  content: '🌱';
+  position: absolute;
+  left: 0;
+  font-size: 1.4rem;
+  opacity: 0.8;
+}
+
+.audience-card:nth-child(2) .audience-card-title::before {
+  content: '📖';
+  position: absolute;
+  left: 0;
+  font-size: 1.4rem;
+  opacity: 0.8;
+}
+
+.audience-card:nth-child(3) .audience-card-title::before {
+  content: '✨';
+  position: absolute;
+  left: 0;
+  font-size: 1.4rem;
+  opacity: 0.8;
+}
+
+.audience-card:nth-child(4) .audience-card-title::before {
+  content: '💼';
+  position: absolute;
+  left: 0;
+  font-size: 1.4rem;
+  opacity: 0.8;
+}
+
+.audience-card:nth-child(5) .audience-card-title::before {
+  content: '🌠';
+  position: absolute;
+  left: 0;
+  font-size: 1.4rem;
+  opacity: 0.8;
+}
+
+/* ===== CARD TEXT ===== */
 .audience-card-text {
-  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-  font-size: 16px;
-  color: #2a5245;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #4a5568;
+  flex-grow: 1;
   margin: 0;
-  line-height: 1.6;
 }
 
+/* ===== FOOTER NOTE ===== */
 .audience-note {
-  text-align: left;
-  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-  font-size: 16px;
-  color: #0d5b40;
-  margin: 0;
-  line-height: 1.7;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #2d3436;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2.5rem;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(248, 248, 255, 0.9) 100%);
+  border-radius: 20px;
+  border: 1px solid rgba(108, 92, 231, 0.1);
+  box-shadow: 0 5px 20px rgba(108, 92, 231, 0.05);
+  position: relative;
+  overflow: hidden;
 }
 
 .audience-note strong {
-  font-weight: 700;
+  color: #6c5ce7;
+  font-weight: 600;
+  position: relative;
+  padding: 0 2px;
 }
 
-@media (max-width: 1000px) {
-  .audience-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-  }
-
-  .audience-title {
-    font-size: 36px;
-    margin-bottom: 36px;
-  }
+.audience-note::before {
+  content: '💫';
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  font-size: 1.5rem;
+  opacity: 0.3;
 }
 
-@media (max-width: 700px) {
-  .retreat-audience {
-    padding: 48px 20px;
-  }
+.audience-note::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(to right, #6c5ce7, #a29bfe);
+  border-radius: 1.5px;
+}
 
-  .audience-grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
+/* ===== RESPONSIVE DESIGN ===== */
 
+/* Large Tablets */
+@media (max-width: 992px) {
+  .retreat-audience.retreat-section {
+    padding: 80px 20px;
+  }
+  
   .audience-title {
-    font-size: 28px;
-    margin-bottom: 28px;
+    font-size: 2.7rem;
+    margin-bottom: 3.5rem;
   }
-
+  
+  .audience-grid.stagger-list {
+    gap: 1.8rem;
+  }
+  
   .audience-card {
-    padding: 20px 18px;
+    padding: 2rem 1.8rem;
   }
-
-  .audience-card-title {
-    font-size: 20px;
-  }
-
-  .audience-card-text {
-    font-size: 15px;
-  }
-
+  
   .audience-note {
-    font-size: 15px;
+    font-size: 1.1rem;
+    padding: 2rem;
+  }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  .retreat-audience.retreat-section {
+    padding: 70px 20px;
+  }
+  
+  .audience-title {
+    font-size: 2.3rem;
+    margin-bottom: 3rem;
+  }
+  
+  .audience-grid.stagger-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .audience-card {
+    padding: 1.8rem 1.5rem;
+  }
+  
+  .audience-card-title.float-icon {
+    font-size: 1.3rem;
+    padding-left: 2rem;
+  }
+  
+  .audience-card-text {
+    font-size: 1rem;
+  }
+  
+  .audience-note {
+    font-size: 1.05rem;
+    padding: 1.8rem;
+  }
+  
+  /* Adjust decorative circles */
+  .retreat-audience::before,
+  .retreat-audience::after {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .retreat-audience.retreat-section {
+    padding: 60px 15px;
+  }
+  
+  .audience-title {
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+  }
+  
+  .audience-grid.stagger-list {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+  
+  .audience-card {
+    padding: 1.5rem;
+  }
+  
+  .audience-card-title.float-icon {
+    font-size: 1.2rem;
+    padding-left: 1.8rem;
+  }
+  
+  .audience-card-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+  
+  .audience-note {
+    font-size: 1rem;
+    padding: 1.5rem;
+  }
+  
+  /* Hide decorative circles on very small screens */
+  .retreat-audience::before,
+  .retreat-audience::after {
+    display: none;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 375px) {
+  .audience-title {
+    font-size: 1.8rem;
+  }
+  
+  .audience-card {
+    padding: 1.2rem;
+  }
+  
+  .audience-card-title.float-icon {
+    font-size: 1.1rem;
+    padding-left: 1.6rem;
+  }
+  
+  .audience-note {
+    padding: 1.2rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* ===== ANIMATION SUPPORT ===== */
+.stagger-list .audience-card {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+/* Staggered animation for cards */
+.stagger-list .audience-card:nth-child(1) { animation-delay: 0.1s; }
+.stagger-list .audience-card:nth-child(2) { animation-delay: 0.2s; }
+.stagger-list .audience-card:nth-child(3) { animation-delay: 0.3s; }
+.stagger-list .audience-card:nth-child(4) { animation-delay: 0.4s; }
+.stagger-list .audience-card:nth-child(5) { animation-delay: 0.5s; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== PRINT STYLES ===== */
+@media print {
+  .retreat-audience.retreat-section {
+    background: white !important;
+    padding: 50px 0 !important;
+  }
+  
+  .audience-card {
+    box-shadow: none !important;
+    border: 1px solid #e0e0e0 !important;
+    page-break-inside: avoid;
+  }
+  
+  .audience-title {
+    color: #000 !important;
+  }
+  
+  .audience-title::before {
+    background: #000 !important;
+  }
+  
+  /* Hide decorative elements for print */
+  .retreat-audience::before,
+  .retreat-audience::after,
+  .audience-card::before,
+  .audience-card::after,
+  .audience-card-title.float-icon::before,
+  .audience-note::before {
+    display: none !important;
+  }
+}
+
+/* ===== DARK MODE SUPPORT ===== */
+@media (prefers-color-scheme: dark) {
+  .retreat-audience.retreat-section {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  }
+  
+  .audience-title {
+    color: #ffffff;
+  }
+  
+  .audience-card {
+    background: #2d3748;
+    color: #e2e8f0;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    border: 1px solid #4a5568;
+  }
+  
+  .audience-card-title.float-icon {
+    color: #ffffff; /* Changed from #ffffff to visible color */
+  }
+  
+  .audience-card-text {
+    color: #e2e8f0; /* Changed from #cbd5e0 to lighter color */
+  }
+  
+  .audience-note {
+    background: linear-gradient(135deg, rgba(45, 55, 72, 0.9) 0%, rgba(55, 65, 81, 0.9) 100%);
+    color: #e2e8f0; /* Changed from #e2e8f0 to ensure visibility */
+    border: 1px solid #4a5568;
+  }
+  
+  .audience-note strong {
+    color: #a29bfe;
+  }
+  
+  /* Improve icon visibility in dark mode */
+  .audience-card:nth-child(1) .audience-card-title::before,
+  .audience-card:nth-child(2) .audience-card-title::before,
+  .audience-card:nth-child(3) .audience-card-title::before,
+  .audience-card:nth-child(4) .audience-card-title::before,
+  .audience-card:nth-child(5) .audience-card-title::before {
+    opacity: 0.9; /* Increased opacity for better visibility */
+  }
+  
+  /* Adjust decorative circles for dark mode */
+  .retreat-audience::before {
+    background: linear-gradient(135deg, rgba(147, 165, 207, 0.05) 0%, rgba(228, 193, 249, 0.05) 100%);
+  }
+  
+  .retreat-audience::after {
+    background: linear-gradient(135deg, rgba(255, 200, 124, 0.05) 0%, rgba(255, 150, 150, 0.05) 100%);
   }
 }

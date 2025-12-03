@@ -9,7 +9,7 @@ const RetreatMentors: React.FC = () => {
 
         <div className="mentors-grid">
           <article className="mentor-card">
-            <div className="mentor-image">
+            <div className="mentor-image float-icon">
               <img
                 src="/SparkWritersRetreat/jpeg%20(1).jpeg"
                 alt="Dr. Manjiri Prabhu"
@@ -19,7 +19,7 @@ const RetreatMentors: React.FC = () => {
             <p className="mentor-subtitle">
               Internationally acclaimed author known as the <strong>"Agatha Christie of India"</strong>, Dr. Prabhu brings decades of expertise in mystery writing and narrative depth.
             </p>
-            <ul className="mentor-skills">
+            <ul className="mentor-skills stagger-list">
               <li>Founder of Pune International Literary Festival</li>
               <li>Expert in creative thinking and storytelling</li>
               <li>Masterful guide for plot development</li>
@@ -28,7 +28,7 @@ const RetreatMentors: React.FC = () => {
           </article>
 
           <article className="mentor-card">
-            <div className="mentor-image">
+            <div className="mentor-image float-icon">
               <img
                src="/SparkWritersRetreat/jpeg%20(2).jpeg"
                 alt="Eshwar Sundaresan"
@@ -38,7 +38,7 @@ const RetreatMentors: React.FC = () => {
             <p className="mentor-subtitle">
               Versatile author and journalist renowned for powerful, emotionally resonant, character-driven narratives that touch hearts and transform perspectives.
             </p>
-            <ul className="mentor-skills">
+            <ul className="mentor-skills stagger-list">
               <li>Expert in finding clarity and structure</li>
               <li>Guides writers towards authentic voice</li>
               <li>Specialises in emotional storytelling</li>

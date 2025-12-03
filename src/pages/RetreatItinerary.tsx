@@ -25,7 +25,7 @@ const RetreatItinerary: React.FC = () => {
 
         <div className="timeline-wrapper">
           {/* Left Column - Content */}
-          <div className="timeline-left">
+          <div className="timeline-left stagger-list">
             <div className="timeline-left-item">
               <h3 className="timeline-left-label">Arrival Day</h3>
               <p className="timeline-left-text">Sunday, 1 March 2026 — Settle into your luxurious villa, meet fellow writers, and embrace the mountain serenity</p>
@@ -38,7 +38,7 @@ const RetreatItinerary: React.FC = () => {
           </div>
 
           {/* Right Column - Timeline */}
-          <div className="timeline-right">
+          <div className="timeline-right stagger-list">
             <div className="timeline-connector-line"></div>
             
             <div className="timeline-node">

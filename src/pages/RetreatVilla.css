@@ -1,468 +1,668 @@
-.villa-modal-overlay {
-    animation: villaModalFadeIn 0.3s ease;
+/* RetreatVilla.css - Light & Beautiful Theme */
+
+/* ===== BASE STYLES ===== */
+.retreat-villa.retreat-section {
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #ecfdf5 0%, #f0fdfa 100%);
+  position: relative;
+  overflow: hidden;
 }
 
-@keyframes villaModalFadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-.villa-modal {
-    background: linear-gradient(135deg, #f8f8fa 0%, #eaeaf3 100%);
-    border-radius: 20px;
-    box-shadow: 0 12px 48px rgba(0,0,0,0.22);
-    padding: 32px 32px 20px 32px;
-    position: relative;
-    max-width: 90vw;
-    max-height: 90vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow: auto;
-    border: 1px solid #e0e0e0;
-}
-.villa-modal-close {
-    background: linear-gradient(135deg, #222 0%, #444 100%);
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    width: 36px;
-    height: 36px;
-    font-size: 1.7em;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.18);
-    transition: background 0.2s, box-shadow 0.2s;
-    border: 1px solid #fff;
-}
-.villa-modal-close:hover {
-    background: linear-gradient(135deg, #444 0%, #222 100%);
-    box-shadow: 0 4px 16px rgba(0,0,0,0.22);
-}
-.villa-modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0,0,0,0.7);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 9999;
-    touch-action: none;
-}
-.villa-modal {
-    background: #fff;
-    border-radius: 16px;
-    box-shadow: 0 8px 40px rgba(0,0,0,0.18);
-    padding: 24px 24px 16px 24px;
-    position: relative;
-    max-width: 90vw;
-    max-height: 90vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow: auto;
-}
-.villa-modal-img {
-    max-width: 80vw;
-    max-height: 60vh;
-    width: 100%;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.10);
-    display: block;
-}
-@media (max-width: 600px) {
-    .villa-modal {
-        max-width: 98vw;
-        max-height: 98vh;
-        padding: 8vw 2vw 4vw 2vw;
-    }
-    .villa-modal-img {
-        max-width: 96vw;
-        max-height: 60vh;
-        width: 100%;
-        height: auto;
-    }
-    .villa-modal-close {
-        top: 8px;
-        right: 8px;
-        width: 28px;
-        height: 28px;
-        font-size: 1.3em;
-    }
-}
-/* Modal styles for full-size villa images */
-.villa-modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0,0,0,0.7);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 9999;
+/* Decorative background elements */
+.retreat-villa::before {
+  content: '';
+  position: absolute;
+  top: -150px;
+  right: -100px;
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.08) 0%, rgba(5, 150, 105, 0.08) 100%);
+  border-radius: 50%;
+  z-index: 1;
 }
 
-.villa-modal {
-    background: #fff;
-    border-radius: 16px;
-    box-shadow: 0 8px 40px rgba(0,0,0,0.18);
-    padding: 24px 24px 16px 24px;
-    position: relative;
-    max-width: 90vw;
-    max-height: 90vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.retreat-villa::after {
+  content: '';
+  position: absolute;
+  bottom: -150px;
+  left: -100px;
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(135deg, rgba(6, 95, 70, 0.08) 0%, rgba(4, 120, 87, 0.08) 100%);
+  border-radius: 50%;
+  z-index: 1;
 }
 
-.villa-modal-img {
-    max-width: 80vw;
-    max-height: 70vh;
-    border-radius: 12px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+/* ===== INNER CONTAINER ===== */
+.retreat-villa-inner.retreat-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
 }
 
-.villa-modal-close {
-    position: absolute;
-    top: 12px;
-    right: 18px;
-    background: #222;
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    width: 32px;
-    height: 32px;
-    font-size: 1.6em;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.18);
-    transition: background 0.2s;
+/* ===== TITLE STYLING ===== */
+.villa-title {
+  font-family: 'Cormorant Garamond', 'Georgia', serif;
+  font-size: 3.2rem;
+  font-weight: 600;
+  color: #2d3436;
+  text-align: center;
+  margin-bottom: 4rem;
+  line-height: 1.3;
+  position: relative;
+  padding-bottom: 1.5rem;
 }
-.villa-modal-close:hover {
-    background: #444;
+
+.villa-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(to right, #10b981, #059669);
+  border-radius: 2px;
 }
-/* Consistent villa image sizing */
+
+/* ===== GALLERY SECTION ===== */
+.villa-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+/* Gallery item */
+.gallery-item {
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 10px 25px rgba(16, 185, 129, 0.1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  height: 250px;
+}
+
+.gallery-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(16, 185, 129, 0.2);
+}
+
+/* Image container */
 .villa-img-container {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    border-radius: 12px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
 }
 
 .villa-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 12px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-    display: block;
-    margin: 0 auto;
-    transition: transform 0.3s;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.villa-img:hover {
-    transform: scale(1.04);
-}
-/*
-  Base Styles and Container Setup
-  ---
-  Light green gradient background matching the screenshot
-*/
-.retreat-villa {
-    background: linear-gradient(to bottom right, #d4f1d4 0%, #e8f5e8 50%, #f0fff0 100%);
-    padding: 80px 160px;
-    font-family: 'Georgia', 'Times New Roman', serif;
-    color: #333;
-    min-height: 100vh;
+.gallery-item:hover .villa-img {
+  transform: scale(1.08);
 }
 
-.retreat-villa-inner {
-    max-width: 100%;
-    margin: 0 auto;
+/* Overlay on hover */
+.gallery-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, transparent 0%, rgba(16, 185, 129, 0.1) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+  pointer-events: none;
 }
 
-.villa-title {
-    font-size: 2.8em;
-    color: #1d4d2d;
-    margin-bottom: 50px;
-    margin-top: 0;
-    font-weight: 400;
-    letter-spacing: 1px;
-    text-align: left;
-    font-family: 'Georgia', serif;
+.gallery-item:hover::before {
+  opacity: 1;
 }
 
-/*
-  Gallery Section
-  ---
-  Grid layout with 4 items on first row, 2 on second row
-*/
-.villa-gallery {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
-    margin-bottom: 60px;
+/* Number indicator (optional) */
+.gallery-item::after {
+  content: '';
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 30px;
+  height: 30px;
+  background: rgba(16, 185, 129, 0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.3s ease;
+  z-index: 2;
 }
 
-.gallery-item {
-    position: relative;
-    aspect-ratio: 1;
-    border-radius: 16px;
-    overflow: hidden;
+.gallery-item:hover::after {
+  opacity: 1;
+  transform: scale(1);
 }
 
-/* Different sizes for different items */
-.gallery-item:nth-child(1) {
-    grid-column: 1;
-    aspect-ratio: 4/3;
-}
+/* Add numbers to each image */
+.gallery-item:nth-child(1)::after { content: '1'; }
+.gallery-item:nth-child(2)::after { content: '2'; }
+.gallery-item:nth-child(3)::after { content: '3'; }
+.gallery-item:nth-child(4)::after { content: '4'; }
+.gallery-item:nth-child(5)::after { content: '5'; }
+.gallery-item:nth-child(6)::after { content: '6'; }
+.gallery-item:nth-child(7)::after { content: '7'; }
+.gallery-item:nth-child(8)::after { content: '8'; }
+.gallery-item:nth-child(9)::after { content: '9'; }
+.gallery-item:nth-child(10)::after { content: '10'; }
+.gallery-item:nth-child(11)::after { content: '11'; }
+.gallery-item:nth-child(12)::after { content: '12'; }
+.gallery-item:nth-child(13)::after { content: '13'; }
+.gallery-item:nth-child(14)::after { content: '14'; }
+.gallery-item:nth-child(15)::after { content: '15'; }
+.gallery-item:nth-child(16)::after { content: '16'; }
+.gallery-item:nth-child(17)::after { content: '17'; }
+.gallery-item:nth-child(18)::after { content: '18'; }
+.gallery-item:nth-child(19)::after { content: '19'; }
+.gallery-item:nth-child(20)::after { content: '20'; }
+.gallery-item:nth-child(21)::after { content: '21'; }
+.gallery-item:nth-child(22)::after { content: '22'; }
+.gallery-item:nth-child(23)::after { content: '23'; }
+.gallery-item:nth-child(24)::after { content: '24'; }
+.gallery-item:nth-child(25)::after { content: '25'; }
+.gallery-item:nth-child(26)::after { content: '26'; }
+.gallery-item:nth-child(27)::after { content: '27'; }
+.gallery-item:nth-child(28)::after { content: '28'; }
 
-.gallery-item:nth-child(2) {
-    grid-column: 2;
-    aspect-ratio: 4/3;
-}
-
-.gallery-item:nth-child(3) {
-    grid-column: 3;
-    aspect-ratio: 4/3;
-}
-
-.gallery-item:nth-child(4) {
-    grid-column: 4;
-    aspect-ratio: 4/3;
-}
-
-.gallery-item:nth-child(5) {
-    grid-column: 1;
-    aspect-ratio: 4/3;
-}
-
-.gallery-item:nth-child(6) {
-    grid-column: 2;
-    aspect-ratio: 4/3;
-}
-
-.gallery-placeholder {
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, #b5d9b5 0%, #8fc98f 100%);
-    border-radius: 16px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    font-size: 1.1em;
-    font-weight: 500;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.gallery-item:hover .gallery-placeholder {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
-}
-
-/*
-  Features Section
-*/
+/* ===== FEATURES SECTION ===== */
 .villa-features {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
+  background: white;
+  border-radius: 24px;
+  padding: 3rem;
+  box-shadow: 0 20px 40px rgba(16, 185, 129, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.9);
 }
 
 .features-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 3rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1.5rem;
 }
 
+/* Feature item styling */
 .feature-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 18px;
-    font-size: 1.2em;
-    color: #2d5f3f;
-    line-height: 1.6;
-    font-family: 'Georgia', serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #4a5568;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.05) 0%, rgba(5, 150, 105, 0.05) 100%);
+  border-radius: 12px;
+  border: 1px solid rgba(16, 185, 129, 0.1);
+  position: relative;
+  padding-left: 3.5rem;
+  transition: all 0.3s ease;
 }
 
+.feature-item:hover {
+  transform: translateX(5px);
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(5, 150, 105, 0.1) 100%);
+  border-color: rgba(16, 185, 129, 0.2);
+}
+
+/* Checkmark icon */
 .feature-item::before {
-    content: '•';
-    font-size: 1.5em;
-    color: #2d5f3f;
-    font-weight: bold;
-    flex-shrink: 0;
-    margin-top: 2px;
+  content: '✓';
+  position: absolute;
+  left: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  background: #10b981;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 0.9rem;
 }
 
-/*
-  Authenticity Box
-  ---
-  Light turquoise/cyan background with icon and content
-*/
+/* ===== AUTHENTICITY BOX ===== */
 .authenticity-box {
-    background: linear-gradient(135deg, #b3e5e5 0%, #a8dfe0 100%);
-    border-radius: 12px;
-    padding: 24px 32px;
-    display: flex;
-    align-items: flex-start;
-    gap: 18px;
-    margin-top: 30px;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.08) 0%, rgba(5, 150, 105, 0.08) 100%);
+  border-radius: 20px;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.authenticity-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(to right, #10b981, #059669);
+  border-radius: 2px 2px 0 0;
 }
 
 .authenticity-icon {
-    font-size: 1.6em;
-    color: #2d5f3f;
-    font-weight: bold;
-    flex-shrink: 0;
-    width: 36px;
-    height: 36px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: rgba(45, 95, 63, 0.1);
-    border-radius: 6px;
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #10b981, #059669);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.8rem;
+  font-weight: bold;
+  box-shadow: 0 8px 20px rgba(16, 185, 129, 0.3);
 }
 
 .authenticity-content {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+  flex: 1;
 }
 
 .authenticity-title {
-    font-size: 1.05em;
-    color: #1a3a28;
-    font-weight: 600;
-    margin: 0;
-    font-family: 'Georgia', serif;
+  font-family: 'Cormorant Garamond', 'Georgia', serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
 }
 
 .authenticity-text {
-    font-size: 1em;
-    color: #333;
-    line-height: 1.5;
-    margin: 0;
-    font-family: 'Georgia', serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #4a5568;
+  margin: 0;
 }
 
-/*
-  Responsive Design
-*/
-@media (max-width: 1200px) {
-    .retreat-villa {
-        padding: 80px 100px;
-    }
-
-    .villa-gallery {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .gallery-item:nth-child(4) {
-        grid-column: 1;
-    }
-
-    .gallery-item:nth-child(5) {
-        grid-column: 2;
-    }
-
-    .gallery-item:nth-child(6) {
-        grid-column: 3;
-    }
+/* ===== ANIMATION SUPPORT ===== */
+.villa-gallery > * {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards;
 }
 
+/* Staggered gallery animations */
+.villa-gallery .gallery-item:nth-child(1) { animation-delay: 0.1s; }
+.villa-gallery .gallery-item:nth-child(2) { animation-delay: 0.15s; }
+.villa-gallery .gallery-item:nth-child(3) { animation-delay: 0.2s; }
+.villa-gallery .gallery-item:nth-child(4) { animation-delay: 0.25s; }
+.villa-gallery .gallery-item:nth-child(5) { animation-delay: 0.3s; }
+.villa-gallery .gallery-item:nth-child(6) { animation-delay: 0.35s; }
+.villa-gallery .gallery-item:nth-child(7) { animation-delay: 0.4s; }
+.villa-gallery .gallery-item:nth-child(8) { animation-delay: 0.45s; }
+.villa-gallery .gallery-item:nth-child(9) { animation-delay: 0.5s; }
+.villa-gallery .gallery-item:nth-child(10) { animation-delay: 0.55s; }
+
+.features-list > * {
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: fadeInLeft 0.6s ease forwards;
+}
+
+/* Staggered features animations */
+.features-list .feature-item:nth-child(1) { animation-delay: 0.6s; }
+.features-list .feature-item:nth-child(2) { animation-delay: 0.65s; }
+.features-list .feature-item:nth-child(3) { animation-delay: 0.7s; }
+.features-list .feature-item:nth-child(4) { animation-delay: 0.75s; }
+.features-list .feature-item:nth-child(5) { animation-delay: 0.8s; }
+.features-list .feature-item:nth-child(6) { animation-delay: 0.85s; }
+
+.authenticity-box {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease forwards;
+  animation-delay: 1s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Large Tablets */
+@media (max-width: 992px) {
+  .retreat-villa.retreat-section {
+    padding: 80px 20px;
+  }
+  
+  .villa-title {
+    font-size: 2.7rem;
+    margin-bottom: 3.5rem;
+  }
+  
+  .villa-gallery {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.2rem;
+  }
+  
+  .gallery-item {
+    height: 220px;
+  }
+  
+  .features-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+  }
+  
+  .feature-item {
+    font-size: 1.05rem;
+    padding: 1.2rem;
+    padding-left: 3rem;
+  }
+  
+  .authenticity-box {
+    gap: 1.5rem;
+    padding: 1.8rem;
+  }
+  
+  .authenticity-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+  }
+  
+  .authenticity-title {
+    font-size: 1.6rem;
+  }
+}
+
+/* Tablets */
 @media (max-width: 768px) {
-    .retreat-villa {
-        padding: 60px 40px;
-    }
-
-    .villa-title {
-        font-size: 2em;
-        margin-bottom: 35px;
-    }
-
-    .villa-gallery {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 18px;
-        margin-bottom: 40px;
-    }
-
-    .gallery-item:nth-child(5),
-    .gallery-item:nth-child(6) {
-        grid-column: auto;
-    }
-
-    .features-list {
-        gap: 20px;
-    }
-
-    .feature-item {
-        font-size: 1.05em;
-        gap: 15px;
-    }
-
-    .authenticity-box {
-        flex-direction: column;
-        padding: 18px 24px;
-        gap: 12px;
-    }
-
-    .authenticity-icon {
-        width: 30px;
-        height: 30px;
-        font-size: 1.3em;
-    }
+  .retreat-villa.retreat-section {
+    padding: 70px 20px;
+  }
+  
+  .villa-title {
+    font-size: 2.3rem;
+    margin-bottom: 3rem;
+  }
+  
+  .villa-gallery {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+  
+  .gallery-item {
+    height: 180px;
+  }
+  
+  .villa-features {
+    padding: 2.5rem;
+  }
+  
+  .features-list {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .feature-item {
+    font-size: 1rem;
+    padding: 1rem;
+    padding-left: 2.8rem;
+  }
+  
+  .authenticity-box {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.2rem;
+    padding: 1.5rem;
+  }
+  
+  .authenticity-title {
+    font-size: 1.5rem;
+  }
+  
+  .authenticity-text {
+    font-size: 1rem;
+  }
+  
+  /* Adjust decorative circles */
+  .retreat-villa::before,
+  .retreat-villa::after {
+    width: 300px;
+    height: 300px;
+  }
 }
 
-@media (max-width: 480px) {
-    .retreat-villa {
-        padding: 40px 20px;
-    }
+/* Mobile */
+@media (max-width: 576px) {
+  .retreat-villa.retreat-section {
+    padding: 60px 15px;
+  }
+  
+  .villa-title {
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+  }
+  
+  .villa-gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+  }
+  
+  .gallery-item {
+    height: 160px;
+    border-radius: 12px;
+  }
+  
+  .gallery-item::after {
+    display: none; /* Hide numbers on small mobile */
+  }
+  
+  .villa-features {
+    padding: 1.5rem;
+    border-radius: 20px;
+  }
+  
+  .feature-item {
+    font-size: 0.95rem;
+    padding: 0.9rem;
+    padding-left: 2.5rem;
+    line-height: 1.5;
+  }
+  
+  .feature-item::before {
+    left: 1rem;
+    width: 20px;
+    height: 20px;
+    font-size: 0.8rem;
+  }
+  
+  .authenticity-box {
+    padding: 1.2rem;
+  }
+  
+  .authenticity-icon {
+    width: 45px;
+    height: 45px;
+    font-size: 1.3rem;
+  }
+  
+  .authenticity-title {
+    font-size: 1.3rem;
+  }
+  
+  .authenticity-text {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  
+  /* Hide decorative circles on very small screens */
+  .retreat-villa::before,
+  .retreat-villa::after {
+    display: none;
+  }
+}
 
-    .villa-gallery {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
+/* Small Mobile */
+@media (max-width: 375px) {
+  .villa-title {
+    font-size: 1.8rem;
+  }
+  
+  .villa-gallery {
+    grid-template-columns: 1fr;
+    gap: 0.6rem;
+  }
+  
+  .gallery-item {
+    height: 200px;
+  }
+  
+  .feature-item {
+    font-size: 0.9rem;
+    padding: 0.8rem;
+    padding-left: 2.2rem;
+  }
+  
+  .authenticity-title {
+    font-size: 1.2rem;
+  }
+  
+  .authenticity-text {
+    font-size: 0.9rem;
+  }
+}
 
-    .gallery-item {
-        aspect-ratio: 1 !important;
-    }
+/* ===== PRINT STYLES ===== */
+@media print {
+  .retreat-villa.retreat-section {
+    background: white !important;
+    padding: 50px 0 !important;
+  }
+  
+  .villa-gallery {
+    display: none; /* Hide gallery for print */
+  }
+  
+  .villa-features {
+    box-shadow: none !important;
+    border: 1px solid #e0e0e0 !important;
+  }
+  
+  .villa-title {
+    color: #000 !important;
+  }
+  
+  .villa-title::after {
+    background: #000 !important;
+  }
+  
+  .feature-item {
+    background: #f5f5f5 !important;
+    border: 1px solid #ddd !important;
+    page-break-inside: avoid;
+  }
+  
+  .feature-item::before {
+    background: #000 !important;
+  }
+  
+  .authenticity-box {
+    border: 1px solid #ddd !important;
+    background: #f9f9f9 !important;
+  }
+  
+  .authenticity-icon {
+    background: #000 !important;
+    box-shadow: none !important;
+  }
+  
+  /* Hide decorative elements for print */
+  .retreat-villa::before,
+  .retreat-villa::after,
+  .authenticity-box::before {
+    display: none !important;
+  }
+}
 
-    .villa-title {
-        font-size: 1.6em;
-        margin-bottom: 25px;
-    }
-
-    .feature-item {
-        font-size: 0.95em;
-        gap: 12px;
-    }
-
-    .authenticity-box {
-        padding: 15px;
-    }
-
-    .authenticity-title {
-        font-size: 1em;
-    }
-
-    .authenticity-text {
-        font-size: 0.9em;
-    }
+/* ===== DARK MODE SUPPORT ===== */
+@media (prefers-color-scheme: dark) {
+  .retreat-villa.retreat-section {
+    background: linear-gradient(135deg, #042f2e 0%, #064e3b 100%);
+  }
+  
+  .villa-title {
+    color: #ffffff;
+  }
+  
+  .villa-features {
+    background: #1f2937;
+    border: 1px solid #374151;
+  }
+  
+  .feature-item {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(5, 150, 105, 0.1) 100%);
+    color: #d1d5db;
+    border-color: rgba(16, 185, 129, 0.2);
+  }
+  
+  .gallery-item {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  }
+  
+  .gallery-item:hover {
+    box-shadow: 0 20px 40px rgba(16, 185, 129, 0.3);
+  }
+  
+  .authenticity-box {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(5, 150, 105, 0.1) 100%);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+  }
+  
+  .authenticity-title {
+    color: #f3f4f6;
+  }
+  
+  .authenticity-text {
+    color: #d1d5db;
+  }
+  
+  /* Adjust decorative circles for dark mode */
+  .retreat-villa::before {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.05) 0%, rgba(5, 150, 105, 0.05) 100%);
+  }
+  
+  .retreat-villa::after {
+    background: linear-gradient(135deg, rgba(6, 95, 70, 0.05) 0%, rgba(4, 120, 87, 0.05) 100%);
+  }
 }

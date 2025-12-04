@@ -62,16 +62,17 @@
 
 /* ===== CARD STYLING ===== */
 .audience-card {
-  background: white;
-  border-radius: 20px;
-  padding: 2.5rem 2rem;
-  box-shadow: 0 8px 30px rgba(108, 92, 231, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.9);
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
-  position: relative;
-  overflow: hidden;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(108, 92, 231, 0.08);
+  border: 1px solid #f3f3fa;
+  padding: 2rem 1.5rem;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.3s, transform 0.3s;
+  position: relative;
+  overflow: hidden;
   height: 100%;
 }
 
@@ -87,8 +88,8 @@
 }
 
 .audience-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(108, 92, 231, 0.12);
+  box-shadow: 0 12px 32px rgba(108, 92, 231, 0.13);
+  transform: translateY(-6px) scale(1.03);
 }
 
 .audience-card:hover::before {
@@ -116,10 +117,11 @@
 /* ===== CARD TITLE ===== */
 .audience-card-title.float-icon {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 600;
   color: #2d3436;
-  margin-bottom: 1rem;
+  margin-bottom: 0.7rem;
+  text-align: center;
   position: relative;
   padding-left: 2.5rem;
   min-height: 32px;
@@ -165,11 +167,9 @@
 
 /* ===== CARD TEXT ===== */
 .audience-card-text {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 1.05rem;
-  line-height: 1.7;
+  font-size: 1rem;
   color: #4a5568;
-  flex-grow: 1;
+  text-align: center;
   margin: 0;
 }
 
@@ -215,6 +215,14 @@
   height: 3px;
   background: linear-gradient(to right, #6c5ce7, #a29bfe);
   border-radius: 1.5px;
+}
+
+/* ===== MODERN GRID FOR AUDIENCE CARDS ===== */
+.audience-grid.modern-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2.5rem;
 }
 
 /* ===== RESPONSIVE DESIGN ===== */
@@ -454,4 +462,20 @@
   .retreat-audience::after {
     background: linear-gradient(135deg, rgba(255, 200, 124, 0.05) 0%, rgba(255, 150, 150, 0.05) 100%);
   }
+  
+  .audience-card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 1rem;
+  color: #6c5ce7;
+}
+
+.audience-card-icon svg {
+  width: 2.2rem;
+  height: 2.2rem;
+  display: block;
+}
 }

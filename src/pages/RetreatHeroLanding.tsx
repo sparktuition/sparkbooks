@@ -1,9 +1,9 @@
 import React from 'react'
 import './RetreatHeroLanding.css'
 
+const GOOGLE_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSe_XC5yOH7QyntgEfZk9uvkpXpkO5aj1rvkjoB4Ihv-hoXfsw/viewform?usp=dialog'
+
 const RetreatHeroLanding: React.FC = () => {
-  // Remove forced scrolling — let the page flow naturally so the hero section doesn't
-  // cause jumpy or separate scrolling behaviors on small devices.
   return (
     <section className="retreat-hero-main">
       <div className="retreat-hero-content">
@@ -14,13 +14,13 @@ const RetreatHeroLanding: React.FC = () => {
         <div className="retreat-hero-btns">
           <a
             className="retreat-hero-btn-primary"
-            href="https://forms.gle/REPLACE_WITH_YOUR_FORM_ID"
+            href={GOOGLE_FORM_URL}
             target="_blank"
             rel="noopener noreferrer"
           >
             Register Now
           </a>
-          <button className="retreat-hero-btn-secondary">Discover More</button>
+         
         </div>
       </div>
     </section>

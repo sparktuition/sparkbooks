@@ -22,22 +22,22 @@ function HomePage() {
   return (
     <div>
       <div data-aos="fade-down" data-aos-duration="900"><Hero /></div>
-      <div data-aos="fade-right" data-aos-duration="700" data-aos-delay="50"><Stats /></div>
-      <div data-aos="fade-up" data-aos-duration="700" data-aos-delay="320"><RetreatSection /></div>
-      <div data-aos="fade-left" data-aos-duration="700" data-aos-delay="80"><About /></div>
-      <div data-aos="fade-up" data-aos-duration="700" data-aos-delay="100"><Timeline /></div>
-      <div data-aos="zoom-in" data-aos-duration="800" data-aos-delay="120"><FeaturedBooks /></div>
-      <div data-aos="fade-up" data-aos-duration="700" data-aos-delay="140"><Collection /></div>
-      <div data-aos="fade-up" data-aos-duration="700" data-aos-delay="160"><AuthorDetails /></div>
-      <div data-aos="zoom-in" data-aos-duration="800" data-aos-delay="180"><CollectionsPage /></div>
-      <div data-aos="fade-up" data-aos-duration="700" data-aos-delay="200"><AuthorServices /></div>
-      <div data-aos="fade-left" data-aos-duration="800" data-aos-delay="220"><SocialPresence /></div>
-      <div data-aos="fade-up" data-aos-duration="700" data-aos-delay="240"><Testimonials /></div>
-      <div data-aos="fade-left" data-aos-duration="700" data-aos-delay="260"><UpcomingEvents /></div>
-      <div data-aos="fade-up" data-aos-duration="700" data-aos-delay="280"><PressCoverage /></div>
-      <div data-aos="zoom-in" data-aos-duration="800" data-aos-delay="300"><BehindTheScenes /></div>
+      <div data-aos="fade-right" data-aos-duration="700" data-aos-delay="15"><Stats /></div>
+      <div data-aos="fade-up" data-aos-duration="700" data-aos-delay="100"><RetreatSection /></div>
+      <div data-aos="fade-left" data-aos-duration="700" data-aos-delay="25"><About /></div>
+      <div data-aos="fade-up" data-aos-duration="700" data-aos-delay="30"><Timeline /></div>
+      <div data-aos="zoom-in" data-aos-duration="800" data-aos-delay="35"><FeaturedBooks /></div>
+      <div data-aos="fade-up" data-aos-duration="700" data-aos-delay="42"><Collection /></div>
+      <div data-aos="fade-up" data-aos-duration="700" data-aos-delay="50"><AuthorDetails /></div>
+      <div data-aos="zoom-in" data-aos-duration="800" data-aos-delay="55"><CollectionsPage /></div>
+      <div data-aos="fade-up" data-aos-duration="700" data-aos-delay="60"><AuthorServices /></div>
+      <div data-aos="fade-left" data-aos-duration="800" data-aos-delay="68"><SocialPresence /></div>
+      <div data-aos="fade-up" data-aos-duration="700" data-aos-delay="75"><Testimonials /></div>
+      <div data-aos="fade-left" data-aos-duration="700" data-aos-delay="80"><UpcomingEvents /></div>
+      <div data-aos="fade-up" data-aos-duration="700" data-aos-delay="85"><PressCoverage /></div>
+      <div data-aos="zoom-in" data-aos-duration="800" data-aos-delay="92"><BehindTheScenes /></div>
 
-      <div data-aos="fade-up" data-aos-duration="700" data-aos-delay="340"><ContactSection /></div>
+      <div data-aos="fade-up" data-aos-duration="700" data-aos-delay="105"><ContactSection /></div>
     </div>
   )
 }

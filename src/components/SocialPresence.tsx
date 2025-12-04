@@ -22,7 +22,7 @@ const SocialPresence: React.FC = () => {
                 </div>
               </div>
 
-              <div className="platform-card" data-aos="fade-up" data-aos-delay="60">
+              <div className="platform-card" data-aos="fade-up" data-aos-delay="20">
                 <div className="p-icon" aria-hidden>
                   <i className="fab fa-instagram" aria-hidden></i>
                 </div>
@@ -32,7 +32,7 @@ const SocialPresence: React.FC = () => {
                 </div>
               </div>
 
-              <div className="platform-card" data-aos="fade-up" data-aos-delay="120">
+              <div className="platform-card" data-aos="fade-up" data-aos-delay="40">
                 <div className="p-icon" aria-hidden>
                   <i className="fab fa-twitter" aria-hidden></i>
                 </div>
@@ -42,7 +42,7 @@ const SocialPresence: React.FC = () => {
                 </div>
               </div>
 
-              <div className="platform-card" data-aos="fade-up" data-aos-delay="180">
+              <div className="platform-card" data-aos="fade-up" data-aos-delay="60">
                 <div className="p-icon" aria-hidden>
                   <i className="fab fa-youtube" aria-hidden></i>
                 </div>
@@ -65,7 +65,7 @@ const SocialPresence: React.FC = () => {
                 </div>
               </div>
 
-              <div className="strategy-item" data-aos="fade-left" data-aos-delay="60">
+              <div className="strategy-item" data-aos="fade-left" data-aos-delay="20">
                 <div className="s-icon" aria-hidden><i className="fas fa-bullseye"></i></div>
                 <div>
                   <strong>Targeted Ads</strong>
@@ -73,7 +73,7 @@ const SocialPresence: React.FC = () => {
                 </div>
               </div>
 
-              <div className="strategy-item" data-aos="fade-left" data-aos-delay="120">
+              <div className="strategy-item" data-aos="fade-left" data-aos-delay="40">
                 <div className="s-icon" aria-hidden><i className="fas fa-users"></i></div>
                 <div>
                   <strong>Influencer Outreach</strong>
@@ -81,7 +81,7 @@ const SocialPresence: React.FC = () => {
                 </div>
               </div>
 
-              <div className="strategy-item" data-aos="fade-left" data-aos-delay="180">
+              <div className="strategy-item" data-aos="fade-left" data-aos-delay="60">
                 <div className="s-icon" aria-hidden><i className="fas fa-envelope"></i></div>
                 <div>
                   <strong>Email Campaigns</strong>

@@ -200,137 +200,7 @@
   }
 }
 
-/* ===== MODAL OVERLAY ===== */
-.retreat-modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(8px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-  padding: 20px;
-  animation: overlayFadeIn 0.3s ease;
-}
-
-@keyframes overlayFadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-/* ===== MODAL ===== */
-.retreat-modal {
-  background: white;
-  border-radius: 24px;
-  padding: 3rem;
-  max-width: 500px;
-  width: 100%;
-  max-height: 90vh;
-  overflow-y: auto;
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
-  position: relative;
-  animation: modalSlideIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-@keyframes modalSlideIn {
-  from {
-    opacity: 0;
-    transform: translateY(30px) scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-}
-
-.retreat-modal h3 {
-  font-family: 'Cormorant Garamond', 'Georgia', serif;
-  font-size: 2.2rem;
-  color: #2d3436;
-  margin-bottom: 2rem;
-  text-align: center;
-  position: relative;
-  padding-bottom: 1rem;
-}
-
-.retreat-modal h3::after {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60px;
-  height: 3px;
-  background: linear-gradient(to right, #64b5f6, #ab47bc);
-  border-radius: 1.5px;
-}
-
-/* ===== FORM STYLES ===== */
-.retreat-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.retreat-form label {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 0.95rem;
-  font-weight: 500;
-  color: #4a5568;
-}
-
-.retreat-form input,
-.retreat-form select,
-.retreat-form textarea {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  font-size: 1rem;
-  padding: 1rem 1.2rem;
-  border: 2px solid #e2e8f0;
-  border-radius: 12px;
-  background: white;
-  transition: all 0.2s ease;
-  color: #2d3436;
-}
-
-.retreat-form input:focus,
-.retreat-form select:focus,
-.retreat-form textarea:focus {
-  outline: none;
-  border-color: #64b5f6;
-  box-shadow: 0 0 0 3px rgba(100, 181, 246, 0.1);
-}
-
-.retreat-form input::placeholder,
-.retreat-form textarea::placeholder {
-  color: #a0aec0;
-}
-
-.retreat-form textarea {
-  resize: vertical;
-  min-height: 100px;
-}
-
-/* ===== FORM ACTIONS ===== */
-.retreat-form-actions {
-  display: flex;
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-.retreat-form-actions .btn {
-  flex: 1;
-  min-width: 0;
-}
+/* modal removed — contact now handled via the Google Form link */
 
 /* ===== RESPONSIVE DESIGN ===== */
 
@@ -371,13 +241,7 @@
     gap: 1rem;
   }
   
-  .retreat-modal {
-    padding: 2rem;
-  }
-  
-  .retreat-modal h3 {
-    font-size: 1.9rem;
-  }
+  /* modal removed */
   
   /* Adjust decorative circles */
   .retreat-cta::before,
@@ -418,21 +282,7 @@
     max-width: 300px;
   }
   
-  .retreat-modal-overlay {
-    padding: 10px;
-  }
-  
-  .retreat-modal {
-    padding: 1.5rem;
-  }
-  
-  .retreat-modal h3 {
-    font-size: 1.7rem;
-  }
-  
-  .retreat-form-actions {
-    flex-direction: column;
-  }
+  /* modal removed */
   
   /* Hide decorative circles on very small screens */
   .retreat-cta::before,
@@ -452,9 +302,7 @@
     font-size: 3rem;
   }
   
-  .retreat-modal h3 {
-    font-size: 1.5rem;
-  }
+  /* modal removed */
 }
 
 /* ===== DARK MODE SUPPORT ===== */
@@ -481,37 +329,7 @@
     background: rgba(144, 202, 249, 0.1);
   }
   
-  .retreat-modal {
-    background: #2d3748;
-  }
-  
-  .retreat-modal h3 {
-    color: #ffffff;
-  }
-  
-  .retreat-form label {
-    color: #cbd5e0;
-  }
-  
-  .retreat-form input,
-  .retreat-form select,
-  .retreat-form textarea {
-    background: #4a5568;
-    border-color: #4a5568;
-    color: #e2e8f0;
-  }
-  
-  .retreat-form input:focus,
-  .retreat-form select:focus,
-  .retreat-form textarea:focus {
-    border-color: #64b5f6;
-    box-shadow: 0 0 0 3px rgba(100, 181, 246, 0.2);
-  }
-  
-  .retreat-form input::placeholder,
-  .retreat-form textarea::placeholder {
-    color: #a0aec0;
-  }
+  /* modal removed */
   
   /* Adjust decorative circles for dark mode */
   .retreat-cta::before {

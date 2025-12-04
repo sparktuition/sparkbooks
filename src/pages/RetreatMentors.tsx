@@ -30,20 +30,19 @@ const RetreatMentors: React.FC = () => {
           <article className="mentor-card">
             <div className="mentor-image float-icon">
               <img
-               src="/SparkWritersRetreat/jpeg%20(2).jpeg"
+               src="/SparkWritersRetreat/jpeg%20(2).png"
                 alt="Eshwar Sundaresan"
               />
             </div>
-            <h3 className="mentor-name">Eshwar Sundaresan</h3>
-            <p className="mentor-subtitle">
-              Versatile author and journalist renowned for powerful, emotionally resonant, character-driven narratives that touch hearts and transform perspectives.
-            </p>
-            <ul className="mentor-skills stagger-list">
-              <li>Expert in finding clarity and structure</li>
-              <li>Guides writers towards authentic voice</li>
-              <li>Specialises in emotional storytelling</li>
-              <li>Helps unlock creative honesty</li>
-            </ul>
+            <h3 className="mentor-name">Sunil Shelar</h3>
+           <p className="mentor-subtitle">
+    Practising Architecture since 1983, including 7 years with world-renowned Architect Charles Correa (1983-1990). Established independent practice in Bangalore in 1990.
+</p>
+<ul className="mentor-skills stagger-list">
+    <li>Worked on key large projects including Vidhan Bhavan (Bhopal), JNIDB (Hyderabad), IUCAA (Pune), and Jawahar Kala Kendra (Jaipur).</li>
+    <li>Rich experience in large Residential, Institutional, IT, Industrial, Health Care, Commercial, and Hospitality projects.</li>
+    <li>Specialises in Town Planning and complex multi-disciplinary architectural design.</li>
+</ul>
           </article>
         </div>
 

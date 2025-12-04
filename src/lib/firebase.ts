@@ -1,16 +1,15 @@
 import { initializeApp } from 'firebase/app'
 import { getFirestore, collection, addDoc, serverTimestamp } from 'firebase/firestore'
 
-// Using explicit client config provided by the user
+// Load Firebase config from environment variables
 const firebaseConfig = {
-  apiKey: "AIzaSyAIrDjFDHg6ziZ0E7fEGYkA8vqEepRRItw",
-  authDomain: "the-spark-books.firebaseapp.com",
-  projectId: "the-spark-books",
-  // Use the correct bucket name that has CORS configured
-  storageBucket: "the-spark-books.firebasestorage.app",
-  messagingSenderId: "219292792958",
-  appId: "1:219292792958:web:37102675b97a0b697c402f",
-  measurementId: "G-7MCT3M96R7",
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID,
 }
 
 let db: ReturnType<typeof getFirestore> | null = null

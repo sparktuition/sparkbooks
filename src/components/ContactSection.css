@@ -163,31 +163,7 @@
   }
 }
 
-/* Modal form styles */
-.contact-modal-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(2,6,23,0.6);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1200;
-  padding: 24px;
-}
-.contact-modal {
-  width: 100%;
-  max-width: 720px;
-  background: #ffffff;
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 20px 60px rgba(2,6,23,0.45);
-}
-.contact-modal h3 { margin: 0 0 10px 0; color: #1e3a1a }
-.contact-form { display: grid; gap: 12px }
-.contact-form label { display: flex; flex-direction: column; font-size: 13px; color:#23310d }
-.contact-form input, .contact-form textarea { margin-top: 6px; padding: 10px 12px; border-radius: 8px; border:1px solid #d6eac8; font-size:14px }
-.form-actions { display:flex; gap:12px; justify-content:flex-end; margin-top:6px }
+/* modal removed (contact flow now handled via Google Form) */
+/* keep general button classes here if needed by other components */
 .btn-outline { background: transparent; border: 1px solid #1e3a1a; color: #1e3a1a; padding:8px 14px; border-radius:8px }
 .btn-primary { background: #1e3a1a; color: #eaffd6; padding:8px 14px; border-radius:8px; border:none }
-.contact-success { margin-top: 10px; color: #1d6d29; font-weight:600 }
-.contact-error { margin-top: 10px; color: #912a2a; font-weight:600 }

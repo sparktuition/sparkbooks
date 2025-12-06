@@ -14,13 +14,25 @@ function initAOS() {
       return
     }
 
-    if (AOS && typeof AOS.init === 'function') {
-      AOS.init({ once: true, duration: 800, offset: 120, easing: 'ease-out-cubic' })
-      console.info('[aos] initialized')
-    } else {
-      // If AOS isn't available yet, try again after a short delay
-      setTimeout(initAOS, 250)
+    // guard against an infinite retry loop — try a limited number of times
+    const maxAttempts = 20
+    let attempts = 0
+
+    const tryInit = () => {
+      attempts += 1
+      // @ts-ignore
+      const A = (window as any).AOS
+      if (A && typeof A.init === 'function') {
+        A.init({ once: true, duration: 800, offset: 120, easing: 'ease-out-cubic' })
+        console.info('[aos] initialized')
+      } else if (attempts < maxAttempts) {
+        setTimeout(tryInit, 250)
+      } else {
+        console.warn(`[aos] not available after ${maxAttempts} attempts — skipping AOS init`)
+      }
     }
+
+    tryInit()
   } catch (e) {
     console.warn('[aos] failed to initialize', e)
   }

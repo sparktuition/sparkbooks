@@ -1,12 +1,10 @@
 
-import { useEffect } from 'react';
+// not using effects here — leave Hero as a presentational component
 import './Hero.css'
 
 
 export default function Hero() {
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }, []);
+  // no scroll-to-top here (caused nested scrolling / odd behavior)
   return (
     <section className="hero-section">
       <div className="hero-section-inner">

@@ -1,17 +1,13 @@
 /* Retreat Hero Section - Clean, Responsive, Unique Classnames */
 
 .retreat-hero-main {
-  /* use a flexible hero height so the section flows with the rest of the page
-     - default is smaller (mobile) so it doesn't create a separate-scrolling feel
-     - expands progressively on larger screens */
-  min-height: 70vh;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  overflow: visible; /* let page scroll naturally; avoid nested scroll or clipping */
-  padding: 48px 0 32px 0;
-  /* ensure background image scrolls with the page (avoid background-attachment: fixed) */
+  min-height: 100vh;
+  padding: 60px 0 40px 0;
+  box-sizing: border-box;
   background: url('/SparkWritersRetreat/herobackgrounf.jpg') center/cover no-repeat;
   background-attachment: scroll;
 }
@@ -123,7 +119,7 @@
 
 /* Larger tablets */
 @media (min-width: 600px) {
-  .retreat-hero-main { min-height: 80vh; padding: 56px 0 36px; }
+  .retreat-hero-main { padding: 56px 0 36px; }
   .retreat-hero-content { max-width: min(88vw, 720px); padding: 0 28px; }
   .retreat-hero-title { font-size: clamp(2.2rem, 3.6vw, 3.4rem); }
   .retreat-hero-desc { font-size: clamp(1rem, 1.8vw, 1.25rem); }
@@ -131,7 +127,7 @@
 
 /* Desktop and larger */
 @media (min-width: 900px) {
-  .retreat-hero-main { min-height: 92vh; padding: 80px 0 48px; }
+  .retreat-hero-main { padding: 80px 0 48px; }
   .retreat-hero-content { max-width: 720px; padding: 0 44px; }
   .retreat-hero-title { font-size: clamp(2.8rem, 2.9vw, 3.6rem); }
   .retreat-hero-desc { font-size: clamp(1.05rem, 1.5vw, 1.25rem); }

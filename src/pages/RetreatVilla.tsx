@@ -11,14 +11,6 @@ const villaImageFiles = [
   "jpg (26).jpg", "jpg (27).jpg", "jpg (28).jpg", "jpg (29).jpg"
 ];
 
-const features = [
-  'Modern luxury villa surrounded by pristine Himalayan greenery and natural beauty',
-  'Quiet, peaceful, and completely private surroundings designed for deep creative work',
-  'Clean, premium rooms with thoughtful amenities and exceptional attention to detail',
-  'Panoramic mountain views from terraces, balconies, and intimate writing nooks',
-  'Beautiful outdoor spaces for contemplation, inspiration, and creative breakthroughs',
-  'Hygienic, freshly prepared meals that nourish both body and creative spirit',
-];
 
 const RetreatVilla: React.FC = () => {
 
@@ -44,28 +36,9 @@ const RetreatVilla: React.FC = () => {
           ))}
         </div>
 
-        {/* Features Section */}
-        <div className="villa-features">
-          <ul className="features-list">
-            {features.map((feature, index) => (
-              <li key={index} className="feature-item">
-                {feature}
-              </li>
-            ))}
-          </ul>
 
-          {/* Authenticity Box */}
-          <div className="authenticity-box">
-            <div className="authenticity-icon">✓</div>
-            <div className="authenticity-content">
-              <h3 className="authenticity-title">Authenticity Guaranteed:</h3>
-              <p className="authenticity-text">
-                Every photograph on our website is genuine villa photography, ensuring complete
-                transparency and trust. What you see is precisely what you'll experience.
-              </p>
-            </div>
-          </div>
-        </div>
+         
+        
       </div>
     </section>
   );

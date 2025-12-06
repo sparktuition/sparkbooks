@@ -7,7 +7,6 @@ import RetreatFeatures from './RetreatFeatures'
 import RetreatItinerary from './RetreatItinerary'
 import RetreatDaily from './RetreatDaily'
 import RetreatMentors from './RetreatMentors'
-import RetreatAudience from './RetreatAudience'
 import RetreatVilla from './RetreatVilla'
 import RetreatWhy from './RetreatWhy'
 import RetreatSeats from './RetreatSeats'
@@ -32,8 +31,6 @@ const RetreatPage: React.FC = () => {
       <div data-aos="fade-left" data-aos-duration="750" data-aos-delay="25"><RetreatExtraordinary /></div>
       {/* 4. Features & Amenities */}
       <div data-aos="zoom-in" data-aos-duration="800" data-aos-delay="33"><RetreatFeatures /></div>
-      {/* 5. Who Should Attend */}
-      <div className="theme-cyan" data-aos="fade-left" data-aos-duration="800" data-aos-delay="70"><RetreatAudience /></div>
       {/* 6. Meet the Mentors */}
       <div className="theme-plum" data-aos="fade-right" data-aos-duration="800" data-aos-delay="60"><RetreatMentors /></div>
       {/* 7. Schedule & Timeline */}

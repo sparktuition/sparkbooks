@@ -258,6 +258,49 @@
   opacity: 0.3;
 }
 
+/* ===== PAYMENT QR BLOCK ===== */
+.retreat-seats-payment {
+  margin-top: 2.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  border: 1px dashed rgba(34, 197, 94, 0.4);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 10px 24px rgba(34, 197, 94, 0.08);
+}
+
+.retreat-seats-payment-text h3 {
+  margin: 0 0 0.35rem 0;
+  font-size: 1.25rem;
+  color: #1e293b;
+}
+
+.retreat-seats-payment-text p {
+  margin: 0;
+  color: #4b5563;
+  font-size: 1rem;
+}
+
+.retreat-seats-payment-qr {
+  flex-shrink: 0;
+  width: 140px;
+  height: 140px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  background: #fff;
+  display: grid;
+  place-items: center;
+}
+
+.retreat-seats-payment-qr img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 /* Alarm clock icon for urgency */
 .retreat-seats-note::before {
   position: absolute;
@@ -359,6 +402,16 @@
   .retreat-seats-note {
     font-size: 1rem;
     padding: 1.2rem 1.2rem 1.2rem 3.5rem;
+  }
+
+  .retreat-seats-payment {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .retreat-seats-payment-qr {
+    width: 160px;
+    height: 160px;
   }
   
   /* Adjust decorative circles */

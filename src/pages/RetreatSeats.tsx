@@ -22,6 +22,16 @@ const RetreatSeats: React.FC = () => (
         <p className="retreat-seats-note">
           <strong>First-come, first-served!</strong> Secure your place soon and join us for this unique and enriching writing journey.
         </p>
+
+        <div className="retreat-seats-payment">
+          <div className="retreat-seats-payment-text">
+            <h3>Pay via Google Pay</h3>
+            <p>Pay using this QR and share the payment screenshot with us.</p>
+          </div>
+          <div className="retreat-seats-payment-qr">
+            <img src="/SparkWritersRetreat/Gpay.jpeg" alt="Google Pay QR" loading="lazy" />
+          </div>
+        </div>
       </div>
     </div>
   </section>

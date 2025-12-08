@@ -18,7 +18,6 @@ import RetreatSection from './components/RetreatSection'
 import RetreatPage from './pages/RetreatPage'
 import RetreatHeroLanding from './pages/RetreatHeroLanding'
 import RetreatHeroTwoColumn from './pages/RetreatHeroTwoColumn'
-import RetreatFeatures from './pages/RetreatFeatures'
 import RetreatItinerary from './pages/RetreatItinerary'
 import RetreatDaily from './pages/RetreatDaily'
 import RetreatMentors from './pages/RetreatMentors'
@@ -105,7 +104,6 @@ function App() {
         {/* Retreat individual section routes */}
         <Route path="/retreat/hero" element={<SectionPage><RetreatHeroLanding /></SectionPage>} />
         <Route path="/retreat/overview" element={<SectionPage><RetreatHeroTwoColumn /></SectionPage>} />
-        <Route path="/retreat/features" element={<SectionPage><RetreatFeatures /></SectionPage>} />
         <Route path="/retreat/mentors" element={<SectionPage><RetreatMentors /></SectionPage>} />
         <Route path="/retreat/itinerary" element={<SectionPage><RetreatItinerary /></SectionPage>} />
         <Route path="/retreat/daily" element={<SectionPage><RetreatDaily /></SectionPage>} />

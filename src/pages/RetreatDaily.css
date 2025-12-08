@@ -8,6 +8,12 @@
   overflow: hidden;
 }
 
+@media (max-width: 768px) {
+  .retreat-daily.retreat-section {
+    padding: 40px 16px;
+  }
+}
+
 /* Decorative background elements */
 .retreat-daily::before {
   position: absolute;
@@ -276,16 +282,31 @@
     grid-template-columns: 1fr;
     gap: 2.5rem;
     margin-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
   }
   
-  /* Reset order for mobile */
+  /* Reset order for mobile - ensure all items display in order */
   .daily-item:nth-child(even) .daily-content,
   .daily-item:nth-child(even) .daily-image {
+    order: unset;
+  }
+  
+  .daily-item .daily-content {
     order: 0;
+  }
+  
+  .daily-item .daily-image {
+    order: 1;
   }
   
   .daily-content {
     padding: 0;
+    width: 100%;
+  }
+  
+  .daily-image {
+    width: 100%;
   }
   
   .feature-title {
@@ -303,21 +324,9 @@
     height: 300px;
   }
   
-  /* Adjust item numbers */
+  /* Remove positioning issues that hide content */
   .daily-item::before {
-    font-size: 6rem;
-  }
-  
-  .daily-item-1::before,
-  .daily-item-3::before,
-  .daily-item-5::before {
-    left: -1rem;
-  }
-  
-  .daily-item-2::before,
-  .daily-item-4::before,
-  .daily-item-6::before {
-    right: -1rem;
+    display: none;
   }
 }
 

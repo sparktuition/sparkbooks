@@ -8,6 +8,12 @@
   overflow: hidden;
 }
 
+@media (max-width: 768px) {
+  .retreat-cuisine-section {
+    padding: 40px 16px;
+  }
+}
+
 /* Rose theme variation */
 .retreat-cuisine-section.theme-rose {
   background: linear-gradient(135deg, #fff5f7 0%, #fdf2f8 100%);

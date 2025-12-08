@@ -7,21 +7,7 @@ const RetreatItinerary: React.FC = () => {
       <div className="retreat-itinerary-inner retreat-inner">
         <h2 className="itinerary-title">Your Seven-Day Transformative Experience</h2>
 
-        <div className="retreat-dates-highlight">
-          <div className="dates-badge">
-            <div className="date-start">
-              <span className="date-label">Arrival</span>
-              <span className="date-value">1 March 2026</span>
-              <span className="date-day">Sunday</span>
-            </div>
-            <div className="dates-separator">to</div>
-            <div className="date-end">
-              <span className="date-label">Departure</span>
-              <span className="date-value">8 March 2026</span>
-              <span className="date-day">Sunday</span>
-            </div>
-          </div>
-        </div>
+       
 
         <div className="timeline-wrapper">
           {/* Left Column - Content */}
@@ -37,27 +23,6 @@ const RetreatItinerary: React.FC = () => {
             </div>
           </div>
 
-          {/* Right Column - Timeline */}
-          <div className="timeline-right stagger-list">
-            <div className="timeline-connector-line"></div>
-            
-            <div className="timeline-node">
-              <div className="timeline-number">1</div>
-              <div className="timeline-dot"></div>
-            </div>
-
-            <div className="timeline-node">
-              <div className="timeline-number">2</div>
-              <div className="timeline-dot"></div>
-              <div className="timeline-node-label">Days 2-6</div>
-              <p className="timeline-node-text">Immersive creative sessions with field experiences, one-on-one mentorship, story development, and uninterrupted writing time</p>
-            </div>
-
-            <div className="timeline-node">
-              <div className="timeline-number">3</div>
-              <div className="timeline-dot"></div>
-            </div>
-          </div>
         </div>
       </div>
     </section>

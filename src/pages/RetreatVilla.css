@@ -8,6 +8,12 @@
   overflow: hidden;
 }
 
+@media (max-width: 768px) {
+  .retreat-villa.retreat-section {
+    padding: 40px 16px;
+  }
+}
+
 /* Decorative background elements */
 .retreat-villa::before {
   position: absolute;

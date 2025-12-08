@@ -8,6 +8,12 @@
   overflow: hidden;
 }
 
+@media (max-width: 768px) {
+  .retreat-why.retreat-section {
+    padding: 40px 16px;
+  }
+}
+
 /* Decorative background elements */
 .retreat-why::before {
   position: absolute;

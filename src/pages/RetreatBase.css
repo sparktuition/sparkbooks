@@ -4,7 +4,7 @@
   --retreat-max-width: 1200px;
   --retreat-side-padding-desktop: 160px;
   --retreat-side-padding-tablet: 100px;
-  --retreat-side-padding-mobile: 40px;
+  --retreat-side-padding-mobile: 16px;
 }
 
 /* Prevent horizontal scroll from decorative offsets or wide elements */
@@ -44,6 +44,9 @@ html, body {
 }
 
 @media (max-width: 768px) {
+  :root {
+    --retreat-side-padding-tablet: 16px;
+  }
   .retreat-section {
     padding-left: var(--retreat-side-padding-mobile);
     padding-right: var(--retreat-side-padding-mobile);

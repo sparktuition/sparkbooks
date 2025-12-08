@@ -89,34 +89,34 @@ button:focus-visible {
   .section,
   .home-section,
   .retreat-section {
-    padding: 32px 14px !important;
+    padding: 24px 14px !important;
   }
 
   .retreat-inner,
   .section-inner,
   .home-inner,
   .container {
-    gap: 1.5rem;
+    gap: 1.25rem !important;
   }
 
   [class*="grid"] {
-    gap: 1.25rem !important;
+    gap: 1rem !important;
   }
 
   h1,
   h2,
   h3,
   h4 {
-    margin: 0 0 0.85rem;
+    margin: 0 0 0.6rem;
   }
 
   p {
-    margin: 0 0 0.75rem;
+    margin: 0 0 0.5rem;
   }
 
   ul {
-    margin: 0 0 0.9rem;
-    padding-left: 1.1rem;
+    margin: 0 0 0.7rem;
+    padding-left: 1rem;
   }
 
   .card,
@@ -124,6 +124,39 @@ button:focus-visible {
   .retreat-card,
   .feature-card,
   .cta-card {
-    padding: 1.5rem !important;
+    padding: 1.25rem !important;
+  }
+}
+
+/* Extra tight spacing on tablet/medium screens (768px and below) for all retreat sections */
+@media (max-width: 768px) {
+  .retreat-section {
+    padding: 28px 16px !important;
+  }
+
+  .retreat-inner {
+    gap: 1.5rem !important;
+  }
+
+  .mentor-card,
+  [class*="card"] {
+    margin-bottom: 0.5rem !important;
+  }
+
+  .mentors-title,
+  .section-title,
+  [class*="title"] {
+    margin-bottom: 2rem !important;
+  }
+
+  .mentor-skills li,
+  .features-list li,
+  .highlights li {
+    margin-bottom: 0.35rem;
+  }
+
+  .mentor-image {
+    width: 140px;
+    height: 140px;
   }
 }

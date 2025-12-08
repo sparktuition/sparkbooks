@@ -8,6 +8,12 @@
   overflow: hidden;
 }
 
+@media (max-width: 768px) {
+  .retreat-mentors.retreat-section {
+    padding: 40px 16px;
+  }
+}
+
 /* Decorative background elements */
 .retreat-mentors::before {
   position: absolute;

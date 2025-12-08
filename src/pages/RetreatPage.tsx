@@ -28,9 +28,7 @@ const RetreatPage: React.FC = () => {
       <div data-aos="fade-right" data-aos-duration="750" data-aos-delay="15"><RetreatHeroTwoColumn /></div>
       {/* 4. Features & Amenities */}
       <div data-aos="zoom-in" data-aos-duration="800" data-aos-delay="33"><RetreatFeatures /></div>
-      {/* 6. Meet the Mentors */}
-      <div className="theme-plum" data-aos="fade-right" data-aos-duration="800" data-aos-delay="60"><RetreatMentors /></div>
-      {/* 7. Schedule & Timeline */}
+    {/* 7. Schedule & Timeline */}
       <div className="theme-amber" data-aos="fade-up" data-aos-duration="800" data-aos-delay="42"><RetreatItinerary /></div>
       {/* 8. Daily Experiences */}
       <div className="theme-lime" data-aos="fade-up" data-aos-duration="800" data-aos-delay="50"><RetreatDaily /></div>
@@ -48,7 +46,9 @@ const RetreatPage: React.FC = () => {
       <div className="theme-mint" data-aos="zoom-in-up" data-aos-duration="850" data-aos-delay="78"><RetreatSeats /></div>
       {/* 15. Transport Arrangements */}
       <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="88"><TransportArrangements /></div>
-
+      {/* 6. Meet the Mentors */}
+      <div className="theme-plum" data-aos="fade-right" data-aos-duration="800" data-aos-delay="60"><RetreatMentors /></div>
+     
       {/* 17. Writing Plan Support */}
       <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="92"><BookWritingPlan /></div>
       {/* 18. Why Choose This Retreat */}

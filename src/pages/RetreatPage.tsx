@@ -2,7 +2,6 @@ import React from 'react'
 
 import RetreatHeroLanding from './RetreatHeroLanding'
 import RetreatHeroTwoColumn from './RetreatHeroTwoColumn'
-import RetreatFeatures from './RetreatFeatures'
 import RetreatItinerary from './RetreatItinerary'
 import RetreatDaily from './RetreatDaily'
 import RetreatMentors from './RetreatMentors'
@@ -27,7 +26,7 @@ const RetreatPage: React.FC = () => {
       {/* 2. Overview & Inspiration */}
       <div data-aos="fade-right" data-aos-duration="750" data-aos-delay="15"><RetreatHeroTwoColumn /></div>
       {/* 4. Features & Amenities */}
-      <div data-aos="zoom-in" data-aos-duration="800" data-aos-delay="33"><RetreatFeatures /></div>
+
     {/* 7. Schedule & Timeline */}
       <div className="theme-amber" data-aos="fade-up" data-aos-duration="800" data-aos-delay="42"><RetreatItinerary /></div>
       {/* 8. Daily Experiences */}

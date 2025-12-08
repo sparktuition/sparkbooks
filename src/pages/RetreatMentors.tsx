@@ -32,28 +32,6 @@ const RetreatMentors: React.FC = () => {
           <article className="mentor-card">
             <div className="mentor-image float-icon">
               <img
-               src="/SparkWritersRetreat/jpeg%20(2).png"
-                alt="Sunil Shelar"
-              />
-            </div>
-            <h3 className="mentor-name">Sunil Shelar</h3>
-            <p className="mentor-subtitle">
-              Visionary architect, artist, and adventurer blending tradition, innovation, and sustainability across four decades of practice.
-            </p>
-            <ul className="mentor-skills stagger-list">
-              <li>40+ years in architecture; alumnus of Sir J.J. College of Architecture, Mumbai</li>
-              <li>Mentee of Charles Correa; founded AUM Group in Bangalore collaborating on large builds</li>
-              <li>Leads diverse work from commercial complexes to sustainable initiatives like the Miyawaki Forest in Shirwal</li>
-              <li>Notable projects include Manyata Tech Park/Township, Angadi Silks, and large mixed-use developments</li>
-              <li>Exhibits as a landscape painter; channels travel and nature into design aesthetics</li>
-              <li>Adventure-driven creativity: solo Kanyakumari-to-Kashmir rides and Himalayan treks inform his storytelling for spaces</li>
-              <li>Note: distinct from Dr. Sunil Shelar, a Satara-based general physician (MBBS, MD, 31+ years)</li>
-            </ul>
-          </article>
-
-          <article className="mentor-card">
-            <div className="mentor-image float-icon">
-              <img
                 src="/SparkWritersRetreat/sangeetha.jfif"
                 alt="Sangeeta Bahadur"
               />
@@ -72,9 +50,53 @@ const RetreatMentors: React.FC = () => {
               <li>Kolkata-born; Mumbai University PG in English Literature; educated across India</li>
             </ul>
           </article>
+
+          <article className="mentor-card">
+            <div className="mentor-image float-icon">
+              <img
+                src="/SparkWritersRetreat/sahanasundar.jpeg"
+                alt="Captain Sahana Sundar"
+              />
+            </div>
+            <h3 className="mentor-name">Captain Sahana Sundar (Retd.)</h3>
+            <p className="mentor-subtitle">
+              Distinguished officer-turned-author blending 32 years of military discipline with literary passion, building bridges between unheard regional voices and India's literary landscape.
+            </p>
+            <ul className="mentor-skills stagger-list">
+              <li>32-year national service career in NCC (1989-2022) as instructor, Administrative Officer across India</li>
+              <li>Commissioned as Lieutenant (2006); voluntarily retired as Captain; seven Republic Day Camp accompaniments</li>
+              <li>Founder of Spark Igniting Minds, an all-India writers' guild and publishing initiative</li>
+              <li>Published 18 books across fiction, non-fiction, anthologies, and children's literature</li>
+              <li>Debut novel Anand inspired by Café Coffee Day founder; author of over 400 poems and award-winning language-learning book</li>
+              <li>Literary translator: Whispers of the Soil, rendering acclaimed Kannada short stories of Y.K. Sandhya Sharma into English</li>
+              <li>Media presence through YouTube channel interviewing personalities; passionate advocate for social change and regional voice amplification</li>
+            </ul>
+          </article>
+
+          <article className="mentor-card">
+            <div className="mentor-image float-icon">
+              <img
+               src="/SparkWritersRetreat/jpeg%20(2).png"
+                alt="Sunil Shelar"
+              />
+            </div>
+            <h3 className="mentor-name">Sunil Shelar</h3>
+            <p className="mentor-subtitle">
+              Visionary architect, artist, and adventurer blending tradition, innovation, and sustainability across four decades of practice.
+            </p>
+            <ul className="mentor-skills stagger-list">
+              <li>40+ years in architecture; alumnus of Sir J.J. College of Architecture, Mumbai</li>
+              <li>Mentee of Charles Correa; founded AUM Group in Bangalore collaborating on large builds</li>
+              <li>Leads diverse work from commercial complexes to sustainable initiatives like the Miyawaki Forest in Shirwal</li>
+              <li>Notable projects include Manyata Tech Park/Township, Angadi Silks, and large mixed-use developments</li>
+              <li>Exhibits as a landscape painter; channels travel and nature into design aesthetics</li>
+              <li>Adventure-driven creativity: solo Kanyakumari-to-Kashmir rides and Himalayan treks inform his storytelling for spaces</li>
+              <li>Note: distinct from Dr. Sunil Shelar, a Satara-based general physician (MBBS, MD, 31+ years)</li>
+            </ul>
+          </article>
         </div>
 
-        <p className="mentors-conclusion">Two remarkable mentors. Two powerful perspectives. One unforgettable creative transformation.</p>
+        <p className="mentors-conclusion">Four remarkable mentors. Four powerful perspectives. One unforgettable creative transformation.</p>
       </div>
     </section>
   )

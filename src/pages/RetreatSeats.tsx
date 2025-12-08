@@ -1,6 +1,8 @@
 import React from 'react';
 import './RetreatSeats.css';
 
+const GOOGLE_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSe_XC5yOH7QyntgEfZk9uvkpXpkO5aj1rvkjoB4Ihv-hoXfsw/viewform?usp=dialog'
+       
 const RetreatSeats: React.FC = () => (
   <section className="retreat-seats-section parallax-bg" data-aos="zoom-in" data-aos-duration="900">
     <div className="retreat-seats-inner">
@@ -28,6 +30,9 @@ const RetreatSeats: React.FC = () => (
             <h3>Pay via Google Pay</h3>
             <p>Pay using this QR and share the payment screenshot with us.</p>
           </div>
+          <div className="retreat-stay-cta">
+                  <a className="retreat-stay-cta-btn" href={GOOGLE_FORM_URL} target="_blank" rel="noopener noreferrer">Register for your stay</a>
+                </div>
           <div className="retreat-seats-payment-qr">
             <img src="/SparkWritersRetreat/Gpay.jpeg" alt="Google Pay QR" loading="lazy" />
           </div>

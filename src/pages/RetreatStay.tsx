@@ -1,7 +1,7 @@
 import React from "react";
 import "./RetreatStay.css";
 
-const GOOGLE_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSe_XC5yOH7QyntgEfZk9uvkpXpkO5aj1rvkjoB4Ihv-hoXfsw/viewform?usp=dialog'
+
 
 const RetreatStay: React.FC = () => (
   <section className="retreat-stay-section theme-sand parallax-bg" data-aos="fade-up" data-aos-duration="900">
@@ -12,10 +12,7 @@ const RetreatStay: React.FC = () => (
           Nestled amidst the serene and breathtaking Himalayan hills, the Alps Resort offers you a perfect retreat setting. Your stay will be both comfortable and inspiring, with cozy rooms, warm hospitality, and stunning views that will fuel your creativity every single day.
         </p>
       </div>
-      <div className="retreat-stay-cta">
-        <a className="retreat-stay-cta-btn" href={GOOGLE_FORM_URL} target="_blank" rel="noopener noreferrer">Register for your stay</a>
-      </div>
-
+      
       <h2 className="retreat-stay-title" style={{marginTop: '2.5rem'}}>Payment and Registration</h2>
       <div className="retreat-stay-content stagger-list">
         <p>

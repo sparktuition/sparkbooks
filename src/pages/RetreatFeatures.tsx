@@ -1,17 +1,12 @@
 import React from 'react'
 import './RetreatFeatures.css'
 
-const GOOGLE_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSe_XC5yOH7QyntgEfZk9uvkpXpkO5aj1rvkjoB4Ihv-hoXfsw/viewform?usp=dialog'
 
 const RetreatFeatures: React.FC = () => {
   return (
     <section className="retreat-features retreat-section">
       <div className="retreat-features-inner retreat-inner">
         <h2 className="retreat-features-title">A Sanctuary for Your Creative Soul</h2>
-
-        <div className="sanctuary-cta">
-          <a className="sanctuary-cta-btn" href={GOOGLE_FORM_URL} target="_blank" rel="noopener noreferrer">Register for the Retreat</a>
-        </div>
 
         <div className="sanctuary-grid">
           <div className="sanctuary-row">

@@ -39,8 +39,26 @@ function initAOS() {
 }
 initAOS()
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+// Global error handler to prevent 404 display on errors
+window.addEventListener('error', (event) => {
+  console.error('[Global Error]', event.error)
+  // Prevent error from causing 404 page to show
+  event.preventDefault()
+})
+
+window.addEventListener('unhandledrejection', (event) => {
+  console.error('[Unhandled Promise Rejection]', event.reason)
+  // Prevent rejection from causing 404 page to show
+  event.preventDefault()
+})
+
+const rootElement = document.getElementById('root')
+if (!rootElement) {
+  console.error('Root element not found!')
+} else {
+  createRoot(rootElement).render(
+    <StrictMode>
+      <App />
+    </StrictMode>,
+  )
+}

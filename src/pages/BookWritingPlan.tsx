@@ -41,6 +41,14 @@ const BookWritingPlan: React.FC = () => (
           <li className="float-icon" key={idx}><span className="topic-number">{idx + 1}.</span> {topic}</li>
         ))}
       </ol>
+
+      <div className="book-writing-plan-bonus">
+        <div className="bonus-icon">✨</div>
+        <h3 className="bonus-title">Publishing Support</h3>
+        <p className="bonus-text">
+          Once your book is ready, <strong>Publishing Guidance and ISBN Number will be provided as free</strong> to help you get your work published and distributed successfully.
+        </p>
+      </div>
     </div>
   </section>
 );
